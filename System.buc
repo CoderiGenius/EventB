@@ -3,6 +3,6 @@
 <org.eventb.core.carrierSet name="'" org.eventb.core.identifier="User"/>
 <org.eventb.core.carrierSet name="(" org.eventb.core.identifier="Order"/>
 <org.eventb.core.constant name="*" org.eventb.core.identifier="Order_Status"/>
-<org.eventb.core.axiom name="+" org.eventb.core.label="Order_Status" org.eventb.core.predicate="{P,A,I,C}"/>
+<org.eventb.core.axiom name="+" org.eventb.core.label="axml1" org.eventb.core.predicate="Order_Status = P,A,I,C"/>
 <org.eventb.core.carrierSet name="," org.eventb.core.identifier="Categories"/>
 </org.eventb.core.contextFile>
