@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" version="3">
+    <org.eventb.core.carrierSet name="'" org.eventb.core.identifier="USERS"/>
+    <org.eventb.core.carrierSet name="(" org.eventb.core.identifier="ORDERS"/>
+    <org.eventb.core.axiom name="*" org.eventb.core.label="STATUS=Pending,Allocated,Processing,Completed" org.eventb.core.predicate="⊤"/>
+    <org.eventb.core.constant name="+" org.eventb.core.identifier="STATUS"/>
+</org.eventb.core.contextFile>
