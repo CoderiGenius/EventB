@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.scContextFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd">
-    <org.eventb.core.scAxiom name="'" org.eventb.core.label="STATUS=Pending,Allocated,Processing,Completed" org.eventb.core.predicate="⊤" org.eventb.core.source="/PlumbingSystem/PlumbingSystem.buc|org.eventb.core.contextFile#PlumbingSystem|org.eventb.core.axiom#*" org.eventb.core.theorem="false"/>
-    <org.eventb.core.scCarrierSet name="USERS" org.eventb.core.source="/PlumbingSystem/PlumbingSystem.buc|org.eventb.core.contextFile#PlumbingSystem|org.eventb.core.carrierSet#'" org.eventb.core.type="ℙ(USERS)"/>
-    <org.eventb.core.scCarrierSet name="ORDERS" org.eventb.core.source="/PlumbingSystem/PlumbingSystem.buc|org.eventb.core.contextFile#PlumbingSystem|org.eventb.core.carrierSet#(" org.eventb.core.type="ℙ(ORDERS)"/>
+<org.eventb.core.scAxiom name="'" org.eventb.core.label="axim1" org.eventb.core.predicate="partition(STATUS,ALLOCATED,IN_PROGRESS,COMPLETED,PENDING)" org.eventb.core.source="/PlumbingSystem/PlumbingSystem.buc|org.eventb.core.contextFile#PlumbingSystem|org.eventb.core.axiom#*" org.eventb.core.theorem="false"/>
+<org.eventb.core.scCarrierSet name="USERS" org.eventb.core.source="/PlumbingSystem/PlumbingSystem.buc|org.eventb.core.contextFile#PlumbingSystem|org.eventb.core.carrierSet#'" org.eventb.core.type="ℙ(USERS)"/>
+<org.eventb.core.scCarrierSet name="STATUS" org.eventb.core.source="/PlumbingSystem/PlumbingSystem.buc|org.eventb.core.contextFile#PlumbingSystem|org.eventb.core.carrierSet#," org.eventb.core.type="ℙ(STATUS)"/>
+<org.eventb.core.scConstant name="ALLOCATED" org.eventb.core.source="/PlumbingSystem/PlumbingSystem.buc|org.eventb.core.contextFile#PlumbingSystem|org.eventb.core.constant#-" org.eventb.core.type="ℙ(STATUS)"/>
+<org.eventb.core.scConstant name="COMPLETED" org.eventb.core.source="/PlumbingSystem/PlumbingSystem.buc|org.eventb.core.contextFile#PlumbingSystem|org.eventb.core.constant#\/" org.eventb.core.type="ℙ(STATUS)"/>
+<org.eventb.core.scCarrierSet name="ORDERS" org.eventb.core.source="/PlumbingSystem/PlumbingSystem.buc|org.eventb.core.contextFile#PlumbingSystem|org.eventb.core.carrierSet#(" org.eventb.core.type="ℙ(ORDERS)"/>
+<org.eventb.core.scConstant name="PENDING" org.eventb.core.source="/PlumbingSystem/PlumbingSystem.buc|org.eventb.core.contextFile#PlumbingSystem|org.eventb.core.constant#0" org.eventb.core.type="ℙ(STATUS)"/>
+<org.eventb.core.scConstant name="IN_PROGRESS" org.eventb.core.source="/PlumbingSystem/PlumbingSystem.buc|org.eventb.core.contextFile#PlumbingSystem|org.eventb.core.constant#." org.eventb.core.type="ℙ(STATUS)"/>
 </org.eventb.core.scContextFile>
