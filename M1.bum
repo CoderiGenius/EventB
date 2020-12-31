@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION"/>
+<org.eventb.core.seesContext name="(" org.eventb.core.target="System"/>
+<org.eventb.core.variable name=")" org.eventb.core.identifier="employee"/>
+<org.eventb.core.variable name="*" org.eventb.core.identifier="admin"/>
+<org.eventb.core.variable name="+" org.eventb.core.identifier="manager"/>
+<org.eventb.core.variable name="," org.eventb.core.identifier="repaireman"/>
+<org.eventb.core.invariant name="-" org.eventb.core.label="inv1" org.eventb.core.predicate="employee ⊆ User "/>
+<org.eventb.core.invariant name="." org.eventb.core.label="inv2" org.eventb.core.predicate="admin ⊆ employee"/>
+<org.eventb.core.invariant name="/" org.eventb.core.label="inv3" org.eventb.core.predicate="manager ⊆ employee"/>
+<org.eventb.core.invariant name="0" org.eventb.core.label="inv4" org.eventb.core.predicate="repaireman ⊆ employee"/>
+<org.eventb.core.invariant name="1" org.eventb.core.label="inv5" org.eventb.core.predicate="admin ⋂ manager = ∅"/>
+<org.eventb.core.invariant name="2" org.eventb.core.label="inv6" org.eventb.core.predicate="admin ⋂ repaireman = ∅"/>
+<org.eventb.core.invariant name="3" org.eventb.core.label="inv7" org.eventb.core.predicate="repaireman ⋂ manager = ∅"/>
+<org.eventb.core.invariant name="4" org.eventb.core.label="inv8" org.eventb.core.predicate="employee = admin ⋃ manager ⋃ repaireman"/>
+</org.eventb.core.machineFile>
