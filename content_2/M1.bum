@@ -8,11 +8,11 @@
         <org.eventb.core.action name="+" org.eventb.core.assignment="customer ≔ ∅" org.eventb.core.label="act5"/>
     </org.eventb.core.event>
     <org.eventb.core.seesContext name="(" org.eventb.core.target="System"/>
-    <org.eventb.core.variable name=")" org.eventb.core.identifier="EMPLOYEE"/>
-    <org.eventb.core.variable name="*" org.eventb.core.identifier="ADMIN"/>
-    <org.eventb.core.variable name="+" org.eventb.core.identifier="MANAGER"/>
-    <org.eventb.core.variable name="=" org.eventb.core.comment="zhou" org.eventb.core.identifier="CATEGORY"/>
-    <org.eventb.core.variable name="," org.eventb.core.identifier="REPAIRMEN"/>
+    <org.eventb.core.variable name=")" org.eventb.core.identifier="employee"/>
+    <org.eventb.core.variable name="*" org.eventb.core.identifier="admin"/>
+    <org.eventb.core.variable name="+" org.eventb.core.identifier="manager"/>
+    <org.eventb.core.variable name="=" org.eventb.core.comment="zhou" org.eventb.core.identifier="category"/>
+    <org.eventb.core.variable name="," org.eventb.core.identifier="repairman"/>
     <org.eventb.core.invariant name="-" org.eventb.core.label="inv1" org.eventb.core.predicate="employee ⊆ User"/>
     <org.eventb.core.invariant name="." org.eventb.core.label="inv2" org.eventb.core.predicate="admin ⊆ employee"/>
     <org.eventb.core.invariant name="/" org.eventb.core.label="inv3" org.eventb.core.predicate="manager ⊆ employee"/>
@@ -49,7 +49,7 @@
         <org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="c_u ⊆ manager"/>
         <org.eventb.core.action name="+" org.eventb.core.assignment="repaireman ≔ repaireman ∪ {u}" org.eventb.core.label="act1"/>
     </org.eventb.core.event>
-    <org.eventb.core.variable name="6" org.eventb.core.identifier="CUSTOMER"/>
+    <org.eventb.core.variable name="6" org.eventb.core.identifier="customer"/>
     <org.eventb.core.invariant name="7" org.eventb.core.label="inv9" org.eventb.core.predicate="customer ⊆ User"/>
     <org.eventb.core.event name=";" org.eventb.core.comment="zhou" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AddJobCategory">
         <org.eventb.core.parameter name="'" org.eventb.core.identifier="c_u"/>
@@ -68,4 +68,7 @@
     <org.eventb.core.invariant name="@" org.eventb.core.comment="zhou" org.eventb.core.label="inv11" org.eventb.core.predicate="status ⊆ order → STATUS"/>
     <org.eventb.core.invariant name="A" org.eventb.core.comment="zhou" org.eventb.core.label="inv12" org.eventb.core.predicate="message_sender ⊆ message → USER"/>
     <org.eventb.core.invariant name="B" org.eventb.core.comment="zhou" org.eventb.core.label="inv13" org.eventb.core.predicate="message_receiver ⊆ message → USER"/>
+    <org.eventb.core.variable name="C" org.eventb.core.identifier="status"/>
+    <org.eventb.core.variable name="D" org.eventb.core.identifier="message_sender"/>
+    <org.eventb.core.variable name="E" org.eventb.core.identifier="message_receiver"/>
 </org.eventb.core.machineFile>
