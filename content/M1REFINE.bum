@@ -9,16 +9,16 @@
 </org.eventb.core.event>
 <org.eventb.core.refinesMachine name="(" org.eventb.core.target="M1"/>
 <org.eventb.core.seesContext name=")" org.eventb.core.target="System"/>
-<org.eventb.core.variable name="*" org.eventb.core.identifier="description"/>
-<org.eventb.core.variable name="+" org.eventb.core.identifier="location"/>
-<org.eventb.core.variable name="," org.eventb.core.identifier="orderDesc"/>
-<org.eventb.core.variable name="-" org.eventb.core.identifier="orderLoc"/>
-<org.eventb.core.variable name="." org.eventb.core.identifier="customerLoc"/>
+<org.eventb.core.variable name="*" org.eventb.core.comment="new variable description" org.eventb.core.identifier="description"/>
+<org.eventb.core.variable name="+" org.eventb.core.comment="new variable location" org.eventb.core.identifier="location"/>
+<org.eventb.core.variable name="," org.eventb.core.comment="new variable, function between order and description" org.eventb.core.identifier="orderDesc"/>
+<org.eventb.core.variable name="-" org.eventb.core.comment="new variable, function between order and location" org.eventb.core.identifier="orderLoc"/>
+<org.eventb.core.variable name="." org.eventb.core.comment="new variable, function between customer and description" org.eventb.core.identifier="customerLoc"/>
 <org.eventb.core.invariant name="/" org.eventb.core.label="inv1" org.eventb.core.predicate="description ⊆ DESCRIPTION"/>
 <org.eventb.core.invariant name="0" org.eventb.core.label="inv2" org.eventb.core.predicate="location ⊆ LOCATION"/>
-<org.eventb.core.invariant name="1" org.eventb.core.label="inv3" org.eventb.core.predicate="orderDesc ∈ order → description"/>
-<org.eventb.core.invariant name="2" org.eventb.core.label="inv4" org.eventb.core.predicate="orderLoc ∈ order → location"/>
-<org.eventb.core.invariant name="3" org.eventb.core.label="inv5" org.eventb.core.predicate="customerLoc ∈ location → customer"/>
+<org.eventb.core.invariant name="1" org.eventb.core.comment="a total function from order to description, ensure each order has a description" org.eventb.core.label="inv3" org.eventb.core.predicate="orderDesc ∈ order → description"/>
+<org.eventb.core.invariant name="2" org.eventb.core.comment="a total function from order to description, ensure each order has a location" org.eventb.core.label="inv4" org.eventb.core.predicate="orderLoc ∈ order → location"/>
+<org.eventb.core.invariant name="3" org.eventb.core.comment="a total function from location to customer, ensure each location belong to a customer" org.eventb.core.label="inv5" org.eventb.core.predicate="customerLoc ∈ location → customer"/>
 <org.eventb.core.variable name="4" org.eventb.core.identifier="employee"/>
 <org.eventb.core.variable name="5" org.eventb.core.identifier="admin"/>
 <org.eventb.core.variable name="6" org.eventb.core.identifier="manager"/>
@@ -73,14 +73,12 @@
 <org.eventb.core.parameter name="(" org.eventb.core.identifier="des"/>
 <org.eventb.core.parameter name=")" org.eventb.core.identifier="loc"/>
 <org.eventb.core.guard name="*" org.eventb.core.label="grd4" org.eventb.core.predicate="des ∈ DESCRIPTION ∖ description"/>
-<org.eventb.core.guard name="," org.eventb.core.label="grd6" org.eventb.core.predicate="loc ∈ location"/>
-<org.eventb.core.guard name="+" org.eventb.core.label="grd5" org.eventb.core.predicate="cus = customerLoc(loc)"/>
-<org.eventb.core.action name="-" org.eventb.core.assignment="orderDesc(ord) ≔ des" org.eventb.core.label="act5"/>
-<org.eventb.core.action name="." org.eventb.core.assignment="orderLoc(ord) ≔ loc" org.eventb.core.label="act6"/>
-<org.eventb.core.guard name="/" org.eventb.core.label="grd7" org.eventb.core.predicate="customerLoc ▷ {cus} ≠ ∅"/>
+<org.eventb.core.guard name="," org.eventb.core.comment="this location can be a new location or a exist location" org.eventb.core.label="grd6" org.eventb.core.predicate="loc ∈ LOCATION"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="orderDesc(ord) ≔ des" org.eventb.core.comment="link the order and description" org.eventb.core.label="act5"/>
+<org.eventb.core.action name="." org.eventb.core.assignment="orderLoc(ord) ≔ loc" org.eventb.core.comment="link the order and location" org.eventb.core.label="act6"/>
 <org.eventb.core.action name="0" org.eventb.core.assignment="description ≔ description ∪ {des}" org.eventb.core.label="act7"/>
-<org.eventb.core.action name="1" org.eventb.core.assignment="location ≔ location ∪ {loc}" org.eventb.core.label="act8"/>
-<org.eventb.core.action name="2" org.eventb.core.assignment="customerLoc(loc) ≔ cus" org.eventb.core.label="act9"/>
+<org.eventb.core.action name="1" org.eventb.core.assignment="location ≔ location ∪ {loc}" org.eventb.core.comment="If the location is already added to the function, it just a redundant operation" org.eventb.core.label="act8"/>
+<org.eventb.core.action name="2" org.eventb.core.assignment="customerLoc(loc) ≔ cus" org.eventb.core.comment="link the location to customer. If the location is already added to the function, it just a redundant operation" org.eventb.core.label="act9"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="Q" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="SubmitReview">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="SubmitReview"/>
@@ -88,34 +86,34 @@
 <org.eventb.core.event name="R" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="customerRegister">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="customerRegister"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="S" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="addNewLocation">
+<org.eventb.core.event name="S" org.eventb.core.comment="add a new location to the link between location and customer" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="addNewLocation">
 <org.eventb.core.parameter name="'" org.eventb.core.identifier="cus"/>
 <org.eventb.core.parameter name="(" org.eventb.core.identifier="loc"/>
 <org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="cus ∈ customer"/>
-<org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="loc ∈ LOCATION ∖ location"/>
+<org.eventb.core.guard name="*" org.eventb.core.comment="add a new location " org.eventb.core.label="grd2" org.eventb.core.predicate="loc ∈ LOCATION ∖ location"/>
 <org.eventb.core.action name="+" org.eventb.core.assignment="location ≔ location ∪ {loc}" org.eventb.core.label="act1"/>
-<org.eventb.core.action name="," org.eventb.core.assignment="customerLoc(loc) ≔ cus" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="customerLoc(loc) ≔ cus" org.eventb.core.comment="link location and customer" org.eventb.core.label="act2"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="T" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="cusModifyDesc">
+<org.eventb.core.event name="T" org.eventb.core.comment="customer modify the description" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="cusModifyDesc">
 <org.eventb.core.parameter name="'" org.eventb.core.identifier="cus"/>
 <org.eventb.core.parameter name="(" org.eventb.core.identifier="ord"/>
 <org.eventb.core.guard name="*" org.eventb.core.label="grd1" org.eventb.core.predicate="cus ∈ customer"/>
-<org.eventb.core.guard name="/" org.eventb.core.label="grd2" org.eventb.core.predicate="des ∈ DESCRIPTION ∖ description"/>
+<org.eventb.core.guard name="/" org.eventb.core.comment="new description" org.eventb.core.label="grd2" org.eventb.core.predicate="des ∈ DESCRIPTION ∖ description"/>
 <org.eventb.core.guard name="+" org.eventb.core.label="grd3" org.eventb.core.predicate="ord ∈ order"/>
-<org.eventb.core.guard name="," org.eventb.core.label="grd4" org.eventb.core.predicate="orderCustomer(ord) = cus"/>
-<org.eventb.core.action name="-" org.eventb.core.assignment="orderDesc(ord) ≔ des" org.eventb.core.label="act1"/>
-<org.eventb.core.action name="0" org.eventb.core.assignment="description ≔ description ∪ {des}" org.eventb.core.label="act2"/>
-<org.eventb.core.parameter name="1" org.eventb.core.identifier="des"/>
+<org.eventb.core.guard name="," org.eventb.core.comment="ensuer the order was created by the customer" org.eventb.core.label="grd4" org.eventb.core.predicate="orderCustomer(ord) = cus"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="orderDesc(ord) ≔ des" org.eventb.core.comment="rewrite the link between order and description" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="0" org.eventb.core.assignment="description ≔ description ∪ {des}" org.eventb.core.comment="add" org.eventb.core.label="act2"/>
+<org.eventb.core.parameter name="1" org.eventb.core.comment="new description" org.eventb.core.identifier="des"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="U" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="repairmanModifyDesc">
-<org.eventb.core.parameter name="'" org.eventb.core.identifier="r"/>
+<org.eventb.core.event name="U" org.eventb.core.comment="repairman modify the description" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="repairmanModifyDesc">
+<org.eventb.core.parameter name="'" org.eventb.core.comment="repairman" org.eventb.core.identifier="r"/>
 <org.eventb.core.parameter name="(" org.eventb.core.identifier="ord"/>
 <org.eventb.core.parameter name=")" org.eventb.core.identifier="des"/>
 <org.eventb.core.guard name="*" org.eventb.core.label="grd1" org.eventb.core.predicate="r ∈ repairman"/>
-<org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="des ∈ DESCRIPTION ∖ description"/>
+<org.eventb.core.guard name="+" org.eventb.core.comment="new description" org.eventb.core.label="grd2" org.eventb.core.predicate="des ∈ DESCRIPTION ∖ description"/>
 <org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="ord ∈ order"/>
-<org.eventb.core.guard name="-" org.eventb.core.label="grd4" org.eventb.core.predicate="ord ∈ owners[{r}]"/>
-<org.eventb.core.action name="." org.eventb.core.assignment="orderDesc ≔ orderDesc  {ord ↦ des}" org.eventb.core.label="act1"/>
-<org.eventb.core.action name="/" org.eventb.core.assignment="description ≔ description ∪ {des}" org.eventb.core.label="act2"/>
+<org.eventb.core.guard name="-" org.eventb.core.comment="ensuer the order was allocated by the repairman" org.eventb.core.label="grd4" org.eventb.core.predicate="ord ∈ owners[{r}]"/>
+<org.eventb.core.action name="." org.eventb.core.assignment="orderDesc ≔ orderDesc  {ord ↦ des}" org.eventb.core.comment="rewrite the link between order and description" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="/" org.eventb.core.assignment="description ≔ description ∪ {des}" org.eventb.core.comment="add" org.eventb.core.label="act2"/>
 </org.eventb.core.event>
 </org.eventb.core.machineFile>

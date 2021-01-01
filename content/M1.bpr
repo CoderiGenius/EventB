@@ -4560,131 +4560,27 @@
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="INITIALISATION/inv13/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="MESSAGE,USER">
 <org.eventb.core.lang name="L"/>
-<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(STATUS,PENDING,ALLOCATED,IN_PROGRESS,COMPLETED))" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p2,p3,p4,p5,p6,p7,p8"/>
-<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p2,p3,p4,p5,p6,p7,p8"/>
-<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p9">
-<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p9" org.eventb.core.prHyps=""/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p1" org.eventb.core.prHyps=""/>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
-</org.eventb.core.prRule>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="PENDING∩COMPLETED=(∅ ⦂ ℙ(STATUS))">
-<org.eventb.core.prIdent name="COMPLETED" org.eventb.core.type="ℙ(STATUS)"/>
-<org.eventb.core.prIdent name="PENDING" org.eventb.core.type="ℙ(STATUS)"/>
-<org.eventb.core.prIdent name="STATUS" org.eventb.core.type="ℙ(STATUS)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="ALLOCATED∩IN_PROGRESS=(∅ ⦂ ℙ(STATUS))">
-<org.eventb.core.prIdent name="ALLOCATED" org.eventb.core.type="ℙ(STATUS)"/>
-<org.eventb.core.prIdent name="IN_PROGRESS" org.eventb.core.type="ℙ(STATUS)"/>
-<org.eventb.core.prIdent name="STATUS" org.eventb.core.type="ℙ(STATUS)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p9" org.eventb.core.predicate="⊤"/>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="PENDING∩ALLOCATED=(∅ ⦂ ℙ(STATUS))">
-<org.eventb.core.prIdent name="ALLOCATED" org.eventb.core.type="ℙ(STATUS)"/>
-<org.eventb.core.prIdent name="PENDING" org.eventb.core.type="ℙ(STATUS)"/>
-<org.eventb.core.prIdent name="STATUS" org.eventb.core.type="ℙ(STATUS)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="IN_PROGRESS∩COMPLETED=(∅ ⦂ ℙ(STATUS))">
-<org.eventb.core.prIdent name="COMPLETED" org.eventb.core.type="ℙ(STATUS)"/>
-<org.eventb.core.prIdent name="IN_PROGRESS" org.eventb.core.type="ℙ(STATUS)"/>
-<org.eventb.core.prIdent name="STATUS" org.eventb.core.type="ℙ(STATUS)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p2" org.eventb.core.predicate="STATUS=PENDING∪ALLOCATED∪IN_PROGRESS∪COMPLETED">
-<org.eventb.core.prIdent name="ALLOCATED" org.eventb.core.type="ℙ(STATUS)"/>
-<org.eventb.core.prIdent name="COMPLETED" org.eventb.core.type="ℙ(STATUS)"/>
-<org.eventb.core.prIdent name="IN_PROGRESS" org.eventb.core.type="ℙ(STATUS)"/>
-<org.eventb.core.prIdent name="PENDING" org.eventb.core.type="ℙ(STATUS)"/>
-<org.eventb.core.prIdent name="STATUS" org.eventb.core.type="ℙ(STATUS)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="PENDING∩IN_PROGRESS=(∅ ⦂ ℙ(STATUS))">
-<org.eventb.core.prIdent name="IN_PROGRESS" org.eventb.core.type="ℙ(STATUS)"/>
-<org.eventb.core.prIdent name="PENDING" org.eventb.core.type="ℙ(STATUS)"/>
-<org.eventb.core.prIdent name="STATUS" org.eventb.core.type="ℙ(STATUS)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="ALLOCATED∩COMPLETED=(∅ ⦂ ℙ(STATUS))">
-<org.eventb.core.prIdent name="ALLOCATED" org.eventb.core.type="ℙ(STATUS)"/>
-<org.eventb.core.prIdent name="COMPLETED" org.eventb.core.type="ℙ(STATUS)"/>
-<org.eventb.core.prIdent name="STATUS" org.eventb.core.type="ℙ(STATUS)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="(∅ ⦂ ℙ(MESSAGE×USER))∈(∅ ⦂ ℙ(MESSAGE)) → USER"/>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="partition(STATUS,PENDING,ALLOCATED,IN_PROGRESS,COMPLETED)">
-<org.eventb.core.prIdent name="ALLOCATED" org.eventb.core.type="ℙ(STATUS)"/>
-<org.eventb.core.prIdent name="COMPLETED" org.eventb.core.type="ℙ(STATUS)"/>
-<org.eventb.core.prIdent name="IN_PROGRESS" org.eventb.core.type="ℙ(STATUS)"/>
-<org.eventb.core.prIdent name="PENDING" org.eventb.core.type="ℙ(STATUS)"/>
-<org.eventb.core.prIdent name="STATUS" org.eventb.core.type="ℙ(STATUS)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
-<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
-<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="(∅ ⦂ ℙ(MESSAGE×USER))∈(∅ ⦂ ℙ(MESSAGE)) → (∅ ⦂ ℙ(USER))∪(∅ ⦂ ℙ(USER))"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="INITIALISATION/inv14/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="MESSAGE,USER">
 <org.eventb.core.lang name="L"/>
-<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(STATUS,PENDING,ALLOCATED,IN_PROGRESS,COMPLETED))" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p2,p3,p4,p5,p6,p7,p8"/>
-<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p2,p3,p4,p5,p6,p7,p8"/>
-<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p9">
-<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p9" org.eventb.core.prHyps=""/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p1" org.eventb.core.prHyps=""/>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
-</org.eventb.core.prRule>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="PENDING∩COMPLETED=(∅ ⦂ ℙ(STATUS))">
-<org.eventb.core.prIdent name="COMPLETED" org.eventb.core.type="ℙ(STATUS)"/>
-<org.eventb.core.prIdent name="PENDING" org.eventb.core.type="ℙ(STATUS)"/>
-<org.eventb.core.prIdent name="STATUS" org.eventb.core.type="ℙ(STATUS)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="ALLOCATED∩IN_PROGRESS=(∅ ⦂ ℙ(STATUS))">
-<org.eventb.core.prIdent name="ALLOCATED" org.eventb.core.type="ℙ(STATUS)"/>
-<org.eventb.core.prIdent name="IN_PROGRESS" org.eventb.core.type="ℙ(STATUS)"/>
-<org.eventb.core.prIdent name="STATUS" org.eventb.core.type="ℙ(STATUS)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p9" org.eventb.core.predicate="⊤"/>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="PENDING∩ALLOCATED=(∅ ⦂ ℙ(STATUS))">
-<org.eventb.core.prIdent name="ALLOCATED" org.eventb.core.type="ℙ(STATUS)"/>
-<org.eventb.core.prIdent name="PENDING" org.eventb.core.type="ℙ(STATUS)"/>
-<org.eventb.core.prIdent name="STATUS" org.eventb.core.type="ℙ(STATUS)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="IN_PROGRESS∩COMPLETED=(∅ ⦂ ℙ(STATUS))">
-<org.eventb.core.prIdent name="COMPLETED" org.eventb.core.type="ℙ(STATUS)"/>
-<org.eventb.core.prIdent name="IN_PROGRESS" org.eventb.core.type="ℙ(STATUS)"/>
-<org.eventb.core.prIdent name="STATUS" org.eventb.core.type="ℙ(STATUS)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p2" org.eventb.core.predicate="STATUS=PENDING∪ALLOCATED∪IN_PROGRESS∪COMPLETED">
-<org.eventb.core.prIdent name="ALLOCATED" org.eventb.core.type="ℙ(STATUS)"/>
-<org.eventb.core.prIdent name="COMPLETED" org.eventb.core.type="ℙ(STATUS)"/>
-<org.eventb.core.prIdent name="IN_PROGRESS" org.eventb.core.type="ℙ(STATUS)"/>
-<org.eventb.core.prIdent name="PENDING" org.eventb.core.type="ℙ(STATUS)"/>
-<org.eventb.core.prIdent name="STATUS" org.eventb.core.type="ℙ(STATUS)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="PENDING∩IN_PROGRESS=(∅ ⦂ ℙ(STATUS))">
-<org.eventb.core.prIdent name="IN_PROGRESS" org.eventb.core.type="ℙ(STATUS)"/>
-<org.eventb.core.prIdent name="PENDING" org.eventb.core.type="ℙ(STATUS)"/>
-<org.eventb.core.prIdent name="STATUS" org.eventb.core.type="ℙ(STATUS)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="ALLOCATED∩COMPLETED=(∅ ⦂ ℙ(STATUS))">
-<org.eventb.core.prIdent name="ALLOCATED" org.eventb.core.type="ℙ(STATUS)"/>
-<org.eventb.core.prIdent name="COMPLETED" org.eventb.core.type="ℙ(STATUS)"/>
-<org.eventb.core.prIdent name="STATUS" org.eventb.core.type="ℙ(STATUS)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="(∅ ⦂ ℙ(MESSAGE×USER))∈(∅ ⦂ ℙ(MESSAGE)) → USER"/>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="partition(STATUS,PENDING,ALLOCATED,IN_PROGRESS,COMPLETED)">
-<org.eventb.core.prIdent name="ALLOCATED" org.eventb.core.type="ℙ(STATUS)"/>
-<org.eventb.core.prIdent name="COMPLETED" org.eventb.core.type="ℙ(STATUS)"/>
-<org.eventb.core.prIdent name="IN_PROGRESS" org.eventb.core.type="ℙ(STATUS)"/>
-<org.eventb.core.prIdent name="PENDING" org.eventb.core.type="ℙ(STATUS)"/>
-<org.eventb.core.prIdent name="STATUS" org.eventb.core.type="ℙ(STATUS)"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
-<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
-<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="(∅ ⦂ ℙ(MESSAGE×USER))∈(∅ ⦂ ℙ(MESSAGE)) → (∅ ⦂ ℙ(USER))"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="INITIALISATION/inv16/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="ORDER,USER">
 <org.eventb.core.lang name="L"/>
@@ -6017,112 +5913,141 @@
 <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.rn"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
 </org.eventb.core.prProof>
-<org.eventb.core.prProof name="SendMessageToEmployee/inv13/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2" org.eventb.core.prSets="MESSAGE,USER" org.eventb.core.psManual="true">
+<org.eventb.core.prProof name="SendMessageToEmployee/inv13/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3" org.eventb.core.prSets="MESSAGE,USER" org.eventb.core.psManual="true">
 <org.eventb.core.lang name="L"/>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(STATUS,PENDING,ALLOCATED,IN_PROGRESS,COMPLETED))" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p3" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p4,p5,p6,p7,p8,p9,p10"/>
-<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p4,p5,p6,p7,p8,p9,p10"/>
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p4" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p5,p6,p7,p8,p9,p10,p11"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p5,p6,p7,p8,p9,p10,p11"/>
 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p11"/>
-<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p12"/>
-<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p13"/>
-<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p14"/>
-<org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p15"/>
-<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="NewPP" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p12"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p13"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p14"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p15"/>
+<org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p16"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p17"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="lae in message_sender∈message → employee" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p18" org.eventb.core.prHyps="p20" org.eventb.core.prInfHyps="p19"/>
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="NewPP" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3">
 <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R0"/>
 <org.eventb.core.prString name=".maxSteps" org.eventb.core.prSValue="-1"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="1.1"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
 <org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
 </org.eventb.core.prRule>
+<org.eventb.core.prIdent name="admin" org.eventb.core.type="ℙ(USER)"/>
 <org.eventb.core.prIdent name="m" org.eventb.core.type="MESSAGE"/>
+<org.eventb.core.prIdent name="manager" org.eventb.core.type="ℙ(USER)"/>
 <org.eventb.core.prIdent name="message" org.eventb.core.type="ℙ(MESSAGE)"/>
 <org.eventb.core.prIdent name="message_sender" org.eventb.core.type="ℙ(MESSAGE×USER)"/>
 <org.eventb.core.prIdent name="o" org.eventb.core.type="USER"/>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="PENDING∩COMPLETED=(∅ ⦂ ℙ(STATUS))">
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="PENDING∩COMPLETED=(∅ ⦂ ℙ(STATUS))">
 <org.eventb.core.prIdent name="COMPLETED" org.eventb.core.type="ℙ(STATUS)"/>
 <org.eventb.core.prIdent name="PENDING" org.eventb.core.type="ℙ(STATUS)"/>
 <org.eventb.core.prIdent name="STATUS" org.eventb.core.type="ℙ(STATUS)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="PENDING∩ALLOCATED=(∅ ⦂ ℙ(STATUS))">
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="PENDING∩ALLOCATED=(∅ ⦂ ℙ(STATUS))">
 <org.eventb.core.prIdent name="ALLOCATED" org.eventb.core.type="ℙ(STATUS)"/>
 <org.eventb.core.prIdent name="PENDING" org.eventb.core.type="ℙ(STATUS)"/>
 <org.eventb.core.prIdent name="STATUS" org.eventb.core.type="ℙ(STATUS)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p12" org.eventb.core.predicate="customer⊆USER">
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="customer⊆USER">
 <org.eventb.core.prIdent name="customer" org.eventb.core.type="ℙ(USER)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p15" org.eventb.core.predicate="category⊆CATEGORY">
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="category⊆CATEGORY">
 <org.eventb.core.prIdent name="CATEGORY" org.eventb.core.type="ℙ(CATEGORY)"/>
 <org.eventb.core.prIdent name="category" org.eventb.core.type="ℙ(CATEGORY)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="message_sender∈message → USER"/>
-<org.eventb.core.prPred name="p9" org.eventb.core.predicate="PENDING∩IN_PROGRESS=(∅ ⦂ ℙ(STATUS))">
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="PENDING∩IN_PROGRESS=(∅ ⦂ ℙ(STATUS))">
 <org.eventb.core.prIdent name="IN_PROGRESS" org.eventb.core.type="ℙ(STATUS)"/>
 <org.eventb.core.prIdent name="PENDING" org.eventb.core.type="ℙ(STATUS)"/>
 <org.eventb.core.prIdent name="STATUS" org.eventb.core.type="ℙ(STATUS)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p10" org.eventb.core.predicate="ALLOCATED∩COMPLETED=(∅ ⦂ ℙ(STATUS))">
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="message_sender∈message → admin∪manager∪repairman">
+<org.eventb.core.prIdent name="repairman" org.eventb.core.type="ℙ(USER)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="o∈admin∪manager"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="message_sender∈message → admin∪manager"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="ALLOCATED∩COMPLETED=(∅ ⦂ ℙ(STATUS))">
 <org.eventb.core.prIdent name="ALLOCATED" org.eventb.core.type="ℙ(STATUS)"/>
 <org.eventb.core.prIdent name="COMPLETED" org.eventb.core.type="ℙ(STATUS)"/>
 <org.eventb.core.prIdent name="STATUS" org.eventb.core.type="ℙ(STATUS)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="message_sender{m ↦ o}∈message∪{m} → USER"/>
-<org.eventb.core.prPred name="p11" org.eventb.core.predicate="employee⊆USER">
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="message_sender{m ↦ o}∈message∪{m} → admin∪manager"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="employee⊆USER">
 <org.eventb.core.prIdent name="employee" org.eventb.core.type="ℙ(USER)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p14" org.eventb.core.predicate="message⊆MESSAGE"/>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="ALLOCATED∩IN_PROGRESS=(∅ ⦂ ℙ(STATUS))">
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="message⊆MESSAGE"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="ALLOCATED∩IN_PROGRESS=(∅ ⦂ ℙ(STATUS))">
 <org.eventb.core.prIdent name="ALLOCATED" org.eventb.core.type="ℙ(STATUS)"/>
 <org.eventb.core.prIdent name="IN_PROGRESS" org.eventb.core.type="ℙ(STATUS)"/>
 <org.eventb.core.prIdent name="STATUS" org.eventb.core.type="ℙ(STATUS)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="IN_PROGRESS∩COMPLETED=(∅ ⦂ ℙ(STATUS))">
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="review⊆REVIEW">
+<org.eventb.core.prIdent name="REVIEW" org.eventb.core.type="ℙ(REVIEW)"/>
+<org.eventb.core.prIdent name="review" org.eventb.core.type="ℙ(REVIEW)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="IN_PROGRESS∩COMPLETED=(∅ ⦂ ℙ(STATUS))">
 <org.eventb.core.prIdent name="COMPLETED" org.eventb.core.type="ℙ(STATUS)"/>
 <org.eventb.core.prIdent name="IN_PROGRESS" org.eventb.core.type="ℙ(STATUS)"/>
 <org.eventb.core.prIdent name="STATUS" org.eventb.core.type="ℙ(STATUS)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="STATUS=PENDING∪ALLOCATED∪IN_PROGRESS∪COMPLETED">
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="message_sender∈message → employee">
+<org.eventb.core.prIdent name="employee" org.eventb.core.type="ℙ(USER)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="STATUS=PENDING∪ALLOCATED∪IN_PROGRESS∪COMPLETED">
 <org.eventb.core.prIdent name="ALLOCATED" org.eventb.core.type="ℙ(STATUS)"/>
 <org.eventb.core.prIdent name="COMPLETED" org.eventb.core.type="ℙ(STATUS)"/>
 <org.eventb.core.prIdent name="IN_PROGRESS" org.eventb.core.type="ℙ(STATUS)"/>
 <org.eventb.core.prIdent name="PENDING" org.eventb.core.type="ℙ(STATUS)"/>
 <org.eventb.core.prIdent name="STATUS" org.eventb.core.type="ℙ(STATUS)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p2" org.eventb.core.predicate="m∈MESSAGE ∖ message"/>
-<org.eventb.core.prPred name="p13" org.eventb.core.predicate="order⊆ORDER">
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="m∈MESSAGE ∖ message"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="order⊆ORDER">
 <org.eventb.core.prIdent name="ORDER" org.eventb.core.type="ℙ(ORDER)"/>
 <org.eventb.core.prIdent name="order" org.eventb.core.type="ℙ(ORDER)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="partition(STATUS,PENDING,ALLOCATED,IN_PROGRESS,COMPLETED)">
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="employee=admin∪manager∪repairman">
+<org.eventb.core.prIdent name="employee" org.eventb.core.type="ℙ(USER)"/>
+<org.eventb.core.prIdent name="repairman" org.eventb.core.type="ℙ(USER)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="partition(STATUS,PENDING,ALLOCATED,IN_PROGRESS,COMPLETED)">
 <org.eventb.core.prIdent name="ALLOCATED" org.eventb.core.type="ℙ(STATUS)"/>
 <org.eventb.core.prIdent name="COMPLETED" org.eventb.core.type="ℙ(STATUS)"/>
 <org.eventb.core.prIdent name="IN_PROGRESS" org.eventb.core.type="ℙ(STATUS)"/>
 <org.eventb.core.prIdent name="PENDING" org.eventb.core.type="ℙ(STATUS)"/>
 <org.eventb.core.prIdent name="STATUS" org.eventb.core.type="ℙ(STATUS)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.pp.pp:1"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.locEq"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.pp.pp:1"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
 </org.eventb.core.prProof>
-<org.eventb.core.prProof name="SendMessageToEmployee/inv14/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2" org.eventb.core.prSets="MESSAGE,USER" org.eventb.core.psManual="true">
+<org.eventb.core.prProof name="SendMessageToEmployee/inv14/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3" org.eventb.core.prSets="MESSAGE,USER" org.eventb.core.psManual="true">
 <org.eventb.core.lang name="L"/>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(STATUS,PENDING,ALLOCATED,IN_PROGRESS,COMPLETED))" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p3" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p4,p5,p6,p7,p8,p9,p10"/>
-<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p4,p5,p6,p7,p8,p9,p10"/>
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p4" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p5,p6,p7,p8,p9,p10,p11"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p5,p6,p7,p8,p9,p10,p11"/>
 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p11"/>
-<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p12"/>
-<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p13"/>
-<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p14"/>
-<org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p15"/>
-<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="NewPP" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p12"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p13"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p14"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p15"/>
+<org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p16"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="NewPP" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3">
 <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R0"/>
 <org.eventb.core.prString name=".maxSteps" org.eventb.core.prSValue="-1"/>
 </org.eventb.core.prRule>
@@ -6135,62 +6060,64 @@
 <org.eventb.core.prIdent name="m" org.eventb.core.type="MESSAGE"/>
 <org.eventb.core.prIdent name="message" org.eventb.core.type="ℙ(MESSAGE)"/>
 <org.eventb.core.prIdent name="message_receiver" org.eventb.core.type="ℙ(MESSAGE×USER)"/>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="PENDING∩COMPLETED=(∅ ⦂ ℙ(STATUS))">
+<org.eventb.core.prIdent name="repairman" org.eventb.core.type="ℙ(USER)"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="PENDING∩COMPLETED=(∅ ⦂ ℙ(STATUS))">
 <org.eventb.core.prIdent name="COMPLETED" org.eventb.core.type="ℙ(STATUS)"/>
 <org.eventb.core.prIdent name="PENDING" org.eventb.core.type="ℙ(STATUS)"/>
 <org.eventb.core.prIdent name="STATUS" org.eventb.core.type="ℙ(STATUS)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="PENDING∩ALLOCATED=(∅ ⦂ ℙ(STATUS))">
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="PENDING∩ALLOCATED=(∅ ⦂ ℙ(STATUS))">
 <org.eventb.core.prIdent name="ALLOCATED" org.eventb.core.type="ℙ(STATUS)"/>
 <org.eventb.core.prIdent name="PENDING" org.eventb.core.type="ℙ(STATUS)"/>
 <org.eventb.core.prIdent name="STATUS" org.eventb.core.type="ℙ(STATUS)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p12" org.eventb.core.predicate="customer⊆USER">
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="e∈repairman"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="customer⊆USER">
 <org.eventb.core.prIdent name="customer" org.eventb.core.type="ℙ(USER)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p15" org.eventb.core.predicate="category⊆CATEGORY">
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="category⊆CATEGORY">
 <org.eventb.core.prIdent name="CATEGORY" org.eventb.core.type="ℙ(CATEGORY)"/>
 <org.eventb.core.prIdent name="category" org.eventb.core.type="ℙ(CATEGORY)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="message_receiver∈message → USER"/>
-<org.eventb.core.prPred name="p9" org.eventb.core.predicate="PENDING∩IN_PROGRESS=(∅ ⦂ ℙ(STATUS))">
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="message_receiver{m ↦ e}∈message∪{m} → repairman"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="PENDING∩IN_PROGRESS=(∅ ⦂ ℙ(STATUS))">
 <org.eventb.core.prIdent name="IN_PROGRESS" org.eventb.core.type="ℙ(STATUS)"/>
 <org.eventb.core.prIdent name="PENDING" org.eventb.core.type="ℙ(STATUS)"/>
 <org.eventb.core.prIdent name="STATUS" org.eventb.core.type="ℙ(STATUS)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p10" org.eventb.core.predicate="ALLOCATED∩COMPLETED=(∅ ⦂ ℙ(STATUS))">
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="ALLOCATED∩COMPLETED=(∅ ⦂ ℙ(STATUS))">
 <org.eventb.core.prIdent name="ALLOCATED" org.eventb.core.type="ℙ(STATUS)"/>
 <org.eventb.core.prIdent name="COMPLETED" org.eventb.core.type="ℙ(STATUS)"/>
 <org.eventb.core.prIdent name="STATUS" org.eventb.core.type="ℙ(STATUS)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p11" org.eventb.core.predicate="employee⊆USER">
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="employee⊆USER">
 <org.eventb.core.prIdent name="employee" org.eventb.core.type="ℙ(USER)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p14" org.eventb.core.predicate="message⊆MESSAGE"/>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="ALLOCATED∩IN_PROGRESS=(∅ ⦂ ℙ(STATUS))">
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="message⊆MESSAGE"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="ALLOCATED∩IN_PROGRESS=(∅ ⦂ ℙ(STATUS))">
 <org.eventb.core.prIdent name="ALLOCATED" org.eventb.core.type="ℙ(STATUS)"/>
 <org.eventb.core.prIdent name="IN_PROGRESS" org.eventb.core.type="ℙ(STATUS)"/>
 <org.eventb.core.prIdent name="STATUS" org.eventb.core.type="ℙ(STATUS)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="message_receiver{m ↦ e}∈message∪{m} → USER"/>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="IN_PROGRESS∩COMPLETED=(∅ ⦂ ℙ(STATUS))">
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="IN_PROGRESS∩COMPLETED=(∅ ⦂ ℙ(STATUS))">
 <org.eventb.core.prIdent name="COMPLETED" org.eventb.core.type="ℙ(STATUS)"/>
 <org.eventb.core.prIdent name="IN_PROGRESS" org.eventb.core.type="ℙ(STATUS)"/>
 <org.eventb.core.prIdent name="STATUS" org.eventb.core.type="ℙ(STATUS)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="STATUS=PENDING∪ALLOCATED∪IN_PROGRESS∪COMPLETED">
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="message_receiver∈message → repairman"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="STATUS=PENDING∪ALLOCATED∪IN_PROGRESS∪COMPLETED">
 <org.eventb.core.prIdent name="ALLOCATED" org.eventb.core.type="ℙ(STATUS)"/>
 <org.eventb.core.prIdent name="COMPLETED" org.eventb.core.type="ℙ(STATUS)"/>
 <org.eventb.core.prIdent name="IN_PROGRESS" org.eventb.core.type="ℙ(STATUS)"/>
 <org.eventb.core.prIdent name="PENDING" org.eventb.core.type="ℙ(STATUS)"/>
 <org.eventb.core.prIdent name="STATUS" org.eventb.core.type="ℙ(STATUS)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p2" org.eventb.core.predicate="m∈MESSAGE ∖ message"/>
-<org.eventb.core.prPred name="p13" org.eventb.core.predicate="order⊆ORDER">
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="m∈MESSAGE ∖ message"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="order⊆ORDER">
 <org.eventb.core.prIdent name="ORDER" org.eventb.core.type="ℙ(ORDER)"/>
 <org.eventb.core.prIdent name="order" org.eventb.core.type="ℙ(ORDER)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="partition(STATUS,PENDING,ALLOCATED,IN_PROGRESS,COMPLETED)">
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="partition(STATUS,PENDING,ALLOCATED,IN_PROGRESS,COMPLETED)">
 <org.eventb.core.prIdent name="ALLOCATED" org.eventb.core.type="ℙ(STATUS)"/>
 <org.eventb.core.prIdent name="COMPLETED" org.eventb.core.type="ℙ(STATUS)"/>
 <org.eventb.core.prIdent name="IN_PROGRESS" org.eventb.core.type="ℙ(STATUS)"/>
@@ -6851,6 +6778,315 @@
 <org.eventb.core.prPred name="p4" org.eventb.core.predicate="order⊆ORDER"/>
 <org.eventb.core.prPred name="p0" org.eventb.core.predicate="orderCustomer∈order → customer∪{cus}"/>
 <org.eventb.core.prPred name="p2" org.eventb.core.predicate="employee⊆USER">
+<org.eventb.core.prIdent name="employee" org.eventb.core.type="ℙ(USER)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.pp.pp:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="adminAddManager/inv13/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1" org.eventb.core.prSets="MESSAGE,USER" org.eventb.core.psManual="true">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p2"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p3"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p5"/>
+<org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p6"/>
+<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p7"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="NewPP" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R0"/>
+<org.eventb.core.prString name=".maxSteps" org.eventb.core.prSValue="-1"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="admin" org.eventb.core.type="ℙ(USER)"/>
+<org.eventb.core.prIdent name="manager" org.eventb.core.type="ℙ(USER)"/>
+<org.eventb.core.prIdent name="message" org.eventb.core.type="ℙ(MESSAGE)"/>
+<org.eventb.core.prIdent name="message_sender" org.eventb.core.type="ℙ(MESSAGE×USER)"/>
+<org.eventb.core.prIdent name="u" org.eventb.core.type="USER"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="message⊆MESSAGE"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="review⊆REVIEW">
+<org.eventb.core.prIdent name="REVIEW" org.eventb.core.type="ℙ(REVIEW)"/>
+<org.eventb.core.prIdent name="review" org.eventb.core.type="ℙ(REVIEW)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="customer⊆USER">
+<org.eventb.core.prIdent name="customer" org.eventb.core.type="ℙ(USER)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="category⊆CATEGORY">
+<org.eventb.core.prIdent name="CATEGORY" org.eventb.core.type="ℙ(CATEGORY)"/>
+<org.eventb.core.prIdent name="category" org.eventb.core.type="ℙ(CATEGORY)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="message_sender∈message → admin∪(manager∪{u})"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="order⊆ORDER">
+<org.eventb.core.prIdent name="ORDER" org.eventb.core.type="ℙ(ORDER)"/>
+<org.eventb.core.prIdent name="order" org.eventb.core.type="ℙ(ORDER)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="message_sender∈message → admin∪manager"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="employee⊆USER">
+<org.eventb.core.prIdent name="employee" org.eventb.core.type="ℙ(USER)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.pp.pp:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="adminAddRepairman/inv13/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1" org.eventb.core.prSets="MESSAGE,USER" org.eventb.core.psManual="true">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p2"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p3"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p5"/>
+<org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p6"/>
+<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p7"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="NewPP" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R0"/>
+<org.eventb.core.prString name=".maxSteps" org.eventb.core.prSValue="-1"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="employee" org.eventb.core.type="ℙ(USER)"/>
+<org.eventb.core.prIdent name="message" org.eventb.core.type="ℙ(MESSAGE)"/>
+<org.eventb.core.prIdent name="message_sender" org.eventb.core.type="ℙ(MESSAGE×USER)"/>
+<org.eventb.core.prIdent name="u" org.eventb.core.type="USER"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="message_sender∈message → employee∪{u}"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="message⊆MESSAGE"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="review⊆REVIEW">
+<org.eventb.core.prIdent name="REVIEW" org.eventb.core.type="ℙ(REVIEW)"/>
+<org.eventb.core.prIdent name="review" org.eventb.core.type="ℙ(REVIEW)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="customer⊆USER">
+<org.eventb.core.prIdent name="customer" org.eventb.core.type="ℙ(USER)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="category⊆CATEGORY">
+<org.eventb.core.prIdent name="CATEGORY" org.eventb.core.type="ℙ(CATEGORY)"/>
+<org.eventb.core.prIdent name="category" org.eventb.core.type="ℙ(CATEGORY)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="message_sender∈message → employee"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="order⊆ORDER">
+<org.eventb.core.prIdent name="ORDER" org.eventb.core.type="ℙ(ORDER)"/>
+<org.eventb.core.prIdent name="order" org.eventb.core.type="ℙ(ORDER)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="employee⊆USER"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.pp.pp:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="adminAddRepairman/inv14/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1" org.eventb.core.prSets="MESSAGE,USER" org.eventb.core.psManual="true">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p2"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p3"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p5"/>
+<org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p6"/>
+<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p7"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="NewPP" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R0"/>
+<org.eventb.core.prString name=".maxSteps" org.eventb.core.prSValue="-1"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="message" org.eventb.core.type="ℙ(MESSAGE)"/>
+<org.eventb.core.prIdent name="message_receiver" org.eventb.core.type="ℙ(MESSAGE×USER)"/>
+<org.eventb.core.prIdent name="repairman" org.eventb.core.type="ℙ(USER)"/>
+<org.eventb.core.prIdent name="u" org.eventb.core.type="USER"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="message⊆MESSAGE"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="review⊆REVIEW">
+<org.eventb.core.prIdent name="REVIEW" org.eventb.core.type="ℙ(REVIEW)"/>
+<org.eventb.core.prIdent name="review" org.eventb.core.type="ℙ(REVIEW)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="customer⊆USER">
+<org.eventb.core.prIdent name="customer" org.eventb.core.type="ℙ(USER)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="category⊆CATEGORY">
+<org.eventb.core.prIdent name="CATEGORY" org.eventb.core.type="ℙ(CATEGORY)"/>
+<org.eventb.core.prIdent name="category" org.eventb.core.type="ℙ(CATEGORY)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="message_receiver∈message → repairman"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="order⊆ORDER">
+<org.eventb.core.prIdent name="ORDER" org.eventb.core.type="ℙ(ORDER)"/>
+<org.eventb.core.prIdent name="order" org.eventb.core.type="ℙ(ORDER)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="message_receiver∈message → repairman∪{u}"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="employee⊆USER">
+<org.eventb.core.prIdent name="employee" org.eventb.core.type="ℙ(USER)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.pp.pp:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="adminAddAdmin/inv13/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1" org.eventb.core.prSets="MESSAGE,USER" org.eventb.core.psManual="true">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p2"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p3"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p5"/>
+<org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p6"/>
+<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p7"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="NewPP" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R0"/>
+<org.eventb.core.prString name=".maxSteps" org.eventb.core.prSValue="-1"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="admin" org.eventb.core.type="ℙ(USER)"/>
+<org.eventb.core.prIdent name="manager" org.eventb.core.type="ℙ(USER)"/>
+<org.eventb.core.prIdent name="message" org.eventb.core.type="ℙ(MESSAGE)"/>
+<org.eventb.core.prIdent name="message_sender" org.eventb.core.type="ℙ(MESSAGE×USER)"/>
+<org.eventb.core.prIdent name="u" org.eventb.core.type="USER"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="message⊆MESSAGE"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="review⊆REVIEW">
+<org.eventb.core.prIdent name="REVIEW" org.eventb.core.type="ℙ(REVIEW)"/>
+<org.eventb.core.prIdent name="review" org.eventb.core.type="ℙ(REVIEW)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="customer⊆USER">
+<org.eventb.core.prIdent name="customer" org.eventb.core.type="ℙ(USER)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="category⊆CATEGORY">
+<org.eventb.core.prIdent name="CATEGORY" org.eventb.core.type="ℙ(CATEGORY)"/>
+<org.eventb.core.prIdent name="category" org.eventb.core.type="ℙ(CATEGORY)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="order⊆ORDER">
+<org.eventb.core.prIdent name="ORDER" org.eventb.core.type="ℙ(ORDER)"/>
+<org.eventb.core.prIdent name="order" org.eventb.core.type="ℙ(ORDER)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="message_sender∈message → admin∪manager"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="message_sender∈message → (admin∪{u})∪manager"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="employee⊆USER">
+<org.eventb.core.prIdent name="employee" org.eventb.core.type="ℙ(USER)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.pp.pp:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="managerAddRepairman/inv13/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1" org.eventb.core.prSets="MESSAGE,USER" org.eventb.core.psManual="true">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p2"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p3"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p5"/>
+<org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p6"/>
+<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p7"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="NewPP" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R0"/>
+<org.eventb.core.prString name=".maxSteps" org.eventb.core.prSValue="-1"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="employee" org.eventb.core.type="ℙ(USER)"/>
+<org.eventb.core.prIdent name="message" org.eventb.core.type="ℙ(MESSAGE)"/>
+<org.eventb.core.prIdent name="message_sender" org.eventb.core.type="ℙ(MESSAGE×USER)"/>
+<org.eventb.core.prIdent name="u" org.eventb.core.type="USER"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="message_sender∈message → employee∪{u}"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="message⊆MESSAGE"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="review⊆REVIEW">
+<org.eventb.core.prIdent name="REVIEW" org.eventb.core.type="ℙ(REVIEW)"/>
+<org.eventb.core.prIdent name="review" org.eventb.core.type="ℙ(REVIEW)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="customer⊆USER">
+<org.eventb.core.prIdent name="customer" org.eventb.core.type="ℙ(USER)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="category⊆CATEGORY">
+<org.eventb.core.prIdent name="CATEGORY" org.eventb.core.type="ℙ(CATEGORY)"/>
+<org.eventb.core.prIdent name="category" org.eventb.core.type="ℙ(CATEGORY)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="message_sender∈message → employee"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="order⊆ORDER">
+<org.eventb.core.prIdent name="ORDER" org.eventb.core.type="ℙ(ORDER)"/>
+<org.eventb.core.prIdent name="order" org.eventb.core.type="ℙ(ORDER)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="employee⊆USER"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.pp.pp:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="managerAddRepairman/inv14/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1" org.eventb.core.prSets="MESSAGE,USER" org.eventb.core.psManual="true">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p2"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p3"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p5"/>
+<org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p6"/>
+<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p7"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="NewPP" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R0"/>
+<org.eventb.core.prString name=".maxSteps" org.eventb.core.prSValue="-1"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="message" org.eventb.core.type="ℙ(MESSAGE)"/>
+<org.eventb.core.prIdent name="message_receiver" org.eventb.core.type="ℙ(MESSAGE×USER)"/>
+<org.eventb.core.prIdent name="repairman" org.eventb.core.type="ℙ(USER)"/>
+<org.eventb.core.prIdent name="u" org.eventb.core.type="USER"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="message⊆MESSAGE"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="review⊆REVIEW">
+<org.eventb.core.prIdent name="REVIEW" org.eventb.core.type="ℙ(REVIEW)"/>
+<org.eventb.core.prIdent name="review" org.eventb.core.type="ℙ(REVIEW)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="customer⊆USER">
+<org.eventb.core.prIdent name="customer" org.eventb.core.type="ℙ(USER)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="category⊆CATEGORY">
+<org.eventb.core.prIdent name="CATEGORY" org.eventb.core.type="ℙ(CATEGORY)"/>
+<org.eventb.core.prIdent name="category" org.eventb.core.type="ℙ(CATEGORY)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="message_receiver∈message → repairman"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="order⊆ORDER">
+<org.eventb.core.prIdent name="ORDER" org.eventb.core.type="ℙ(ORDER)"/>
+<org.eventb.core.prIdent name="order" org.eventb.core.type="ℙ(ORDER)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="message_receiver∈message → repairman∪{u}"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="employee⊆USER">
+<org.eventb.core.prIdent name="employee" org.eventb.core.type="ℙ(USER)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.pp.pp:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="AllocateJob/inv11/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2" org.eventb.core.prSets="ORDER,STATUS" org.eventb.core.psManual="true">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p3"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p5"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p6"/>
+<org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p7"/>
+<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p8"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="NewPP" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R0"/>
+<org.eventb.core.prString name=".maxSteps" org.eventb.core.prSValue="-1"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="ALLOCATED" org.eventb.core.type="STATUS"/>
+<org.eventb.core.prIdent name="ord" org.eventb.core.type="ORDER"/>
+<org.eventb.core.prIdent name="order" org.eventb.core.type="ℙ(ORDER)"/>
+<org.eventb.core.prIdent name="status" org.eventb.core.type="ℙ(ORDER×STATUS)"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="message⊆MESSAGE">
+<org.eventb.core.prIdent name="MESSAGE" org.eventb.core.type="ℙ(MESSAGE)"/>
+<org.eventb.core.prIdent name="message" org.eventb.core.type="ℙ(MESSAGE)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="review⊆REVIEW">
+<org.eventb.core.prIdent name="REVIEW" org.eventb.core.type="ℙ(REVIEW)"/>
+<org.eventb.core.prIdent name="review" org.eventb.core.type="ℙ(REVIEW)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="customer⊆USER">
+<org.eventb.core.prIdent name="USER" org.eventb.core.type="ℙ(USER)"/>
+<org.eventb.core.prIdent name="customer" org.eventb.core.type="ℙ(USER)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="category⊆CATEGORY">
+<org.eventb.core.prIdent name="CATEGORY" org.eventb.core.type="ℙ(CATEGORY)"/>
+<org.eventb.core.prIdent name="category" org.eventb.core.type="ℙ(CATEGORY)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="ord∈order"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="status∈order → STATUS"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="status{ord ↦ ALLOCATED}∈order → STATUS"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="order⊆ORDER"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="employee⊆USER">
+<org.eventb.core.prIdent name="USER" org.eventb.core.type="ℙ(USER)"/>
 <org.eventb.core.prIdent name="employee" org.eventb.core.type="ℙ(USER)"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.pp.pp:1"/>

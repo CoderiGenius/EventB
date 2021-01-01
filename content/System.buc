@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" version="3">
-<org.eventb.core.carrierSet name="'" org.eventb.core.identifier="USER"/>
-<org.eventb.core.carrierSet name="(" org.eventb.core.identifier="ORDER"/>
-<org.eventb.core.carrierSet name=")" org.eventb.core.identifier="CATEGORY"/>
-<org.eventb.core.carrierSet name="*" org.eventb.core.identifier="STATUS"/>
-<org.eventb.core.constant name="+" org.eventb.core.identifier="PENDING"/>
-<org.eventb.core.constant name="," org.eventb.core.identifier="ALLOCATED"/>
-<org.eventb.core.constant name="-" org.eventb.core.identifier="IN_PROGRESS"/>
-<org.eventb.core.constant name="." org.eventb.core.identifier="COMPLETED"/>
-<org.eventb.core.carrierSet name="0" org.eventb.core.identifier="MESSAGE"/>
-<org.eventb.core.axiom name="1" org.eventb.core.label="axm1" org.eventb.core.predicate="STATUS = {PENDING,ALLOCATED,IN_PROGRESS,COMPLETED}"/>
-<org.eventb.core.carrierSet name="2" org.eventb.core.identifier="REVIEW"/>
-<org.eventb.core.carrierSet name="3" org.eventb.core.identifier="DESCRIPTION"/>
-<org.eventb.core.carrierSet name="4" org.eventb.core.identifier="LOCATION"/>
+<org.eventb.core.carrierSet name="'" org.eventb.core.comment="All users of the application" org.eventb.core.identifier="USER"/>
+<org.eventb.core.carrierSet name="(" org.eventb.core.comment="Created by customers and operated by employee" org.eventb.core.identifier="ORDER"/>
+<org.eventb.core.carrierSet name=")" org.eventb.core.comment="service category" org.eventb.core.identifier="CATEGORY"/>
+<org.eventb.core.carrierSet name="*" org.eventb.core.comment="status of order. type is enumeration" org.eventb.core.identifier="STATUS"/>
+<org.eventb.core.constant name="+" org.eventb.core.comment="order status : PENDING" org.eventb.core.identifier="PENDING"/>
+<org.eventb.core.constant name="," org.eventb.core.comment="order status : ALLOCATED" org.eventb.core.identifier="ALLOCATED"/>
+<org.eventb.core.constant name="-" org.eventb.core.comment="order status : IN_PROGRESS" org.eventb.core.identifier="IN_PROGRESS"/>
+<org.eventb.core.constant name="." org.eventb.core.comment="order status : COMPLETED" org.eventb.core.identifier="COMPLETED"/>
+<org.eventb.core.carrierSet name="0" org.eventb.core.comment="message between admin/manager and repairman" org.eventb.core.identifier="MESSAGE"/>
+<org.eventb.core.axiom name="1" org.eventb.core.comment="the status of order just includes four elements." org.eventb.core.label="axm1" org.eventb.core.predicate="STATUS = {PENDING,ALLOCATED,IN_PROGRESS,COMPLETED}"/>
+<org.eventb.core.carrierSet name="2" org.eventb.core.comment="customer review for the completed order" org.eventb.core.identifier="REVIEW"/>
+<org.eventb.core.carrierSet name="3" org.eventb.core.comment="description for the order" org.eventb.core.identifier="DESCRIPTION"/>
+<org.eventb.core.carrierSet name="4" org.eventb.core.comment="location for the order" org.eventb.core.identifier="LOCATION"/>
 </org.eventb.core.contextFile>

@@ -36,27 +36,22 @@
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
 </org.eventb.core.prProof>
-<org.eventb.core.prProof name="SubmitNewRepairRequest/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3" org.eventb.core.prSets="DESCRIPTION,LOCATION,ORDER,USER" org.eventb.core.psManual="true">
+<org.eventb.core.prProof name="SubmitNewRepairRequest/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2" org.eventb.core.prSets="DESCRIPTION,ORDER" org.eventb.core.psManual="true">
 <org.eventb.core.lang name="L"/>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p4" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p5"/>
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p3" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p4"/>
 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p6"/>
-<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p7"/>
-<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p8"/>
-<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p9"/>
-<org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p10"/>
-<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p11"/>
-<org.eventb.core.prHypAction name="HIDE6" org.eventb.core.prHyps="p12"/>
-<org.eventb.core.prHypAction name="HIDE7" org.eventb.core.prHyps="p13"/>
-<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with cus=customerLoc(loc)" org.eventb.core.prHyps="p2">
-<org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p14" org.eventb.core.prInfHyps="p15"/>
-<org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p5" org.eventb.core.prInfHyps="p16"/>
-<org.eventb.core.prHypAction name="DESELECT2" org.eventb.core.prHyps="p14,p5"/>
-<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="NewPP" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p3">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p5"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p6"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p7"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p8"/>
+<org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p9"/>
+<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prHypAction name="HIDE6" org.eventb.core.prHyps="p11"/>
+<org.eventb.core.prHypAction name="HIDE7" org.eventb.core.prHyps="p12"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="NewPP" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2">
 <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R0"/>
 <org.eventb.core.prString name=".maxSteps" org.eventb.core.prSValue="-1"/>
 </org.eventb.core.prRule>
@@ -64,78 +59,72 @@
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-</org.eventb.core.prRule>
-<org.eventb.core.prIdent name="cus" org.eventb.core.type="USER"/>
-<org.eventb.core.prIdent name="customerLoc" org.eventb.core.type="ℙ(LOCATION×USER)"/>
 <org.eventb.core.prIdent name="des" org.eventb.core.type="DESCRIPTION"/>
 <org.eventb.core.prIdent name="description" org.eventb.core.type="ℙ(DESCRIPTION)"/>
-<org.eventb.core.prIdent name="loc" org.eventb.core.type="LOCATION"/>
 <org.eventb.core.prIdent name="ord" org.eventb.core.type="ORDER"/>
 <org.eventb.core.prIdent name="order" org.eventb.core.type="ℙ(ORDER)"/>
 <org.eventb.core.prIdent name="orderDesc" org.eventb.core.type="ℙ(ORDER×DESCRIPTION)"/>
 <org.eventb.core.prPred name="p1" org.eventb.core.predicate="orderDesc∈order → description"/>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="customer⊆USER">
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="customer⊆USER">
+<org.eventb.core.prIdent name="USER" org.eventb.core.type="ℙ(USER)"/>
 <org.eventb.core.prIdent name="customer" org.eventb.core.type="ℙ(USER)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p10" org.eventb.core.predicate="category⊆CATEGORY">
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="category⊆CATEGORY">
 <org.eventb.core.prIdent name="CATEGORY" org.eventb.core.type="ℙ(CATEGORY)"/>
 <org.eventb.core.prIdent name="category" org.eventb.core.type="ℙ(CATEGORY)"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p0" org.eventb.core.predicate="orderDesc{ord ↦ des}∈order∪{ord} → description∪{des}"/>
-<org.eventb.core.prPred name="p14" org.eventb.core.predicate="cus∈customer">
-<org.eventb.core.prIdent name="customer" org.eventb.core.type="ℙ(USER)"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="customerLoc ▷ {cus}≠(∅ ⦂ ℙ(LOCATION×USER))">
+<org.eventb.core.prIdent name="LOCATION" org.eventb.core.type="ℙ(LOCATION)"/>
+<org.eventb.core.prIdent name="USER" org.eventb.core.type="ℙ(USER)"/>
+<org.eventb.core.prIdent name="cus" org.eventb.core.type="USER"/>
+<org.eventb.core.prIdent name="customerLoc" org.eventb.core.type="ℙ(LOCATION×USER)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="customerLoc ▷ {cus}≠(∅ ⦂ ℙ(LOCATION×USER))"/>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="cus∈ran(customerLoc)"/>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="employee⊆USER">
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="cus∈ran(customerLoc)">
+<org.eventb.core.prIdent name="LOCATION" org.eventb.core.type="ℙ(LOCATION)"/>
+<org.eventb.core.prIdent name="USER" org.eventb.core.type="ℙ(USER)"/>
+<org.eventb.core.prIdent name="cus" org.eventb.core.type="USER"/>
+<org.eventb.core.prIdent name="customerLoc" org.eventb.core.type="ℙ(LOCATION×USER)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="employee⊆USER">
+<org.eventb.core.prIdent name="USER" org.eventb.core.type="ℙ(USER)"/>
 <org.eventb.core.prIdent name="employee" org.eventb.core.type="ℙ(USER)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p9" org.eventb.core.predicate="message⊆MESSAGE">
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="message⊆MESSAGE">
 <org.eventb.core.prIdent name="MESSAGE" org.eventb.core.type="ℙ(MESSAGE)"/>
 <org.eventb.core.prIdent name="message" org.eventb.core.type="ℙ(MESSAGE)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p11" org.eventb.core.predicate="review⊆REVIEW">
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="review⊆REVIEW">
 <org.eventb.core.prIdent name="REVIEW" org.eventb.core.type="ℙ(REVIEW)"/>
 <org.eventb.core.prIdent name="review" org.eventb.core.type="ℙ(REVIEW)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p12" org.eventb.core.predicate="description⊆DESCRIPTION"/>
-<org.eventb.core.prPred name="p13" org.eventb.core.predicate="location⊆LOCATION">
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="description⊆DESCRIPTION"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="location⊆LOCATION">
+<org.eventb.core.prIdent name="LOCATION" org.eventb.core.type="ℙ(LOCATION)"/>
 <org.eventb.core.prIdent name="location" org.eventb.core.type="ℙ(LOCATION)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p2" org.eventb.core.predicate="cus=customerLoc(loc)"/>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="order⊆ORDER"/>
-<org.eventb.core.prPred name="p16" org.eventb.core.predicate="customerLoc(loc)∈ran(customerLoc)"/>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="des∈DESCRIPTION ∖ description"/>
-<org.eventb.core.prPred name="p15" org.eventb.core.predicate="customerLoc(loc)∈customer">
-<org.eventb.core.prIdent name="customer" org.eventb.core.type="ℙ(USER)"/>
-</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="order⊆ORDER"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="des∈DESCRIPTION ∖ description"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
-<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.pp.pp:1"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.pp.pp:1"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
 </org.eventb.core.prProof>
-<org.eventb.core.prProof name="SubmitNewRepairRequest/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3" org.eventb.core.prSets="LOCATION,ORDER,USER" org.eventb.core.psManual="true">
+<org.eventb.core.prProof name="SubmitNewRepairRequest/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2" org.eventb.core.prSets="LOCATION,ORDER" org.eventb.core.psManual="true">
 <org.eventb.core.lang name="L"/>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p4" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p5"/>
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p3" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p4"/>
 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p6"/>
-<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p7"/>
-<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p8"/>
-<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p9"/>
-<org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p10"/>
-<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p11"/>
-<org.eventb.core.prHypAction name="HIDE6" org.eventb.core.prHyps="p12"/>
-<org.eventb.core.prHypAction name="HIDE7" org.eventb.core.prHyps="p13"/>
-<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with cus=customerLoc(loc)" org.eventb.core.prHyps="p1">
-<org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p14" org.eventb.core.prInfHyps="p15"/>
-<org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p5" org.eventb.core.prInfHyps="p16"/>
-<org.eventb.core.prHypAction name="DESELECT2" org.eventb.core.prHyps="p14,p5"/>
-<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="NewPP" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p2,p3">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p5"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p6"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p7"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p8"/>
+<org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p9"/>
+<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prHypAction name="HIDE6" org.eventb.core.prHyps="p11"/>
+<org.eventb.core.prHypAction name="HIDE7" org.eventb.core.prHyps="p12"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="NewPP" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2">
 <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R0"/>
 <org.eventb.core.prString name=".maxSteps" org.eventb.core.prSValue="-1"/>
 </org.eventb.core.prRule>
@@ -143,56 +132,53 @@
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-</org.eventb.core.prRule>
-<org.eventb.core.prIdent name="cus" org.eventb.core.type="USER"/>
-<org.eventb.core.prIdent name="customerLoc" org.eventb.core.type="ℙ(LOCATION×USER)"/>
 <org.eventb.core.prIdent name="loc" org.eventb.core.type="LOCATION"/>
 <org.eventb.core.prIdent name="location" org.eventb.core.type="ℙ(LOCATION)"/>
 <org.eventb.core.prIdent name="ord" org.eventb.core.type="ORDER"/>
 <org.eventb.core.prIdent name="order" org.eventb.core.type="ℙ(ORDER)"/>
 <org.eventb.core.prIdent name="orderLoc" org.eventb.core.type="ℙ(ORDER×LOCATION)"/>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="customer⊆USER">
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="customer⊆USER">
+<org.eventb.core.prIdent name="USER" org.eventb.core.type="ℙ(USER)"/>
 <org.eventb.core.prIdent name="customer" org.eventb.core.type="ℙ(USER)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p10" org.eventb.core.predicate="category⊆CATEGORY">
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="category⊆CATEGORY">
 <org.eventb.core.prIdent name="CATEGORY" org.eventb.core.type="ℙ(CATEGORY)"/>
 <org.eventb.core.prIdent name="category" org.eventb.core.type="ℙ(CATEGORY)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p14" org.eventb.core.predicate="cus∈customer">
-<org.eventb.core.prIdent name="customer" org.eventb.core.type="ℙ(USER)"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="customerLoc ▷ {cus}≠(∅ ⦂ ℙ(LOCATION×USER))">
+<org.eventb.core.prIdent name="USER" org.eventb.core.type="ℙ(USER)"/>
+<org.eventb.core.prIdent name="cus" org.eventb.core.type="USER"/>
+<org.eventb.core.prIdent name="customerLoc" org.eventb.core.type="ℙ(LOCATION×USER)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="customerLoc ▷ {cus}≠(∅ ⦂ ℙ(LOCATION×USER))"/>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="cus∈ran(customerLoc)"/>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="employee⊆USER">
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="cus∈ran(customerLoc)">
+<org.eventb.core.prIdent name="USER" org.eventb.core.type="ℙ(USER)"/>
+<org.eventb.core.prIdent name="cus" org.eventb.core.type="USER"/>
+<org.eventb.core.prIdent name="customerLoc" org.eventb.core.type="ℙ(LOCATION×USER)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="employee⊆USER">
+<org.eventb.core.prIdent name="USER" org.eventb.core.type="ℙ(USER)"/>
 <org.eventb.core.prIdent name="employee" org.eventb.core.type="ℙ(USER)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p9" org.eventb.core.predicate="message⊆MESSAGE">
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="message⊆MESSAGE">
 <org.eventb.core.prIdent name="MESSAGE" org.eventb.core.type="ℙ(MESSAGE)"/>
 <org.eventb.core.prIdent name="message" org.eventb.core.type="ℙ(MESSAGE)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p11" org.eventb.core.predicate="review⊆REVIEW">
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="review⊆REVIEW">
 <org.eventb.core.prIdent name="REVIEW" org.eventb.core.type="ℙ(REVIEW)"/>
 <org.eventb.core.prIdent name="review" org.eventb.core.type="ℙ(REVIEW)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p12" org.eventb.core.predicate="description⊆DESCRIPTION">
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="description⊆DESCRIPTION">
 <org.eventb.core.prIdent name="DESCRIPTION" org.eventb.core.type="ℙ(DESCRIPTION)"/>
 <org.eventb.core.prIdent name="description" org.eventb.core.type="ℙ(DESCRIPTION)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p13" org.eventb.core.predicate="location⊆LOCATION"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="location⊆LOCATION"/>
 <org.eventb.core.prPred name="p0" org.eventb.core.predicate="orderLoc{ord ↦ loc}∈order∪{ord} → location∪{loc}"/>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="cus=customerLoc(loc)"/>
-<org.eventb.core.prPred name="p2" org.eventb.core.predicate="ord∈ORDER ∖ order"/>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="orderLoc∈order → location"/>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="order⊆ORDER"/>
-<org.eventb.core.prPred name="p16" org.eventb.core.predicate="customerLoc(loc)∈ran(customerLoc)"/>
-<org.eventb.core.prPred name="p15" org.eventb.core.predicate="customerLoc(loc)∈customer">
-<org.eventb.core.prIdent name="customer" org.eventb.core.type="ℙ(USER)"/>
-</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="ord∈ORDER ∖ order"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="orderLoc∈order → location"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="order⊆ORDER"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
-<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.pp.pp:1"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.pp.pp:1"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="SubmitNewRepairRequest/grd5/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2" org.eventb.core.prSets="LOCATION,USER">
 <org.eventb.core.lang name="L"/>
@@ -687,31 +673,24 @@
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.pp.pp:1"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
 </org.eventb.core.prProof>
-<org.eventb.core.prProof name="SubmitNewRepairRequest/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5" org.eventb.core.prSets="LOCATION,USER" org.eventb.core.psManual="true">
+<org.eventb.core.prProof name="SubmitNewRepairRequest/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2" org.eventb.core.prSets="LOCATION,USER" org.eventb.core.psManual="true">
 <org.eventb.core.lang name="L"/>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p5" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p6"/>
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p3" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p4"/>
 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p7"/>
-<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p8"/>
-<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p9"/>
-<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p10"/>
-<org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p11"/>
-<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p12"/>
-<org.eventb.core.prHypAction name="HIDE6" org.eventb.core.prHyps="p13"/>
-<org.eventb.core.prHypAction name="HIDE7" org.eventb.core.prHyps="p14"/>
-<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with cus=customerLoc(loc)" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p3">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p17">
-<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p4" org.eventb.core.prInfHyps="p15"/>
-<org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p6" org.eventb.core.prInfHyps="p16"/>
-<org.eventb.core.prHypAction name="DESELECT2" org.eventb.core.prHyps="p4,p6"/>
-<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="NewPP" org.eventb.core.prGoal="p17" org.eventb.core.prHyps="p1,p2,p3,p16,p15">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p5"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p6"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p7"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p8"/>
+<org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p9"/>
+<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prHypAction name="HIDE6" org.eventb.core.prHyps="p11"/>
+<org.eventb.core.prHypAction name="HIDE7" org.eventb.core.prHyps="p12"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="NewPP" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2">
 <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R0"/>
 <org.eventb.core.prString name=".maxSteps" org.eventb.core.prSValue="-1"/>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
@@ -722,45 +701,39 @@
 <org.eventb.core.prIdent name="customerLoc" org.eventb.core.type="ℙ(LOCATION×USER)"/>
 <org.eventb.core.prIdent name="loc" org.eventb.core.type="LOCATION"/>
 <org.eventb.core.prIdent name="location" org.eventb.core.type="ℙ(LOCATION)"/>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="loc∈location"/>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="customer⊆USER"/>
-<org.eventb.core.prPred name="p11" org.eventb.core.predicate="category⊆CATEGORY">
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="customer⊆USER"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="category⊆CATEGORY">
 <org.eventb.core.prIdent name="CATEGORY" org.eventb.core.type="ℙ(CATEGORY)"/>
 <org.eventb.core.prIdent name="category" org.eventb.core.type="ℙ(CATEGORY)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p2" org.eventb.core.predicate="customerLoc∈location → customer"/>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="cus∈customer"/>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="customerLoc ▷ {cus}≠(∅ ⦂ ℙ(LOCATION×USER))"/>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="cus∈ran(customerLoc)"/>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="employee⊆USER">
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="customerLoc∈location → customer"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="cus∈customer"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="customerLoc ▷ {cus}≠(∅ ⦂ ℙ(LOCATION×USER))"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="cus∈ran(customerLoc)"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="employee⊆USER">
 <org.eventb.core.prIdent name="employee" org.eventb.core.type="ℙ(USER)"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p0" org.eventb.core.predicate="customerLoc{loc ↦ cus}∈location∪{loc} → customer"/>
-<org.eventb.core.prPred name="p10" org.eventb.core.predicate="message⊆MESSAGE">
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="message⊆MESSAGE">
 <org.eventb.core.prIdent name="MESSAGE" org.eventb.core.type="ℙ(MESSAGE)"/>
 <org.eventb.core.prIdent name="message" org.eventb.core.type="ℙ(MESSAGE)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p12" org.eventb.core.predicate="review⊆REVIEW">
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="review⊆REVIEW">
 <org.eventb.core.prIdent name="REVIEW" org.eventb.core.type="ℙ(REVIEW)"/>
 <org.eventb.core.prIdent name="review" org.eventb.core.type="ℙ(REVIEW)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p13" org.eventb.core.predicate="description⊆DESCRIPTION">
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="description⊆DESCRIPTION">
 <org.eventb.core.prIdent name="DESCRIPTION" org.eventb.core.type="ℙ(DESCRIPTION)"/>
 <org.eventb.core.prIdent name="description" org.eventb.core.type="ℙ(DESCRIPTION)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p14" org.eventb.core.predicate="location⊆LOCATION"/>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="cus=customerLoc(loc)"/>
-<org.eventb.core.prPred name="p17" org.eventb.core.predicate="customerLoc{loc ↦ customerLoc(loc)}∈location∪{loc} → customer"/>
-<org.eventb.core.prPred name="p9" org.eventb.core.predicate="order⊆ORDER">
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="location⊆LOCATION"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="order⊆ORDER">
 <org.eventb.core.prIdent name="ORDER" org.eventb.core.type="ℙ(ORDER)"/>
 <org.eventb.core.prIdent name="order" org.eventb.core.type="ℙ(ORDER)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p16" org.eventb.core.predicate="customerLoc(loc)∈ran(customerLoc)"/>
-<org.eventb.core.prPred name="p15" org.eventb.core.predicate="customerLoc(loc)∈customer"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
-<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.pp.pp:1"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.pp.pp:1"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="cusModifyDesc/grd5/WD" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1" org.eventb.core.prSets="DESCRIPTION,ORDER">
 <org.eventb.core.lang name="L"/>
