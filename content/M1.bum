@@ -117,7 +117,7 @@
 <org.eventb.core.parameter name=")" org.eventb.core.identifier="e"/>
 <org.eventb.core.guard name="*" org.eventb.core.label="grd1" org.eventb.core.predicate="op ∈ admin ∪ manager"/>
 <org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="ord ∈ order"/>
-<org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="e ∈ employee"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="e ∈ repairman"/>
 <org.eventb.core.guard name="-" org.eventb.core.label="grd4" org.eventb.core.predicate="status(ord) ∈ {ALLOCATED,PENDING}"/>
 <org.eventb.core.action name="." org.eventb.core.assignment="owners ≔ owners ∪ {e ↦ ord}" org.eventb.core.label="act1"/>
 </org.eventb.core.event>
@@ -154,7 +154,7 @@
 <org.eventb.core.variable name="\" org.eventb.core.identifier="review"/>
 <org.eventb.core.variable name="]" org.eventb.core.identifier="orderReview"/>
 <org.eventb.core.invariant name="^" org.eventb.core.label="inv19" org.eventb.core.predicate="review ⊆ REVIEW"/>
-<org.eventb.core.invariant name="_" org.eventb.core.label="inv20" org.eventb.core.predicate="orderReview ∈ order → review"/>
+<org.eventb.core.invariant name="_" org.eventb.core.label="inv20" org.eventb.core.predicate="orderReview ∈ order ⇸ review"/>
 <org.eventb.core.event name="`" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="SubmitReview">
 <org.eventb.core.parameter name="'" org.eventb.core.identifier="r"/>
 <org.eventb.core.parameter name="(" org.eventb.core.identifier="o"/>
