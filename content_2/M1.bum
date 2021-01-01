@@ -76,4 +76,12 @@
         <org.eventb.core.parameter name="," org.eventb.core.identifier="e"/>
         <org.eventb.core.guard name="-" org.eventb.core.label="grd3" org.eventb.core.predicate="e ∈ employee"/>
     </org.eventb.core.event>
+    <org.eventb.core.event name="S" org.eventb.core.comment="zhou" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="SubmitNewRepairRequest">
+        <org.eventb.core.parameter name="'" org.eventb.core.comment="customer" org.eventb.core.identifier="c"/>
+        <org.eventb.core.parameter name="(" org.eventb.core.comment="order" org.eventb.core.identifier="o"/>
+        <org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="c ∈ customer"/>
+        <org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="status(o) ∉ {ALLOCATED,IN_PROGRESS,COMPELETED)"/>
+        <org.eventb.core.action name="+" org.eventb.core.assignment="order ≔ order ∪ {o}" org.eventb.core.label="act1"/>
+        <org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="o ∈ ORDER ∖ order"/>
+    </org.eventb.core.event>
 </org.eventb.core.machineFile>
