@@ -1,42 +1,46 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.psFile>
-<org.eventb.core.psStatus name="INITIALISATION/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="61" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="INITIALISATION/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="61" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="INITIALISATION/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="61" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="INITIALISATION/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="61" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="INITIALISATION/inv6/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="61" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="INITIALISATION/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="61" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="INITIALISATION/inv8/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="61" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="INITIALISATION/inv11/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="61" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="INITIALISATION/inv13/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="61" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="INITIALISATION/inv14/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="61" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="INITIALISATION/inv16/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="61" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="adminAddManager/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="59" org.eventb.core.psManual="true"/>
-<org.eventb.core.psStatus name="adminAddManager/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="59" org.eventb.core.psManual="true"/>
-<org.eventb.core.psStatus name="adminAddManager/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="59" org.eventb.core.psBroken="true" org.eventb.core.psManual="true"/>
-<org.eventb.core.psStatus name="adminAddManager/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="59" org.eventb.core.psBroken="true" org.eventb.core.psManual="true"/>
-<org.eventb.core.psStatus name="adminAddManager/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="59" org.eventb.core.psBroken="true" org.eventb.core.psManual="true"/>
-<org.eventb.core.psStatus name="adminAddManager/inv8/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="59" org.eventb.core.psBroken="true" org.eventb.core.psManual="true"/>
-<org.eventb.core.psStatus name="adminAddRepairman/inv2/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="63" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="adminAddRepairman/inv3/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="63" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="adminAddRepairman/inv4/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="63" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="adminAddRepairman/inv6/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="63" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="adminAddRepairman/inv7/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="63" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="adminAddRepairman/inv8/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="63" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="adminAddRepairman/inv16/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="63" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="adminAddAdmin/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="59" org.eventb.core.psBroken="true" org.eventb.core.psManual="true"/>
-<org.eventb.core.psStatus name="adminAddAdmin/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="59" org.eventb.core.psBroken="true" org.eventb.core.psManual="true"/>
-<org.eventb.core.psStatus name="adminAddAdmin/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="59" org.eventb.core.psBroken="true" org.eventb.core.psManual="true"/>
-<org.eventb.core.psStatus name="adminAddAdmin/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="59" org.eventb.core.psBroken="true" org.eventb.core.psManual="true"/>
-<org.eventb.core.psStatus name="adminAddAdmin/inv6/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="59" org.eventb.core.psBroken="true" org.eventb.core.psManual="true"/>
-<org.eventb.core.psStatus name="adminAddAdmin/inv8/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="59" org.eventb.core.psBroken="true" org.eventb.core.psManual="true"/>
-<org.eventb.core.psStatus name="managerAddRepairman/inv2/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="63" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="managerAddRepairman/inv3/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="63" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="managerAddRepairman/inv4/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="63" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="managerAddRepairman/inv6/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="63" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="managerAddRepairman/inv7/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="63" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="managerAddRepairman/inv8/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="63" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="managerAddRepairman/inv16/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="63" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="SendMessageToEmployee/inv13/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="80" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="SendMessageToEmployee/inv14/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="80" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="91" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="91" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="91" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="91" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv6/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="91" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="91" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv8/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="91" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv11/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="91" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv13/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="91" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv14/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="91" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv16/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="91" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="adminAddManager/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="91" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="adminAddManager/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="91" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="adminAddManager/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="91" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="adminAddManager/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="91" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="adminAddManager/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="91" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="adminAddManager/inv8/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="91" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="adminAddRepairman/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="91" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="adminAddRepairman/inv3/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="91" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="adminAddRepairman/inv4/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="91" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="adminAddRepairman/inv6/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="91" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="adminAddRepairman/inv7/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="91" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="adminAddRepairman/inv8/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="91" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="adminAddRepairman/inv16/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="91" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="adminAddAdmin/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="91" org.eventb.core.psBroken="true" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="adminAddAdmin/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="91" org.eventb.core.psBroken="true" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="adminAddAdmin/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="91" org.eventb.core.psBroken="true" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="adminAddAdmin/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="91" org.eventb.core.psBroken="true" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="adminAddAdmin/inv6/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="91" org.eventb.core.psBroken="true" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="adminAddAdmin/inv8/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="91" org.eventb.core.psBroken="true" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="managerAddRepairman/inv2/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="91" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="managerAddRepairman/inv3/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="91" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="managerAddRepairman/inv4/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="91" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="managerAddRepairman/inv6/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="91" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="managerAddRepairman/inv7/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="91" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="managerAddRepairman/inv8/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="91" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="managerAddRepairman/inv16/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="91" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="SendMessageToEmployee/inv13/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="93" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="SendMessageToEmployee/inv14/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="93" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="AllocateJob/grd4/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="112" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="AllocateJob/inv16/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="112" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="completeOrder/grd3/WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="104" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="completeOrder/inv11/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="104" org.eventb.core.psManual="false"/>
 </org.eventb.core.psFile>

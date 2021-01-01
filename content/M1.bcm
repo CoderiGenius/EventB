@@ -2,16 +2,16 @@
 <org.eventb.core.scMachineFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd">
 <org.eventb.core.scSeesContext name="'" org.eventb.core.scTarget="/content/System.bcc" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.seesContext#;"/>
 <org.eventb.core.scInternalContext name="System">
-<org.eventb.core.scAxiom name="'" org.eventb.core.label="axm1" org.eventb.core.predicate="partition(STATUS,PENDING,ALLOCATED,IN_PROGRESS,COMPLETED)" org.eventb.core.source="/content/System.buc|org.eventb.core.contextFile#System|org.eventb.core.axiom#\/" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="'" org.eventb.core.label="axm1" org.eventb.core.predicate="STATUS={PENDING,ALLOCATED,IN_PROGRESS,COMPLETED}" org.eventb.core.source="/content/System.buc|org.eventb.core.contextFile#System|org.eventb.core.axiom#1" org.eventb.core.theorem="false"/>
 <org.eventb.core.scCarrierSet name="MESSAGE" org.eventb.core.source="/content/System.buc|org.eventb.core.contextFile#System|org.eventb.core.carrierSet#0" org.eventb.core.type="ℙ(MESSAGE)"/>
 <org.eventb.core.scCarrierSet name="STATUS" org.eventb.core.source="/content/System.buc|org.eventb.core.contextFile#System|org.eventb.core.carrierSet#*" org.eventb.core.type="ℙ(STATUS)"/>
 <org.eventb.core.scCarrierSet name="ORDER" org.eventb.core.source="/content/System.buc|org.eventb.core.contextFile#System|org.eventb.core.carrierSet#(" org.eventb.core.type="ℙ(ORDER)"/>
-<org.eventb.core.scConstant name="ALLOCATED" org.eventb.core.source="/content/System.buc|org.eventb.core.contextFile#System|org.eventb.core.constant#," org.eventb.core.type="ℙ(STATUS)"/>
+<org.eventb.core.scConstant name="ALLOCATED" org.eventb.core.source="/content/System.buc|org.eventb.core.contextFile#System|org.eventb.core.constant#," org.eventb.core.type="STATUS"/>
 <org.eventb.core.scCarrierSet name="USER" org.eventb.core.source="/content/System.buc|org.eventb.core.contextFile#System|org.eventb.core.carrierSet#'" org.eventb.core.type="ℙ(USER)"/>
-<org.eventb.core.scConstant name="COMPLETED" org.eventb.core.source="/content/System.buc|org.eventb.core.contextFile#System|org.eventb.core.constant#." org.eventb.core.type="ℙ(STATUS)"/>
+<org.eventb.core.scConstant name="COMPLETED" org.eventb.core.source="/content/System.buc|org.eventb.core.contextFile#System|org.eventb.core.constant#." org.eventb.core.type="STATUS"/>
 <org.eventb.core.scCarrierSet name="CATEGORY" org.eventb.core.source="/content/System.buc|org.eventb.core.contextFile#System|org.eventb.core.carrierSet#)" org.eventb.core.type="ℙ(CATEGORY)"/>
-<org.eventb.core.scConstant name="PENDING" org.eventb.core.source="/content/System.buc|org.eventb.core.contextFile#System|org.eventb.core.constant#+" org.eventb.core.type="ℙ(STATUS)"/>
-<org.eventb.core.scConstant name="IN_PROGRESS" org.eventb.core.source="/content/System.buc|org.eventb.core.contextFile#System|org.eventb.core.constant#-" org.eventb.core.type="ℙ(STATUS)"/>
+<org.eventb.core.scConstant name="PENDING" org.eventb.core.source="/content/System.buc|org.eventb.core.contextFile#System|org.eventb.core.constant#+" org.eventb.core.type="STATUS"/>
+<org.eventb.core.scConstant name="IN_PROGRESS" org.eventb.core.source="/content/System.buc|org.eventb.core.contextFile#System|org.eventb.core.constant#-" org.eventb.core.type="STATUS"/>
 </org.eventb.core.scInternalContext>
 <org.eventb.core.scInvariant name="Systen" org.eventb.core.label="inv1" org.eventb.core.predicate="employee⊆USER" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#-" org.eventb.core.theorem="false"/>
 <org.eventb.core.scInvariant name="Systeo" org.eventb.core.label="inv2" org.eventb.core.predicate="admin⊆employee" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#." org.eventb.core.theorem="false"/>
@@ -60,8 +60,8 @@
 <org.eventb.core.scGuard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="o∈admin" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#5|org.eventb.core.guard#0" org.eventb.core.theorem="false"/>
 <org.eventb.core.scParameter name="o" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#5|org.eventb.core.parameter#\/" org.eventb.core.type="USER"/>
 <org.eventb.core.scParameter name="u" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#5|org.eventb.core.parameter#'" org.eventb.core.type="USER"/>
-<org.eventb.core.scAction name="v" org.eventb.core.assignment="employee ≔ employee∪{u}" org.eventb.core.label="act1" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#5|org.eventb.core.action#-"/>
-<org.eventb.core.scAction name="w" org.eventb.core.assignment="manager ≔ manager∪{u}" org.eventb.core.label="act2" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#5|org.eventb.core.action#."/>
+<org.eventb.core.scAction name="v" org.eventb.core.assignment="manager ≔ manager∪{u}" org.eventb.core.label="act2" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#5|org.eventb.core.action#."/>
+<org.eventb.core.scAction name="w" org.eventb.core.assignment="employee ≔ employee∪{u}" org.eventb.core.label="act3" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#5|org.eventb.core.action#1"/>
 </org.eventb.core.scEvent>
 <org.eventb.core.scEvent name="message_receiveu" org.eventb.core.accurate="true" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="adminAddRepairman" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#=">
 <org.eventb.core.scGuard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="u∈USER ∖ employee" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#=|org.eventb.core.guard#)" org.eventb.core.theorem="false"/>
@@ -97,7 +97,7 @@
 <org.eventb.core.scEvent name="message_receivey" org.eventb.core.accurate="true" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ViewCompeletedJob" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#Q">
 <org.eventb.core.scGuard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="o∈admin∪manager" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#Q|org.eventb.core.guard#*" org.eventb.core.theorem="false"/>
 <org.eventb.core.scGuard name="(" org.eventb.core.label="grd3" org.eventb.core.predicate="rm∈repairman" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#Q|org.eventb.core.guard#," org.eventb.core.theorem="false"/>
-<org.eventb.core.scGuard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="result=dom(owners[{rm}] ◁ status ▷ COMPLETED)" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#Q|org.eventb.core.guard#+" org.eventb.core.theorem="false"/>
+<org.eventb.core.scGuard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="result=dom(owners[{rm}] ◁ status ▷ {COMPLETED})" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#Q|org.eventb.core.guard#+" org.eventb.core.theorem="false"/>
 <org.eventb.core.scParameter name="o" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#Q|org.eventb.core.parameter#'" org.eventb.core.type="USER"/>
 <org.eventb.core.scParameter name="result" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#Q|org.eventb.core.parameter#(" org.eventb.core.type="ℙ(ORDER)"/>
 <org.eventb.core.scParameter name="rm" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#Q|org.eventb.core.parameter#)" org.eventb.core.type="USER"/>
@@ -105,7 +105,7 @@
 <org.eventb.core.scEvent name="message_receivez" org.eventb.core.accurate="true" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="SendMessageToEmployee" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#R">
 <org.eventb.core.scGuard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="o∈admin∪manager" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#R|org.eventb.core.guard#*" org.eventb.core.theorem="false"/>
 <org.eventb.core.scGuard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="m∈MESSAGE ∖ message" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#R|org.eventb.core.guard#-" org.eventb.core.theorem="false"/>
-<org.eventb.core.scGuard name=")" org.eventb.core.label="grd3" org.eventb.core.predicate="IN_PROGRESS⊆ran(owners[{e}] ◁ status)" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#R|org.eventb.core.guard#+" org.eventb.core.theorem="false"/>
+<org.eventb.core.scGuard name=")" org.eventb.core.label="grd3" org.eventb.core.predicate="IN_PROGRESS∈ran(owners[{e}] ◁ status)" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#R|org.eventb.core.guard#+" org.eventb.core.theorem="false"/>
 <org.eventb.core.scParameter name="e" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#R|org.eventb.core.parameter#)" org.eventb.core.type="USER"/>
 <org.eventb.core.scParameter name="m" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#R|org.eventb.core.parameter#(" org.eventb.core.type="MESSAGE"/>
 <org.eventb.core.scParameter name="o" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#R|org.eventb.core.parameter#'" org.eventb.core.type="USER"/>
@@ -115,8 +115,32 @@
 </org.eventb.core.scEvent>
 <org.eventb.core.scEvent name="message_receive{" org.eventb.core.accurate="true" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ViewUnfinishedJob" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#S">
 <org.eventb.core.scGuard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="o∈admin∪manager" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#S|org.eventb.core.guard#)" org.eventb.core.theorem="false"/>
-<org.eventb.core.scGuard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="r=dom(status ⩥ COMPLETED)" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#S|org.eventb.core.guard#*" org.eventb.core.theorem="false"/>
+<org.eventb.core.scGuard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="r=dom(status ⩥ {COMPLETED})" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#S|org.eventb.core.guard#*" org.eventb.core.theorem="false"/>
 <org.eventb.core.scParameter name="o" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#S|org.eventb.core.parameter#'" org.eventb.core.type="USER"/>
 <org.eventb.core.scParameter name="r" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#S|org.eventb.core.parameter#(" org.eventb.core.type="ℙ(ORDER)"/>
+</org.eventb.core.scEvent>
+<org.eventb.core.scEvent name="message_receive|" org.eventb.core.accurate="true" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AllocateJob" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#V">
+<org.eventb.core.scGuard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="op∈admin∪manager" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#V|org.eventb.core.guard#*" org.eventb.core.theorem="false"/>
+<org.eventb.core.scGuard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="ord∈order" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#V|org.eventb.core.guard#+" org.eventb.core.theorem="false"/>
+<org.eventb.core.scGuard name=")" org.eventb.core.label="grd3" org.eventb.core.predicate="e∈employee" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#V|org.eventb.core.guard#," org.eventb.core.theorem="false"/>
+<org.eventb.core.scGuard name="*" org.eventb.core.label="grd4" org.eventb.core.predicate="status(ord)∈{ALLOCATED,PENDING}" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#V|org.eventb.core.guard#-" org.eventb.core.theorem="false"/>
+<org.eventb.core.scParameter name="ord" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#V|org.eventb.core.parameter#(" org.eventb.core.type="ORDER"/>
+<org.eventb.core.scParameter name="op" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#V|org.eventb.core.parameter#'" org.eventb.core.type="USER"/>
+<org.eventb.core.scParameter name="e" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#V|org.eventb.core.parameter#)" org.eventb.core.type="USER"/>
+<org.eventb.core.scAction name="ore" org.eventb.core.assignment="owners ≔ owners∪{e ↦ ord}" org.eventb.core.label="act1" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#V|org.eventb.core.action#."/>
+</org.eventb.core.scEvent>
+<org.eventb.core.scEvent name="message_receive}" org.eventb.core.accurate="true" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="viewAllocatedJobs" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#T">
+<org.eventb.core.scGuard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="r∈repairman" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#T|org.eventb.core.guard#)" org.eventb.core.theorem="false"/>
+<org.eventb.core.scGuard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="result=owners[{r}]" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#T|org.eventb.core.guard#*" org.eventb.core.theorem="false"/>
+<org.eventb.core.scParameter name="result" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#T|org.eventb.core.parameter#(" org.eventb.core.type="ℙ(ORDER)"/>
+<org.eventb.core.scParameter name="r" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#T|org.eventb.core.parameter#'" org.eventb.core.type="USER"/>
+</org.eventb.core.scEvent>
+<org.eventb.core.scEvent name="message_receive~" org.eventb.core.accurate="true" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="completeOrder" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#U">
+<org.eventb.core.scGuard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="r∈repairman" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#U|org.eventb.core.guard#," org.eventb.core.theorem="false"/>
+<org.eventb.core.scGuard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="o∈owners[{r}]" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#U|org.eventb.core.guard#-" org.eventb.core.theorem="false"/>
+<org.eventb.core.scGuard name=")" org.eventb.core.label="grd3" org.eventb.core.predicate="status(o)∈{ALLOCATED,IN_PROGRESS}" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#U|org.eventb.core.guard#*" org.eventb.core.theorem="false"/>
+<org.eventb.core.scParameter name="o" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#U|org.eventb.core.parameter#'" org.eventb.core.type="ORDER"/>
+<org.eventb.core.scParameter name="r" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#U|org.eventb.core.parameter#(" org.eventb.core.type="USER"/>
+<org.eventb.core.scAction name="s" org.eventb.core.assignment="status ≔ status{o ↦ COMPLETED}" org.eventb.core.label="act1" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#U|org.eventb.core.action#."/>
 </org.eventb.core.scEvent>
 </org.eventb.core.scMachineFile>

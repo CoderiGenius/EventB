@@ -30,9 +30,9 @@
 <org.eventb.core.parameter name="'" org.eventb.core.comment="新用户" org.eventb.core.identifier="u"/>
 <org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="u ∈ USER ∖ employee"/>
 <org.eventb.core.guard name="0" org.eventb.core.label="grd2" org.eventb.core.predicate="o ∈ admin"/>
-<org.eventb.core.action name="-" org.eventb.core.assignment="employee ≔ employee ∪ {u}" org.eventb.core.label="act1"/>
 <org.eventb.core.action name="." org.eventb.core.assignment="manager ≔ manager ∪ {u}" org.eventb.core.label="act2"/>
 <org.eventb.core.parameter name="/" org.eventb.core.identifier="o"/>
+<org.eventb.core.action name="1" org.eventb.core.assignment="employee ≔ employee ∪ {u}" org.eventb.core.label="act3"/>
 </org.eventb.core.event>
 <org.eventb.core.seesContext name=";" org.eventb.core.target="System"/>
 <org.eventb.core.event name="=" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="adminAddRepairman">
@@ -88,7 +88,7 @@
 <org.eventb.core.parameter name=")" org.eventb.core.comment="repairman" org.eventb.core.identifier="rm"/>
 <org.eventb.core.guard name="*" org.eventb.core.label="grd1" org.eventb.core.predicate="o ∈ admin ∪ manager"/>
 <org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="rm ∈ repairman"/>
-<org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="result = dom((owners[{rm}] ◁ status) ▷ COMPLETED)"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="result = dom((owners[{rm}] ◁ status) ▷ {COMPLETED})"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="R" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="SendMessageToEmployee">
 <org.eventb.core.parameter name="'" org.eventb.core.identifier="o"/>
@@ -96,7 +96,7 @@
 <org.eventb.core.parameter name=")" org.eventb.core.identifier="e"/>
 <org.eventb.core.guard name="*" org.eventb.core.label="grd1" org.eventb.core.predicate="o ∈ admin ∪ manager"/>
 <org.eventb.core.guard name="-" org.eventb.core.label="grd2" org.eventb.core.predicate="m ∈ MESSAGE ∖ message"/>
-<org.eventb.core.guard name="+" org.eventb.core.label="grd3" org.eventb.core.predicate="IN_PROGRESS ⊆ ran(owners[{e}] ◁ status)"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd3" org.eventb.core.predicate="IN_PROGRESS ∈ ran(owners[{e}] ◁ status)"/>
 <org.eventb.core.action name="." org.eventb.core.assignment="message_sender(m) ≔ o" org.eventb.core.label="act1"/>
 <org.eventb.core.action name="/" org.eventb.core.assignment="message_receiver(m) ≔ e" org.eventb.core.label="act2"/>
 <org.eventb.core.action name="0" org.eventb.core.assignment="message ≔ message ∪ {m}" org.eventb.core.label="act3"/>
@@ -105,6 +105,30 @@
 <org.eventb.core.parameter name="'" org.eventb.core.identifier="o"/>
 <org.eventb.core.parameter name="(" org.eventb.core.identifier="r"/>
 <org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="o ∈ admin ∪ manager"/>
-<org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="r = dom(status ⩥ COMPLETED)"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="r = dom(status ⩥ {COMPLETED})"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="V" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AllocateJob">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="op"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="ord"/>
+<org.eventb.core.parameter name=")" org.eventb.core.identifier="e"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd1" org.eventb.core.predicate="op ∈ admin ∪ manager"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="ord ∈ order"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="e ∈ employee"/>
+<org.eventb.core.guard name="-" org.eventb.core.label="grd4" org.eventb.core.predicate="status(ord) ∈ {ALLOCATED,PENDING}"/>
+<org.eventb.core.action name="." org.eventb.core.assignment="owners ≔ owners ∪ {e ↦ ord}" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="T" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="viewAllocatedJobs">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="r"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="result"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="r ∈ repairman"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="result = owners[{r}]"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="U" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="completeOrder">
+<org.eventb.core.parameter name="'" org.eventb.core.comment="order" org.eventb.core.identifier="o"/>
+<org.eventb.core.parameter name="(" org.eventb.core.comment="repairman" org.eventb.core.identifier="r"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd1" org.eventb.core.predicate="r ∈ repairman"/>
+<org.eventb.core.guard name="-" org.eventb.core.label="grd2" org.eventb.core.predicate="o ∈ owners[{r}]"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd3" org.eventb.core.predicate="status(o) ∈ {ALLOCATED,IN_PROGRESS}"/>
+<org.eventb.core.action name="." org.eventb.core.assignment="status(o) ≔ COMPLETED" org.eventb.core.label="act1"/>
 </org.eventb.core.event>
 </org.eventb.core.machineFile>
