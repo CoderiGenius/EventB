@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.scContextFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd">
 <org.eventb.core.scAxiom name="'" org.eventb.core.label="axm1" org.eventb.core.predicate="STATUS={PENDING,ALLOCATED,IN_PROGRESS,COMPLETED}" org.eventb.core.source="/content/System.buc|org.eventb.core.contextFile#System|org.eventb.core.axiom#1" org.eventb.core.theorem="false"/>
+<org.eventb.core.scCarrierSet name="LOCATION" org.eventb.core.source="/content/System.buc|org.eventb.core.contextFile#System|org.eventb.core.carrierSet#4" org.eventb.core.type="ℙ(LOCATION)"/>
 <org.eventb.core.scCarrierSet name="MESSAGE" org.eventb.core.source="/content/System.buc|org.eventb.core.contextFile#System|org.eventb.core.carrierSet#0" org.eventb.core.type="ℙ(MESSAGE)"/>
 <org.eventb.core.scCarrierSet name="STATUS" org.eventb.core.source="/content/System.buc|org.eventb.core.contextFile#System|org.eventb.core.carrierSet#*" org.eventb.core.type="ℙ(STATUS)"/>
 <org.eventb.core.scCarrierSet name="ORDER" org.eventb.core.source="/content/System.buc|org.eventb.core.contextFile#System|org.eventb.core.carrierSet#(" org.eventb.core.type="ℙ(ORDER)"/>
@@ -9,6 +10,7 @@
 <org.eventb.core.scConstant name="COMPLETED" org.eventb.core.source="/content/System.buc|org.eventb.core.contextFile#System|org.eventb.core.constant#." org.eventb.core.type="STATUS"/>
 <org.eventb.core.scCarrierSet name="REVIEW" org.eventb.core.source="/content/System.buc|org.eventb.core.contextFile#System|org.eventb.core.carrierSet#2" org.eventb.core.type="ℙ(REVIEW)"/>
 <org.eventb.core.scCarrierSet name="CATEGORY" org.eventb.core.source="/content/System.buc|org.eventb.core.contextFile#System|org.eventb.core.carrierSet#)" org.eventb.core.type="ℙ(CATEGORY)"/>
+<org.eventb.core.scCarrierSet name="DESCRIPTION" org.eventb.core.source="/content/System.buc|org.eventb.core.contextFile#System|org.eventb.core.carrierSet#3" org.eventb.core.type="ℙ(DESCRIPTION)"/>
 <org.eventb.core.scConstant name="PENDING" org.eventb.core.source="/content/System.buc|org.eventb.core.contextFile#System|org.eventb.core.constant#+" org.eventb.core.type="STATUS"/>
 <org.eventb.core.scConstant name="IN_PROGRESS" org.eventb.core.source="/content/System.buc|org.eventb.core.contextFile#System|org.eventb.core.constant#-" org.eventb.core.type="STATUS"/>
 </org.eventb.core.scContextFile>

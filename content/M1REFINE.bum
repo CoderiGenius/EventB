@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="description ≔ ∅" org.eventb.core.label="act17"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="location ≔ ∅" org.eventb.core.label="act18"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="orderDesc ≔ ∅" org.eventb.core.label="act19"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="orderLoc ≔ ∅" org.eventb.core.label="act20"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="customerLoc ≔ ∅" org.eventb.core.label="act21"/>
+</org.eventb.core.event>
+<org.eventb.core.refinesMachine name="(" org.eventb.core.target="M1"/>
+<org.eventb.core.seesContext name=")" org.eventb.core.target="System"/>
+<org.eventb.core.variable name="*" org.eventb.core.identifier="description"/>
+<org.eventb.core.variable name="+" org.eventb.core.identifier="location"/>
+<org.eventb.core.variable name="," org.eventb.core.identifier="orderDesc"/>
+<org.eventb.core.variable name="-" org.eventb.core.identifier="orderLoc"/>
+<org.eventb.core.variable name="." org.eventb.core.identifier="customerLoc"/>
+<org.eventb.core.invariant name="/" org.eventb.core.label="inv1" org.eventb.core.predicate="description ⊆ DESCRIPTION"/>
+<org.eventb.core.invariant name="0" org.eventb.core.label="inv2" org.eventb.core.predicate="location ⊆ LOCATION"/>
+<org.eventb.core.invariant name="1" org.eventb.core.label="inv3" org.eventb.core.predicate="orderDesc ∈ order → description"/>
+<org.eventb.core.invariant name="2" org.eventb.core.label="inv4" org.eventb.core.predicate="orderLoc ∈ order → location"/>
+<org.eventb.core.invariant name="3" org.eventb.core.label="inv5" org.eventb.core.predicate="customerLoc ∈ location → customer"/>
+<org.eventb.core.variable name="4" org.eventb.core.identifier="employee"/>
+<org.eventb.core.variable name="5" org.eventb.core.identifier="admin"/>
+<org.eventb.core.variable name="6" org.eventb.core.identifier="manager"/>
+<org.eventb.core.variable name="7" org.eventb.core.identifier="repairman"/>
+<org.eventb.core.variable name="8" org.eventb.core.identifier="customer"/>
+<org.eventb.core.variable name="9" org.eventb.core.identifier="status"/>
+<org.eventb.core.variable name=":" org.eventb.core.identifier="message_sender"/>
+<org.eventb.core.variable name=";" org.eventb.core.identifier="message_receiver"/>
+<org.eventb.core.variable name="=" org.eventb.core.identifier="message"/>
+<org.eventb.core.variable name="&gt;" org.eventb.core.identifier="category"/>
+<org.eventb.core.variable name="?" org.eventb.core.identifier="owners"/>
+<org.eventb.core.variable name="@" org.eventb.core.identifier="order"/>
+<org.eventb.core.variable name="A" org.eventb.core.identifier="orderCategory"/>
+<org.eventb.core.variable name="B" org.eventb.core.identifier="orderCustomer"/>
+<org.eventb.core.variable name="C" org.eventb.core.identifier="review"/>
+<org.eventb.core.variable name="D" org.eventb.core.identifier="orderReview"/>
+<org.eventb.core.event name="E" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="adminAddManager">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="adminAddManager"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="F" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="adminAddRepairman">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="adminAddRepairman"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="G" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="adminAddAdmin">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="adminAddAdmin"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="H" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="managerAddRepairman">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="managerAddRepairman"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="I" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="AddJobCategory">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="AddJobCategory"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="J" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="ViewCompeletedJob">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="ViewCompeletedJob"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="K" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="SendMessageToEmployee">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="SendMessageToEmployee"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="L" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="ViewUncompletedJob">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="ViewUncompletedJob"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="M" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="AllocateJob">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="AllocateJob"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="N" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="viewAllocatedJobs">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="viewAllocatedJobs"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="O" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="completeOrder">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="completeOrder"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="P" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="SubmitNewRepairRequest">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="SubmitNewRepairRequest"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="des"/>
+<org.eventb.core.parameter name=")" org.eventb.core.identifier="loc"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd4" org.eventb.core.predicate="des ∈ DESCRIPTION ∖ description"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd6" org.eventb.core.predicate="loc ∈ location"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd5" org.eventb.core.predicate="cus = customerLoc(loc)"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="orderDesc(ord) ≔ des" org.eventb.core.label="act5"/>
+<org.eventb.core.action name="." org.eventb.core.assignment="orderLoc(ord) ≔ loc" org.eventb.core.label="act6"/>
+<org.eventb.core.guard name="/" org.eventb.core.label="grd7" org.eventb.core.predicate="customerLoc ▷ {cus} ≠ ∅"/>
+<org.eventb.core.action name="0" org.eventb.core.assignment="description ≔ description ∪ {des}" org.eventb.core.label="act7"/>
+<org.eventb.core.action name="1" org.eventb.core.assignment="location ≔ location ∪ {loc}" org.eventb.core.label="act8"/>
+<org.eventb.core.action name="2" org.eventb.core.assignment="customerLoc(loc) ≔ cus" org.eventb.core.label="act9"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="Q" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="SubmitReview">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="SubmitReview"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="R" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="customerRegister">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="customerRegister"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="S" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="addNewLocation">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="cus"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="loc"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="cus ∈ customer"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="loc ∈ LOCATION ∖ location"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="location ≔ location ∪ {loc}" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="customerLoc(loc) ≔ cus" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="T" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="cusModifyDesc">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="cus"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="ord"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd1" org.eventb.core.predicate="cus ∈ customer"/>
+<org.eventb.core.guard name="/" org.eventb.core.label="grd2" org.eventb.core.predicate="des ∈ DESCRIPTION ∖ description"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd3" org.eventb.core.predicate="ord ∈ order"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd4" org.eventb.core.predicate="orderCustomer(ord) = cus"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="orderDesc(ord) ≔ des" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="0" org.eventb.core.assignment="description ≔ description ∪ {des}" org.eventb.core.label="act2"/>
+<org.eventb.core.parameter name="1" org.eventb.core.identifier="des"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="U" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="repairmanModifyDesc">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="r"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="ord"/>
+<org.eventb.core.parameter name=")" org.eventb.core.identifier="des"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd1" org.eventb.core.predicate="r ∈ repairman"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="des ∈ DESCRIPTION ∖ description"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="ord ∈ order"/>
+<org.eventb.core.guard name="-" org.eventb.core.label="grd4" org.eventb.core.predicate="ord ∈ owners[{r}]"/>
+<org.eventb.core.action name="." org.eventb.core.assignment="orderDesc ≔ orderDesc  {ord ↦ des}" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="/" org.eventb.core.assignment="description ≔ description ∪ {des}" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+</org.eventb.core.machineFile>

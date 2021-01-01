@@ -105,7 +105,7 @@
 <org.eventb.core.action name="/" org.eventb.core.assignment="message_receiver(m) ≔ e" org.eventb.core.label="act2"/>
 <org.eventb.core.action name="0" org.eventb.core.assignment="message ≔ message ∪ {m}" org.eventb.core.label="act3"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="S" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ViewUnfinishedJob">
+<org.eventb.core.event name="S" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ViewUncompletedJob">
 <org.eventb.core.parameter name="'" org.eventb.core.identifier="o"/>
 <org.eventb.core.parameter name="(" org.eventb.core.identifier="r"/>
 <org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="o ∈ admin ∪ manager"/>
@@ -165,5 +165,10 @@
 <org.eventb.core.guard name="-" org.eventb.core.label="grd4" org.eventb.core.predicate="status(o) = COMPLETED"/>
 <org.eventb.core.action name="." org.eventb.core.assignment="review ≔ review ∪ {r}" org.eventb.core.label="act1"/>
 <org.eventb.core.action name="/" org.eventb.core.assignment="orderReview(o) ≔ r" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="a" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="customerRegister">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="cus"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="cus ∈ USER ∖ customer"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="customer ≔ customer ∪ {cus}" org.eventb.core.label="act1"/>
 </org.eventb.core.event>
 </org.eventb.core.machineFile>
