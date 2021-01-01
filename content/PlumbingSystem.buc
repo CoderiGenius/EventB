@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" version="3">
+<org.eventb.core.carrierSet name="'" org.eventb.core.identifier="USERS"/>
+<org.eventb.core.carrierSet name="(" org.eventb.core.identifier="ORDERS"/>
+<org.eventb.core.axiom name="*" org.eventb.core.label="axim1" org.eventb.core.predicate="partition(STATUS,ALLOCATED,IN_PROGRESS,COMPLETED,PENDING)"/>
+<org.eventb.core.carrierSet name="," org.eventb.core.identifier="STATUS"/>
+<org.eventb.core.constant name="-" org.eventb.core.identifier="ALLOCATED"/>
+<org.eventb.core.constant name="." org.eventb.core.identifier="IN_PROGRESS"/>
+<org.eventb.core.constant name="/" org.eventb.core.identifier="COMPLETED"/>
+<org.eventb.core.constant name="0" org.eventb.core.identifier="PENDING"/>
+</org.eventb.core.contextFile>

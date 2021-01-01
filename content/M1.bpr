@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.prFile version="1">
+<org.eventb.core.prProof name="INITIALISATION/inv2/INV" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(Order_Status,PENDING,ALLOCATED,IN_PROGRESS,COMPLETED))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p0" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p1,p2,p3,p4,p5,p6,p7"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7"/>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="PENDING∩COMPLETED=(∅ ⦂ ℙ(Order_Status))">
+<org.eventb.core.prIdent name="COMPLETED" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="Order_Status" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="PENDING" org.eventb.core.type="ℙ(Order_Status)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="ALLOCATED∩IN_PROGRESS=(∅ ⦂ ℙ(Order_Status))">
+<org.eventb.core.prIdent name="ALLOCATED" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="IN_PROGRESS" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="Order_Status" org.eventb.core.type="ℙ(Order_Status)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="PENDING∩ALLOCATED=(∅ ⦂ ℙ(Order_Status))">
+<org.eventb.core.prIdent name="ALLOCATED" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="Order_Status" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="PENDING" org.eventb.core.type="ℙ(Order_Status)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="Order_Status=PENDING∪ALLOCATED∪IN_PROGRESS∪COMPLETED">
+<org.eventb.core.prIdent name="ALLOCATED" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="COMPLETED" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="IN_PROGRESS" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="Order_Status" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="PENDING" org.eventb.core.type="ℙ(Order_Status)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="IN_PROGRESS∩COMPLETED=(∅ ⦂ ℙ(Order_Status))">
+<org.eventb.core.prIdent name="COMPLETED" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="IN_PROGRESS" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="Order_Status" org.eventb.core.type="ℙ(Order_Status)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="partition(Order_Status,PENDING,ALLOCATED,IN_PROGRESS,COMPLETED)">
+<org.eventb.core.prIdent name="ALLOCATED" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="COMPLETED" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="IN_PROGRESS" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="Order_Status" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="PENDING" org.eventb.core.type="ℙ(Order_Status)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="PENDING∩IN_PROGRESS=(∅ ⦂ ℙ(Order_Status))">
+<org.eventb.core.prIdent name="IN_PROGRESS" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="Order_Status" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="PENDING" org.eventb.core.type="ℙ(Order_Status)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="ALLOCATED∩COMPLETED=(∅ ⦂ ℙ(Order_Status))">
+<org.eventb.core.prIdent name="ALLOCATED" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="COMPLETED" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="Order_Status" org.eventb.core.type="ℙ(Order_Status)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="INITIALISATION/inv3/INV" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(Order_Status,PENDING,ALLOCATED,IN_PROGRESS,COMPLETED))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p0" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p1,p2,p3,p4,p5,p6,p7"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7"/>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="PENDING∩COMPLETED=(∅ ⦂ ℙ(Order_Status))">
+<org.eventb.core.prIdent name="COMPLETED" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="Order_Status" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="PENDING" org.eventb.core.type="ℙ(Order_Status)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="ALLOCATED∩IN_PROGRESS=(∅ ⦂ ℙ(Order_Status))">
+<org.eventb.core.prIdent name="ALLOCATED" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="IN_PROGRESS" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="Order_Status" org.eventb.core.type="ℙ(Order_Status)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="PENDING∩ALLOCATED=(∅ ⦂ ℙ(Order_Status))">
+<org.eventb.core.prIdent name="ALLOCATED" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="Order_Status" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="PENDING" org.eventb.core.type="ℙ(Order_Status)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="Order_Status=PENDING∪ALLOCATED∪IN_PROGRESS∪COMPLETED">
+<org.eventb.core.prIdent name="ALLOCATED" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="COMPLETED" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="IN_PROGRESS" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="Order_Status" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="PENDING" org.eventb.core.type="ℙ(Order_Status)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="IN_PROGRESS∩COMPLETED=(∅ ⦂ ℙ(Order_Status))">
+<org.eventb.core.prIdent name="COMPLETED" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="IN_PROGRESS" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="Order_Status" org.eventb.core.type="ℙ(Order_Status)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="partition(Order_Status,PENDING,ALLOCATED,IN_PROGRESS,COMPLETED)">
+<org.eventb.core.prIdent name="ALLOCATED" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="COMPLETED" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="IN_PROGRESS" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="Order_Status" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="PENDING" org.eventb.core.type="ℙ(Order_Status)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="PENDING∩IN_PROGRESS=(∅ ⦂ ℙ(Order_Status))">
+<org.eventb.core.prIdent name="IN_PROGRESS" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="Order_Status" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="PENDING" org.eventb.core.type="ℙ(Order_Status)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="ALLOCATED∩COMPLETED=(∅ ⦂ ℙ(Order_Status))">
+<org.eventb.core.prIdent name="ALLOCATED" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="COMPLETED" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="Order_Status" org.eventb.core.type="ℙ(Order_Status)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="INITIALISATION/inv4/INV" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(Order_Status,PENDING,ALLOCATED,IN_PROGRESS,COMPLETED))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p0" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p1,p2,p3,p4,p5,p6,p7"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7"/>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="PENDING∩COMPLETED=(∅ ⦂ ℙ(Order_Status))">
+<org.eventb.core.prIdent name="COMPLETED" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="Order_Status" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="PENDING" org.eventb.core.type="ℙ(Order_Status)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="ALLOCATED∩IN_PROGRESS=(∅ ⦂ ℙ(Order_Status))">
+<org.eventb.core.prIdent name="ALLOCATED" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="IN_PROGRESS" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="Order_Status" org.eventb.core.type="ℙ(Order_Status)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="PENDING∩ALLOCATED=(∅ ⦂ ℙ(Order_Status))">
+<org.eventb.core.prIdent name="ALLOCATED" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="Order_Status" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="PENDING" org.eventb.core.type="ℙ(Order_Status)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="Order_Status=PENDING∪ALLOCATED∪IN_PROGRESS∪COMPLETED">
+<org.eventb.core.prIdent name="ALLOCATED" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="COMPLETED" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="IN_PROGRESS" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="Order_Status" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="PENDING" org.eventb.core.type="ℙ(Order_Status)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="IN_PROGRESS∩COMPLETED=(∅ ⦂ ℙ(Order_Status))">
+<org.eventb.core.prIdent name="COMPLETED" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="IN_PROGRESS" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="Order_Status" org.eventb.core.type="ℙ(Order_Status)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="partition(Order_Status,PENDING,ALLOCATED,IN_PROGRESS,COMPLETED)">
+<org.eventb.core.prIdent name="ALLOCATED" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="COMPLETED" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="IN_PROGRESS" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="Order_Status" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="PENDING" org.eventb.core.type="ℙ(Order_Status)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="PENDING∩IN_PROGRESS=(∅ ⦂ ℙ(Order_Status))">
+<org.eventb.core.prIdent name="IN_PROGRESS" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="Order_Status" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="PENDING" org.eventb.core.type="ℙ(Order_Status)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="ALLOCATED∩COMPLETED=(∅ ⦂ ℙ(Order_Status))">
+<org.eventb.core.prIdent name="ALLOCATED" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="COMPLETED" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="Order_Status" org.eventb.core.type="ℙ(Order_Status)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="INITIALISATION/inv5/INV" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(Order_Status,PENDING,ALLOCATED,IN_PROGRESS,COMPLETED))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p0" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p1,p2,p3,p4,p5,p6,p7"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7"/>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="PENDING∩COMPLETED=(∅ ⦂ ℙ(Order_Status))">
+<org.eventb.core.prIdent name="COMPLETED" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="Order_Status" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="PENDING" org.eventb.core.type="ℙ(Order_Status)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="ALLOCATED∩IN_PROGRESS=(∅ ⦂ ℙ(Order_Status))">
+<org.eventb.core.prIdent name="ALLOCATED" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="IN_PROGRESS" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="Order_Status" org.eventb.core.type="ℙ(Order_Status)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="PENDING∩ALLOCATED=(∅ ⦂ ℙ(Order_Status))">
+<org.eventb.core.prIdent name="ALLOCATED" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="Order_Status" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="PENDING" org.eventb.core.type="ℙ(Order_Status)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="Order_Status=PENDING∪ALLOCATED∪IN_PROGRESS∪COMPLETED">
+<org.eventb.core.prIdent name="ALLOCATED" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="COMPLETED" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="IN_PROGRESS" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="Order_Status" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="PENDING" org.eventb.core.type="ℙ(Order_Status)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="IN_PROGRESS∩COMPLETED=(∅ ⦂ ℙ(Order_Status))">
+<org.eventb.core.prIdent name="COMPLETED" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="IN_PROGRESS" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="Order_Status" org.eventb.core.type="ℙ(Order_Status)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="partition(Order_Status,PENDING,ALLOCATED,IN_PROGRESS,COMPLETED)">
+<org.eventb.core.prIdent name="ALLOCATED" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="COMPLETED" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="IN_PROGRESS" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="Order_Status" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="PENDING" org.eventb.core.type="ℙ(Order_Status)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="PENDING∩IN_PROGRESS=(∅ ⦂ ℙ(Order_Status))">
+<org.eventb.core.prIdent name="IN_PROGRESS" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="Order_Status" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="PENDING" org.eventb.core.type="ℙ(Order_Status)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="ALLOCATED∩COMPLETED=(∅ ⦂ ℙ(Order_Status))">
+<org.eventb.core.prIdent name="ALLOCATED" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="COMPLETED" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="Order_Status" org.eventb.core.type="ℙ(Order_Status)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="INITIALISATION/inv6/INV" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(Order_Status,PENDING,ALLOCATED,IN_PROGRESS,COMPLETED))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p0" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p1,p2,p3,p4,p5,p6,p7"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7"/>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="PENDING∩COMPLETED=(∅ ⦂ ℙ(Order_Status))">
+<org.eventb.core.prIdent name="COMPLETED" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="Order_Status" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="PENDING" org.eventb.core.type="ℙ(Order_Status)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="ALLOCATED∩IN_PROGRESS=(∅ ⦂ ℙ(Order_Status))">
+<org.eventb.core.prIdent name="ALLOCATED" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="IN_PROGRESS" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="Order_Status" org.eventb.core.type="ℙ(Order_Status)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="PENDING∩ALLOCATED=(∅ ⦂ ℙ(Order_Status))">
+<org.eventb.core.prIdent name="ALLOCATED" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="Order_Status" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="PENDING" org.eventb.core.type="ℙ(Order_Status)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="Order_Status=PENDING∪ALLOCATED∪IN_PROGRESS∪COMPLETED">
+<org.eventb.core.prIdent name="ALLOCATED" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="COMPLETED" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="IN_PROGRESS" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="Order_Status" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="PENDING" org.eventb.core.type="ℙ(Order_Status)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="IN_PROGRESS∩COMPLETED=(∅ ⦂ ℙ(Order_Status))">
+<org.eventb.core.prIdent name="COMPLETED" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="IN_PROGRESS" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="Order_Status" org.eventb.core.type="ℙ(Order_Status)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="partition(Order_Status,PENDING,ALLOCATED,IN_PROGRESS,COMPLETED)">
+<org.eventb.core.prIdent name="ALLOCATED" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="COMPLETED" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="IN_PROGRESS" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="Order_Status" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="PENDING" org.eventb.core.type="ℙ(Order_Status)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="PENDING∩IN_PROGRESS=(∅ ⦂ ℙ(Order_Status))">
+<org.eventb.core.prIdent name="IN_PROGRESS" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="Order_Status" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="PENDING" org.eventb.core.type="ℙ(Order_Status)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="ALLOCATED∩COMPLETED=(∅ ⦂ ℙ(Order_Status))">
+<org.eventb.core.prIdent name="ALLOCATED" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="COMPLETED" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="Order_Status" org.eventb.core.type="ℙ(Order_Status)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="INITIALISATION/inv7/INV" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(Order_Status,PENDING,ALLOCATED,IN_PROGRESS,COMPLETED))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p0" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p1,p2,p3,p4,p5,p6,p7"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7"/>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="PENDING∩COMPLETED=(∅ ⦂ ℙ(Order_Status))">
+<org.eventb.core.prIdent name="COMPLETED" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="Order_Status" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="PENDING" org.eventb.core.type="ℙ(Order_Status)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="ALLOCATED∩IN_PROGRESS=(∅ ⦂ ℙ(Order_Status))">
+<org.eventb.core.prIdent name="ALLOCATED" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="IN_PROGRESS" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="Order_Status" org.eventb.core.type="ℙ(Order_Status)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="PENDING∩ALLOCATED=(∅ ⦂ ℙ(Order_Status))">
+<org.eventb.core.prIdent name="ALLOCATED" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="Order_Status" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="PENDING" org.eventb.core.type="ℙ(Order_Status)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="Order_Status=PENDING∪ALLOCATED∪IN_PROGRESS∪COMPLETED">
+<org.eventb.core.prIdent name="ALLOCATED" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="COMPLETED" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="IN_PROGRESS" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="Order_Status" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="PENDING" org.eventb.core.type="ℙ(Order_Status)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="IN_PROGRESS∩COMPLETED=(∅ ⦂ ℙ(Order_Status))">
+<org.eventb.core.prIdent name="COMPLETED" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="IN_PROGRESS" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="Order_Status" org.eventb.core.type="ℙ(Order_Status)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="partition(Order_Status,PENDING,ALLOCATED,IN_PROGRESS,COMPLETED)">
+<org.eventb.core.prIdent name="ALLOCATED" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="COMPLETED" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="IN_PROGRESS" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="Order_Status" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="PENDING" org.eventb.core.type="ℙ(Order_Status)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="PENDING∩IN_PROGRESS=(∅ ⦂ ℙ(Order_Status))">
+<org.eventb.core.prIdent name="IN_PROGRESS" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="Order_Status" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="PENDING" org.eventb.core.type="ℙ(Order_Status)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="ALLOCATED∩COMPLETED=(∅ ⦂ ℙ(Order_Status))">
+<org.eventb.core.prIdent name="ALLOCATED" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="COMPLETED" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="Order_Status" org.eventb.core.type="ℙ(Order_Status)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="INITIALISATION/inv8/INV" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(Order_Status,PENDING,ALLOCATED,IN_PROGRESS,COMPLETED))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p0" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p1,p2,p3,p4,p5,p6,p7"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7"/>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="PENDING∩COMPLETED=(∅ ⦂ ℙ(Order_Status))">
+<org.eventb.core.prIdent name="COMPLETED" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="Order_Status" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="PENDING" org.eventb.core.type="ℙ(Order_Status)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="ALLOCATED∩IN_PROGRESS=(∅ ⦂ ℙ(Order_Status))">
+<org.eventb.core.prIdent name="ALLOCATED" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="IN_PROGRESS" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="Order_Status" org.eventb.core.type="ℙ(Order_Status)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="PENDING∩ALLOCATED=(∅ ⦂ ℙ(Order_Status))">
+<org.eventb.core.prIdent name="ALLOCATED" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="Order_Status" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="PENDING" org.eventb.core.type="ℙ(Order_Status)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="Order_Status=PENDING∪ALLOCATED∪IN_PROGRESS∪COMPLETED">
+<org.eventb.core.prIdent name="ALLOCATED" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="COMPLETED" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="IN_PROGRESS" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="Order_Status" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="PENDING" org.eventb.core.type="ℙ(Order_Status)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="IN_PROGRESS∩COMPLETED=(∅ ⦂ ℙ(Order_Status))">
+<org.eventb.core.prIdent name="COMPLETED" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="IN_PROGRESS" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="Order_Status" org.eventb.core.type="ℙ(Order_Status)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="partition(Order_Status,PENDING,ALLOCATED,IN_PROGRESS,COMPLETED)">
+<org.eventb.core.prIdent name="ALLOCATED" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="COMPLETED" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="IN_PROGRESS" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="Order_Status" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="PENDING" org.eventb.core.type="ℙ(Order_Status)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="PENDING∩IN_PROGRESS=(∅ ⦂ ℙ(Order_Status))">
+<org.eventb.core.prIdent name="IN_PROGRESS" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="Order_Status" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="PENDING" org.eventb.core.type="ℙ(Order_Status)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="ALLOCATED∩COMPLETED=(∅ ⦂ ℙ(Order_Status))">
+<org.eventb.core.prIdent name="ALLOCATED" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="COMPLETED" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.prIdent name="Order_Status" org.eventb.core.type="ℙ(Order_Status)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+</org.eventb.core.prProof>
+</org.eventb.core.prFile>

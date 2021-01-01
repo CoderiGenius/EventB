@@ -1,0 +1,23 @@
+- An admin/manager adds a new employee to the system
+  
+  - 分情况吗，比如admin加新manager，admin加repaireman，manager加repaireman
+
+- An admin/manager adds a new job category to the system
+  
+  - 一个方法就行
+
+- An admin/manager viewing a list of jobs completed by an employee
+
+- An admin/manager sending a message to an employee while attending a repair job
+
+- An Admin/manager viewing a list of pending, allocated, and in-progress jobs
+
+- An admin/manager allocating a new job to one or more employee(s)
+
+- An employee viewing the list of all their allocated jobs
+
+- An employee marks a previously allocated job as completed
+
+- A registered customer submits a new repair request
+
+- A registered customer adding a review for a completed job that they requested
