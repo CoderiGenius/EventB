@@ -13,6 +13,8 @@
 <org.eventb.core.action name="0" org.eventb.core.assignment="message ≔ ∅" org.eventb.core.label="act10"/>
 <org.eventb.core.action name="1" org.eventb.core.assignment="category ≔ ∅" org.eventb.core.label="act11"/>
 <org.eventb.core.action name="2" org.eventb.core.assignment="order ≔ ∅" org.eventb.core.label="act12"/>
+<org.eventb.core.action name="3" org.eventb.core.assignment="orderCategory ≔∅" org.eventb.core.label="act13"/>
+<org.eventb.core.action name="4" org.eventb.core.assignment="orderCustomer ≔ ∅" org.eventb.core.label="act14"/>
 </org.eventb.core.event>
 <org.eventb.core.variable name=")" org.eventb.core.identifier="employee"/>
 <org.eventb.core.variable name="*" org.eventb.core.identifier="admin"/>
@@ -130,5 +132,21 @@
 <org.eventb.core.guard name="-" org.eventb.core.label="grd2" org.eventb.core.predicate="o ∈ owners[{r}]"/>
 <org.eventb.core.guard name="*" org.eventb.core.label="grd3" org.eventb.core.predicate="status(o) ∈ {ALLOCATED,IN_PROGRESS}"/>
 <org.eventb.core.action name="." org.eventb.core.assignment="status(o) ≔ COMPLETED" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="W" org.eventb.core.identifier="orderCategory"/>
+<org.eventb.core.invariant name="X" org.eventb.core.label="inv17" org.eventb.core.predicate="orderCategory ∈ order → category"/>
+<org.eventb.core.variable name="Y" org.eventb.core.identifier="orderCustomer"/>
+<org.eventb.core.invariant name="Z" org.eventb.core.label="inv18" org.eventb.core.predicate="orderCustomer ∈ order → customer"/>
+<org.eventb.core.event name="[" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="SubmitNewRepairRequest">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="cus"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="ord"/>
+<org.eventb.core.parameter name=")" org.eventb.core.identifier="cate"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd1" org.eventb.core.predicate="cus ∈ customer"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="cate ∈ category"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="ord ∈ ORDER ∖ order"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="order ≔ order ∪ {ord}" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="." org.eventb.core.assignment="status(ord) ≔ PENDING" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="/" org.eventb.core.assignment="orderCategory(ord) ≔ cate" org.eventb.core.label="act3"/>
+<org.eventb.core.action name="0" org.eventb.core.assignment="orderCustomer(ord) ≔ cus" org.eventb.core.label="act4"/>
 </org.eventb.core.event>
 </org.eventb.core.machineFile>
