@@ -9,4 +9,7 @@
 <org.eventb.core.constant name="-" org.eventb.core.identifier="IN_PROGRESS"/>
 <org.eventb.core.constant name="." org.eventb.core.identifier="COMPLETED"/>
 <org.eventb.core.axiom name="/" org.eventb.core.label="axm1" org.eventb.core.predicate="partition(Order_Status,PENDING,ALLOCATED,IN_PROGRESS,COMPLETED)"/>
+<org.eventb.core.carrierSet name="0" org.eventb.core.identifier="set1"/>
+<org.eventb.core.carrierSet name="1" org.eventb.core.identifier="set2"/>
+<org.eventb.core.carrierSet name="2" org.eventb.core.identifier="set3"/>
 </org.eventb.core.contextFile>

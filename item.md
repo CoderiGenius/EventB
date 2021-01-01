@@ -11,3 +11,6 @@
 - An employee marks a previously allocated job as completed
 - A registered customer submits a new repair request
 - A registered customer adding a review for a completed job that they requested
+
+
+员工和用户可以有交集
