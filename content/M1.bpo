@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="80">
+<org.eventb.core.poFile org.eventb.core.poStamp="81">
 <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="55">
 <org.eventb.core.poIdentifier name="MESSAGE" org.eventb.core.type="ℙ(MESSAGE)"/>
 <org.eventb.core.poIdentifier name="STATUS" org.eventb.core.type="ℙ(STATUS)"/>
@@ -424,6 +424,14 @@
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="o∈admin∪manager" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#R|org.eventb.core.guard#*"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="m∈MESSAGE ∖ message" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#R|org.eventb.core.guard#-"/>
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="IN_PROGRESS⊆ran(owners[{e}] ◁ status)" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#R|org.eventb.core.guard#+"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTmessage_receive{" org.eventb.core.parentSet="/content/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="r" org.eventb.core.type="ℙ(ORDER)"/>
+<org.eventb.core.poIdentifier name="o" org.eventb.core.type="USER"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPmessage_receive{" org.eventb.core.parentSet="/content/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTIDENTmessage_receive{" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="o∈admin∪manager" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#S|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="r=dom(status ⩥ COMPLETED)" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#S|org.eventb.core.guard#*"/>
 </org.eventb.core.poPredicateSet>
 <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/content/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="59">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="employee⊆USER" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#-"/>
