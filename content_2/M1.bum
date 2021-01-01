@@ -11,7 +11,7 @@
     <org.eventb.core.variable name=")" org.eventb.core.identifier="EMPLOYEE"/>
     <org.eventb.core.variable name="*" org.eventb.core.identifier="ADMIN"/>
     <org.eventb.core.variable name="+" org.eventb.core.identifier="MANAGER"/>
-    <org.eventb.core.variable name="=" org.eventb.core.identifier="CATEGORY"/>
+    <org.eventb.core.variable name="=" org.eventb.core.comment="zhou" org.eventb.core.identifier="CATEGORY"/>
     <org.eventb.core.variable name="," org.eventb.core.identifier="REPAIRMEN"/>
     <org.eventb.core.invariant name="-" org.eventb.core.label="inv1" org.eventb.core.predicate="employee ⊆ User"/>
     <org.eventb.core.invariant name="." org.eventb.core.label="inv2" org.eventb.core.predicate="admin ⊆ employee"/>
@@ -51,11 +51,19 @@
     </org.eventb.core.event>
     <org.eventb.core.variable name="6" org.eventb.core.identifier="CUSTOMER"/>
     <org.eventb.core.invariant name="7" org.eventb.core.label="inv9" org.eventb.core.predicate="customer ⊆ User"/>
-    <org.eventb.core.event name=";" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AddJobCategory">
+    <org.eventb.core.event name=";" org.eventb.core.comment="zhou" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AddJobCategory">
         <org.eventb.core.parameter name="'" org.eventb.core.identifier="c_u"/>
         <org.eventb.core.parameter name="(" org.eventb.core.identifier="category"/>
         <org.eventb.core.guard name=")" org.eventb.core.label="c_u ∈ admin ∪ manager" org.eventb.core.predicate="⊤"/>
         <org.eventb.core.guard name="*" org.eventb.core.label="category ∉ CATEGORY" org.eventb.core.predicate="⊤"/>
         <org.eventb.core.action name="+" org.eventb.core.assignment="" org.eventb.core.label="CATEGORY≔category"/>
     </org.eventb.core.event>
+    <org.eventb.core.event name="&gt;" org.eventb.core.comment="zhou" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ViewCompeletedJob">
+        <org.eventb.core.parameter name="'" org.eventb.core.identifier="c_u"/>
+        <org.eventb.core.guard name="(" org.eventb.core.label="c_u ∈ MANAGER ∪ ADMIN" org.eventb.core.predicate="⊤"/>
+        <org.eventb.core.action name=")" org.eventb.core.assignment="" org.eventb.core.comment="zhou" org.eventb.core.label="result ≔ dom(status ▷ {COMPELETE})"/>
+        <org.eventb.core.parameter name="*" org.eventb.core.identifier="!result"/>
+    </org.eventb.core.event>
+    <org.eventb.core.invariant name="?" org.eventb.core.comment="zhou" org.eventb.core.label="inv10" org.eventb.core.predicate="order ⊆ Order"/>
+    <org.eventb.core.invariant name="@" org.eventb.core.comment="zhou" org.eventb.core.label="inv11" org.eventb.core.predicate="status ⊆ order −&gt; STATUS"/>
 </org.eventb.core.machineFile>
