@@ -90,4 +90,15 @@
 <org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="rm ∈ repairman"/>
 <org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="result = dom((owners[{rm}] ◁ status) ▷ COMPLETED)"/>
 </org.eventb.core.event>
+<org.eventb.core.event name="R" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="SendMessageToEmployee">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="o"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="m"/>
+<org.eventb.core.parameter name=")" org.eventb.core.identifier="e"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd1" org.eventb.core.predicate="o ∈ admin ∪ manager"/>
+<org.eventb.core.guard name="-" org.eventb.core.label="grd2" org.eventb.core.predicate="m ∈ MESSAGE ∖ message"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd3" org.eventb.core.predicate="IN_PROGRESS ⊆ ran(owners[{e}] ◁ status)"/>
+<org.eventb.core.action name="." org.eventb.core.assignment="message_sender(m) ≔ o" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="/" org.eventb.core.assignment="message_receiver(m) ≔ e" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="0" org.eventb.core.assignment="message ≔ message ∪ {m}" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
 </org.eventb.core.machineFile>

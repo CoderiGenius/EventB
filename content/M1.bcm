@@ -102,4 +102,15 @@
 <org.eventb.core.scParameter name="result" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#Q|org.eventb.core.parameter#(" org.eventb.core.type="ℙ(ORDER)"/>
 <org.eventb.core.scParameter name="rm" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#Q|org.eventb.core.parameter#)" org.eventb.core.type="USER"/>
 </org.eventb.core.scEvent>
+<org.eventb.core.scEvent name="message_receivez" org.eventb.core.accurate="true" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="SendMessageToEmployee" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#R">
+<org.eventb.core.scGuard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="o∈admin∪manager" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#R|org.eventb.core.guard#*" org.eventb.core.theorem="false"/>
+<org.eventb.core.scGuard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="m∈MESSAGE ∖ message" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#R|org.eventb.core.guard#-" org.eventb.core.theorem="false"/>
+<org.eventb.core.scGuard name=")" org.eventb.core.label="grd3" org.eventb.core.predicate="IN_PROGRESS⊆ran(owners[{e}] ◁ status)" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#R|org.eventb.core.guard#+" org.eventb.core.theorem="false"/>
+<org.eventb.core.scParameter name="e" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#R|org.eventb.core.parameter#)" org.eventb.core.type="USER"/>
+<org.eventb.core.scParameter name="m" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#R|org.eventb.core.parameter#(" org.eventb.core.type="MESSAGE"/>
+<org.eventb.core.scParameter name="o" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#R|org.eventb.core.parameter#'" org.eventb.core.type="USER"/>
+<org.eventb.core.scAction name="p" org.eventb.core.assignment="message_sender ≔ message_sender{m ↦ o}" org.eventb.core.label="act1" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#R|org.eventb.core.action#."/>
+<org.eventb.core.scAction name="q" org.eventb.core.assignment="message_receiver ≔ message_receiver{m ↦ e}" org.eventb.core.label="act2" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#R|org.eventb.core.action#\/"/>
+<org.eventb.core.scAction name="r" org.eventb.core.assignment="message ≔ message∪{m}" org.eventb.core.label="act3" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#R|org.eventb.core.action#0"/>
+</org.eventb.core.scEvent>
 </org.eventb.core.scMachineFile>
