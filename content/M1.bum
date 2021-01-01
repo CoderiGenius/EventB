@@ -80,5 +80,14 @@
 <org.eventb.core.parameter name="(" org.eventb.core.comment="category" org.eventb.core.identifier="c"/>
 <org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="o ∈ admin ∪ manager"/>
 <org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="c ∈ CATEGORY ∖ category"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="category ≔ category ∪ {c}" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="Q" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ViewCompeletedJob">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="o"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="result"/>
+<org.eventb.core.parameter name=")" org.eventb.core.comment="repairman" org.eventb.core.identifier="rm"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd1" org.eventb.core.predicate="o ∈ admin ∪ manager"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="rm ∈ repairman"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="result = dom((owners[{rm}] ◁ status) ▷ COMPLETED)"/>
 </org.eventb.core.event>
 </org.eventb.core.machineFile>

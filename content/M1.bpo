@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="63">
+<org.eventb.core.poFile org.eventb.core.poStamp="76">
 <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="55">
 <org.eventb.core.poIdentifier name="MESSAGE" org.eventb.core.type="ℙ(MESSAGE)"/>
 <org.eventb.core.poIdentifier name="STATUS" org.eventb.core.type="ℙ(STATUS)"/>
@@ -377,13 +377,24 @@
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="u∈USER ∖ employee" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#?|org.eventb.core.guard#)"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="o∈manager" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#?|org.eventb.core.guard#*"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTIDENTmessage_receivex" org.eventb.core.parentSet="/content/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="EVTIDENTmessage_receivex" org.eventb.core.parentSet="/content/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="64">
 <org.eventb.core.poIdentifier name="c" org.eventb.core.type="CATEGORY"/>
+<org.eventb.core.poIdentifier name="category'" org.eventb.core.type="ℙ(CATEGORY)"/>
 <org.eventb.core.poIdentifier name="o" org.eventb.core.type="USER"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPmessage_receivex" org.eventb.core.parentSet="/content/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTIDENTmessage_receivex" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="EVTALLHYPmessage_receivex" org.eventb.core.parentSet="/content/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTIDENTmessage_receivex" org.eventb.core.poStamp="64">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="o∈admin∪manager" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#P|org.eventb.core.guard#)"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="c∈CATEGORY ∖ category" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#P|org.eventb.core.guard#*"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTmessage_receivey" org.eventb.core.parentSet="/content/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="76">
+<org.eventb.core.poIdentifier name="result" org.eventb.core.type="ℙ(ORDER)"/>
+<org.eventb.core.poIdentifier name="o" org.eventb.core.type="USER"/>
+<org.eventb.core.poIdentifier name="rm" org.eventb.core.type="USER"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPmessage_receivey" org.eventb.core.parentSet="/content/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTIDENTmessage_receivey" org.eventb.core.poStamp="76">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="o∈admin∪manager" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#Q|org.eventb.core.guard#*"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="rm∈repairman" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#Q|org.eventb.core.guard#,"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="result=dom(owners[{rm}] ◁ status ▷ COMPLETED)" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#Q|org.eventb.core.guard#+"/>
 </org.eventb.core.poPredicateSet>
 <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/content/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="59">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="employee⊆USER" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#-"/>

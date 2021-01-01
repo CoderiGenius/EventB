@@ -92,5 +92,14 @@
 <org.eventb.core.scGuard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="c∈CATEGORY ∖ category" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#P|org.eventb.core.guard#*" org.eventb.core.theorem="false"/>
 <org.eventb.core.scParameter name="c" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#P|org.eventb.core.parameter#(" org.eventb.core.type="CATEGORY"/>
 <org.eventb.core.scParameter name="o" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#P|org.eventb.core.parameter#'" org.eventb.core.type="USER"/>
+<org.eventb.core.scAction name="p" org.eventb.core.assignment="category ≔ category∪{c}" org.eventb.core.label="act1" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#P|org.eventb.core.action#+"/>
+</org.eventb.core.scEvent>
+<org.eventb.core.scEvent name="message_receivey" org.eventb.core.accurate="true" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ViewCompeletedJob" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#Q">
+<org.eventb.core.scGuard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="o∈admin∪manager" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#Q|org.eventb.core.guard#*" org.eventb.core.theorem="false"/>
+<org.eventb.core.scGuard name="(" org.eventb.core.label="grd3" org.eventb.core.predicate="rm∈repairman" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#Q|org.eventb.core.guard#," org.eventb.core.theorem="false"/>
+<org.eventb.core.scGuard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="result=dom(owners[{rm}] ◁ status ▷ COMPLETED)" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#Q|org.eventb.core.guard#+" org.eventb.core.theorem="false"/>
+<org.eventb.core.scParameter name="o" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#Q|org.eventb.core.parameter#'" org.eventb.core.type="USER"/>
+<org.eventb.core.scParameter name="result" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#Q|org.eventb.core.parameter#(" org.eventb.core.type="ℙ(ORDER)"/>
+<org.eventb.core.scParameter name="rm" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#Q|org.eventb.core.parameter#)" org.eventb.core.type="USER"/>
 </org.eventb.core.scEvent>
 </org.eventb.core.scMachineFile>
