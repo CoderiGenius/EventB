@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" version="3">
-<org.eventb.core.carrierSet name="'" org.eventb.core.identifier="User"/>
-<org.eventb.core.carrierSet name="(" org.eventb.core.identifier="Order"/>
-<org.eventb.core.carrierSet name=")" org.eventb.core.identifier="Categories"/>
-<org.eventb.core.carrierSet name="*" org.eventb.core.identifier="Order_Status"/>
+<org.eventb.core.carrierSet name="'" org.eventb.core.identifier="USER"/>
+<org.eventb.core.carrierSet name="(" org.eventb.core.identifier="ORDER"/>
+<org.eventb.core.carrierSet name=")" org.eventb.core.identifier="CATEGORY"/>
+<org.eventb.core.carrierSet name="*" org.eventb.core.identifier="STATUS"/>
 <org.eventb.core.constant name="+" org.eventb.core.identifier="PENDING"/>
 <org.eventb.core.constant name="," org.eventb.core.identifier="ALLOCATED"/>
 <org.eventb.core.constant name="-" org.eventb.core.identifier="IN_PROGRESS"/>
 <org.eventb.core.constant name="." org.eventb.core.identifier="COMPLETED"/>
-<org.eventb.core.axiom name="/" org.eventb.core.label="axm1" org.eventb.core.predicate="partition(Order_Status,PENDING,ALLOCATED,IN_PROGRESS,COMPLETED)"/>
-<org.eventb.core.carrierSet name="0" org.eventb.core.identifier="set1"/>
-<org.eventb.core.carrierSet name="1" org.eventb.core.identifier="set2"/>
-<org.eventb.core.carrierSet name="2" org.eventb.core.identifier="set3"/>
+<org.eventb.core.axiom name="/" org.eventb.core.label="axm1" org.eventb.core.predicate="partition(STATUS,PENDING,ALLOCATED,IN_PROGRESS,COMPLETED)"/>
 </org.eventb.core.contextFile>

@@ -1,19 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="4">
-<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="4">
-<org.eventb.core.poIdentifier name="set3" org.eventb.core.type="ℙ(set3)"/>
-<org.eventb.core.poIdentifier name="set2" org.eventb.core.type="ℙ(set2)"/>
-<org.eventb.core.poIdentifier name="set1" org.eventb.core.type="ℙ(set1)"/>
-<org.eventb.core.poIdentifier name="Order_Status" org.eventb.core.type="ℙ(Order_Status)"/>
-<org.eventb.core.poIdentifier name="Order" org.eventb.core.type="ℙ(Order)"/>
-<org.eventb.core.poIdentifier name="Categories" org.eventb.core.type="ℙ(Categories)"/>
-<org.eventb.core.poIdentifier name="User" org.eventb.core.type="ℙ(User)"/>
-<org.eventb.core.poIdentifier name="ALLOCATED" org.eventb.core.type="ℙ(Order_Status)"/>
-<org.eventb.core.poIdentifier name="COMPLETED" org.eventb.core.type="ℙ(Order_Status)"/>
-<org.eventb.core.poIdentifier name="PENDING" org.eventb.core.type="ℙ(Order_Status)"/>
-<org.eventb.core.poIdentifier name="IN_PROGRESS" org.eventb.core.type="ℙ(Order_Status)"/>
+<org.eventb.core.poFile org.eventb.core.poStamp="9">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="9">
+<org.eventb.core.poIdentifier name="STATUS" org.eventb.core.type="ℙ(STATUS)"/>
+<org.eventb.core.poIdentifier name="ORDER" org.eventb.core.type="ℙ(ORDER)"/>
+<org.eventb.core.poIdentifier name="USER" org.eventb.core.type="ℙ(USER)"/>
+<org.eventb.core.poIdentifier name="CATEGORY" org.eventb.core.type="ℙ(CATEGORY)"/>
+<org.eventb.core.poIdentifier name="ALLOCATED" org.eventb.core.type="ℙ(STATUS)"/>
+<org.eventb.core.poIdentifier name="COMPLETED" org.eventb.core.type="ℙ(STATUS)"/>
+<org.eventb.core.poIdentifier name="PENDING" org.eventb.core.type="ℙ(STATUS)"/>
+<org.eventb.core.poIdentifier name="IN_PROGRESS" org.eventb.core.type="ℙ(STATUS)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/content/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="4">
-<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="partition(Order_Status,PENDING,ALLOCATED,IN_PROGRESS,COMPLETED)" org.eventb.core.source="/content/System.buc|org.eventb.core.contextFile#System|org.eventb.core.axiom#\/"/>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/content/System.bpo|org.eventb.core.poFile#System|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="9">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="partition(STATUS,PENDING,ALLOCATED,IN_PROGRESS,COMPLETED)" org.eventb.core.source="/content/System.buc|org.eventb.core.contextFile#System|org.eventb.core.axiom#\/"/>
 </org.eventb.core.poPredicateSet>
 </org.eventb.core.poFile>
