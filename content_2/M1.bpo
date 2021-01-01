@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="45">
-<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="11">
+<org.eventb.core.poFile org.eventb.core.poStamp="55">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="47">
 <org.eventb.core.poIdentifier name="MESSAGE" org.eventb.core.type="ℙ(MESSAGE)"/>
 <org.eventb.core.poIdentifier name="STATUS" org.eventb.core.type="ℙ(STATUS)"/>
 <org.eventb.core.poIdentifier name="ORDER" org.eventb.core.type="ℙ(ORDER)"/>
 <org.eventb.core.poIdentifier name="USER" org.eventb.core.type="ℙ(USER)"/>
 <org.eventb.core.poIdentifier name="CATEGORY" org.eventb.core.type="ℙ(CATEGORY)"/>
-<org.eventb.core.poIdentifier name="ALLOCATED" org.eventb.core.type="ℙ(STATUS)"/>
-<org.eventb.core.poIdentifier name="COMPLETED" org.eventb.core.type="ℙ(STATUS)"/>
-<org.eventb.core.poIdentifier name="PENDING" org.eventb.core.type="ℙ(STATUS)"/>
-<org.eventb.core.poIdentifier name="IN_PROGRESS" org.eventb.core.type="ℙ(STATUS)"/>
-<org.eventb.core.poPredicate name="IN_PROGREST" org.eventb.core.predicate="partition(STATUS,PENDING,ALLOCATED,IN_PROGRESS,COMPLETED)" org.eventb.core.source="/content_2/System.buc|org.eventb.core.contextFile#System|org.eventb.core.axiom#\/"/>
+<org.eventb.core.poIdentifier name="ALLOCATED" org.eventb.core.type="STATUS"/>
+<org.eventb.core.poIdentifier name="COMPLETED" org.eventb.core.type="STATUS"/>
+<org.eventb.core.poIdentifier name="PENDING" org.eventb.core.type="STATUS"/>
+<org.eventb.core.poIdentifier name="IN_PROGRESS" org.eventb.core.type="STATUS"/>
+<org.eventb.core.poPredicate name="IN_PROGREST" org.eventb.core.predicate="STATUS={PENDING,ALLOCATED,IN_PROGRESS,COMPLETED}" org.eventb.core.source="/content_2/System.buc|org.eventb.core.contextFile#System|org.eventb.core.axiom#\/"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="27">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="54">
 <org.eventb.core.poIdentifier name="owners" org.eventb.core.type="ℙ(USER×ORDER)"/>
 <org.eventb.core.poIdentifier name="message" org.eventb.core.type="ℙ(MESSAGE)"/>
 <org.eventb.core.poIdentifier name="order" org.eventb.core.type="ℙ(ORDER)"/>
 <org.eventb.core.poIdentifier name="employee" org.eventb.core.type="ℙ(USER)"/>
 <org.eventb.core.poIdentifier name="message_receiver" org.eventb.core.type="ℙ(MESSAGE×USER)"/>
+<org.eventb.core.poIdentifier name="ordcate" org.eventb.core.type="ℙ(ORDER×CATEGORY)"/>
 <org.eventb.core.poIdentifier name="message_sender" org.eventb.core.type="ℙ(MESSAGE×USER)"/>
 <org.eventb.core.poIdentifier name="customer" org.eventb.core.type="ℙ(USER)"/>
 <org.eventb.core.poIdentifier name="repairman" org.eventb.core.type="ℙ(USER)"/>
@@ -26,7 +27,7 @@
 <org.eventb.core.poIdentifier name="admin" org.eventb.core.type="ℙ(USER)"/>
 <org.eventb.core.poIdentifier name="category" org.eventb.core.type="ℙ(CATEGORY)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="INITIALISATION/inv2/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="27">
+<org.eventb.core.poSequent name="INITIALISATION/inv2/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="54">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTALLHYPmessage_receives"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(USER))⊆(∅ ⦂ ℙ(USER))" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#."/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#'"/>
@@ -34,7 +35,7 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poSequent#INITIALISATION\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv3/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="27">
+<org.eventb.core.poSequent name="INITIALISATION/inv3/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="54">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTALLHYPmessage_receives"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(USER))⊆(∅ ⦂ ℙ(USER))" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#\/"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#'"/>
@@ -42,7 +43,7 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poSequent#INITIALISATION\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv4/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="27">
+<org.eventb.core.poSequent name="INITIALISATION/inv4/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="54">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTALLHYPmessage_receives"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(USER))⊆(∅ ⦂ ℙ(USER))" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#0"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#'"/>
@@ -50,7 +51,7 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poSequent#INITIALISATION\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv5/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="27">
+<org.eventb.core.poSequent name="INITIALISATION/inv5/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="54">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTALLHYPmessage_receives"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(USER))∩(∅ ⦂ ℙ(USER))=(∅ ⦂ ℙ(USER))" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#1"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#'"/>
@@ -58,7 +59,7 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poSequent#INITIALISATION\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv6/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="27">
+<org.eventb.core.poSequent name="INITIALISATION/inv6/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="54">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTALLHYPmessage_receives"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(USER))∩(∅ ⦂ ℙ(USER))=(∅ ⦂ ℙ(USER))" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#2"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#'"/>
@@ -66,7 +67,7 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poSequent#INITIALISATION\/inv6\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD5"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv7/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="27">
+<org.eventb.core.poSequent name="INITIALISATION/inv7/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="54">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTALLHYPmessage_receives"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(USER))∩(∅ ⦂ ℙ(USER))=(∅ ⦂ ℙ(USER))" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#3"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#'"/>
@@ -74,7 +75,7 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poSequent#INITIALISATION\/inv7\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD6"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv8/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="27">
+<org.eventb.core.poSequent name="INITIALISATION/inv8/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="54">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTALLHYPmessage_receives"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(USER))=(∅ ⦂ ℙ(USER))∪(∅ ⦂ ℙ(USER))∪(∅ ⦂ ℙ(USER))" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#4"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#'"/>
@@ -82,7 +83,7 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poSequent#INITIALISATION\/inv8\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD7"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv11/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="27">
+<org.eventb.core.poSequent name="INITIALISATION/inv11/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="54">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTALLHYPmessage_receives"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="status'∈order' → STATUS" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#@"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#'"/>
@@ -90,7 +91,7 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poSequent#INITIALISATION\/inv11\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD10"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv12/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="27">
+<org.eventb.core.poSequent name="INITIALISATION/inv12/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="54">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTALLHYPmessage_receives"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="message_sender'∈message' → USER" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#A"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#'"/>
@@ -98,7 +99,7 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poSequent#INITIALISATION\/inv12\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD12"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv13/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="27">
+<org.eventb.core.poSequent name="INITIALISATION/inv13/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="54">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTALLHYPmessage_receives"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="message_receiver'∈message' → USER" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#B"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#'"/>
@@ -106,7 +107,7 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poSequent#INITIALISATION\/inv13\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD13"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv18/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="27">
+<org.eventb.core.poSequent name="INITIALISATION/inv18/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="54">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTALLHYPmessage_receives"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="owners'∈(∅ ⦂ ℙ(USER)) ↔ order'" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#N"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#'"/>
@@ -114,7 +115,15 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poSequent#INITIALISATION\/inv18\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD15"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTmessage_receives" org.eventb.core.parentSet="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="27">
+<org.eventb.core.poSequent name="INITIALISATION/inv19/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="54">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTALLHYPmessage_receives"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="ordcate'∈order' → category'" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#U"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#U"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poSequent#INITIALISATION\/inv19\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD16"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTmessage_receives" org.eventb.core.parentSet="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="54">
 <org.eventb.core.poIdentifier name="message'" org.eventb.core.type="ℙ(MESSAGE)"/>
 <org.eventb.core.poIdentifier name="message_sender'" org.eventb.core.type="ℙ(MESSAGE×USER)"/>
 <org.eventb.core.poIdentifier name="employee'" org.eventb.core.type="ℙ(USER)"/>
@@ -125,29 +134,38 @@
 <org.eventb.core.poIdentifier name="status'" org.eventb.core.type="ℙ(ORDER×STATUS)"/>
 <org.eventb.core.poIdentifier name="customer'" org.eventb.core.type="ℙ(USER)"/>
 <org.eventb.core.poIdentifier name="owners'" org.eventb.core.type="ℙ(USER×ORDER)"/>
+<org.eventb.core.poIdentifier name="ordcate'" org.eventb.core.type="ℙ(ORDER×CATEGORY)"/>
 <org.eventb.core.poIdentifier name="repairman'" org.eventb.core.type="ℙ(USER)"/>
 <org.eventb.core.poIdentifier name="order'" org.eventb.core.type="ℙ(ORDER)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPmessage_receives" org.eventb.core.parentSet="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTIDENTmessage_receives" org.eventb.core.poStamp="27"/>
-<org.eventb.core.poPredicateSet name="EVTIDENTmessage_receivet" org.eventb.core.parentSet="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="27">
+<org.eventb.core.poPredicateSet name="EVTALLHYPmessage_receives" org.eventb.core.parentSet="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTIDENTmessage_receives" org.eventb.core.poStamp="54"/>
+<org.eventb.core.poSequent name="AddJobCategory/inv19/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="54">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTALLHYPmessage_receivet"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="ordcate∈order → category∪{c}" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#U"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#;"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#U"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poSequent#AddJobCategory\/inv19\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD16"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTmessage_receivet" org.eventb.core.parentSet="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="54">
 <org.eventb.core.poIdentifier name="c" org.eventb.core.type="CATEGORY"/>
 <org.eventb.core.poIdentifier name="category'" org.eventb.core.type="ℙ(CATEGORY)"/>
 <org.eventb.core.poIdentifier name="c_u" org.eventb.core.type="USER"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPmessage_receivet" org.eventb.core.parentSet="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTIDENTmessage_receivet" org.eventb.core.poStamp="27">
+<org.eventb.core.poPredicateSet name="EVTALLHYPmessage_receivet" org.eventb.core.parentSet="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTIDENTmessage_receivet" org.eventb.core.poStamp="54">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="c_u∈admin∪manager" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#;|org.eventb.core.guard#,"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="c∉CATEGORY" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#;|org.eventb.core.guard#-"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTIDENTmessage_receiveu" org.eventb.core.parentSet="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="34">
+<org.eventb.core.poPredicateSet name="EVTIDENTmessage_receiveu" org.eventb.core.parentSet="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="54">
 <org.eventb.core.poIdentifier name="r" org.eventb.core.type="ℙ(ORDER)"/>
 <org.eventb.core.poIdentifier name="c_u" org.eventb.core.type="USER"/>
 <org.eventb.core.poIdentifier name="r_m" org.eventb.core.type="USER"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPmessage_receiveu" org.eventb.core.parentSet="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTIDENTmessage_receiveu" org.eventb.core.poStamp="34">
+<org.eventb.core.poPredicateSet name="EVTALLHYPmessage_receiveu" org.eventb.core.parentSet="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTIDENTmessage_receiveu" org.eventb.core.poStamp="54">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="c_u∈admin∪manager" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#&gt;|org.eventb.core.guard#+"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="r=ran({r_m} ◁ owners)" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#&gt;|org.eventb.core.guard#,"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="SendMessageToEmployee/inv12/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="43">
+<org.eventb.core.poSequent name="SendMessageToEmployee/inv12/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="54">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTALLHYPmessage_receivev"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="message_sender{m ↦ o}∈message∪{m} → USER" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#A"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#P"/>
@@ -155,7 +173,7 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poSequent#SendMessageToEmployee\/inv12\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD12"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="SendMessageToEmployee/inv13/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="43">
+<org.eventb.core.poSequent name="SendMessageToEmployee/inv13/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="54">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTALLHYPmessage_receivev"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="message_receiver{m ↦ e}∈message∪{m} → USER" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#B"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#P"/>
@@ -163,7 +181,7 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poSequent#SendMessageToEmployee\/inv13\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD13"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTmessage_receivev" org.eventb.core.parentSet="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="43">
+<org.eventb.core.poPredicateSet name="EVTIDENTmessage_receivev" org.eventb.core.parentSet="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="54">
 <org.eventb.core.poIdentifier name="message'" org.eventb.core.type="ℙ(MESSAGE)"/>
 <org.eventb.core.poIdentifier name="message_sender'" org.eventb.core.type="ℙ(MESSAGE×USER)"/>
 <org.eventb.core.poIdentifier name="o" org.eventb.core.type="USER"/>
@@ -171,20 +189,85 @@
 <org.eventb.core.poIdentifier name="e" org.eventb.core.type="USER"/>
 <org.eventb.core.poIdentifier name="m" org.eventb.core.type="MESSAGE"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPmessage_receivev" org.eventb.core.parentSet="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTIDENTmessage_receivev" org.eventb.core.poStamp="43">
+<org.eventb.core.poPredicateSet name="EVTALLHYPmessage_receivev" org.eventb.core.parentSet="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTIDENTmessage_receivev" org.eventb.core.poStamp="54">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="o∈admin∪manager" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#P|org.eventb.core.guard#*"/>
-<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="IN_PROGRESS⊆ran(owners[{e}] ◁ status)" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#P|org.eventb.core.guard#+"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="IN_PROGRESS∈ran(owners[{e}] ◁ status)" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#P|org.eventb.core.guard#+"/>
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="m∈MESSAGE ∖ message" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#P|org.eventb.core.guard#\/"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTIDENTmessage_receivew" org.eventb.core.parentSet="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="45">
+<org.eventb.core.poPredicateSet name="EVTIDENTmessage_receivew" org.eventb.core.parentSet="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="54">
 <org.eventb.core.poIdentifier name="r" org.eventb.core.type="ℙ(ORDER)"/>
 <org.eventb.core.poIdentifier name="c_u" org.eventb.core.type="USER"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPmessage_receivew" org.eventb.core.parentSet="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTIDENTmessage_receivew" org.eventb.core.poStamp="45">
+<org.eventb.core.poPredicateSet name="EVTALLHYPmessage_receivew" org.eventb.core.parentSet="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTIDENTmessage_receivew" org.eventb.core.poStamp="54">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="c_u∈admin∪manager" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#Q|org.eventb.core.guard#("/>
-<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="r=dom(status ⩥ COMPLETED)" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#Q|org.eventb.core.guard#+"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="r=dom(status ⩥ {COMPLETED})" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#Q|org.eventb.core.guard#+"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="27">
+<org.eventb.core.poSequent name="AllocateJob/grd4/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="54">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTHYPmessage_receivex)"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="o∈dom(status)∧status∈ORDER ⇸ STATUS" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#R|org.eventb.core.guard#."/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#R|org.eventb.core.guard#."/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTHYPmessage_receivex)"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="AllocateJob/inv18/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="54">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTALLHYPmessage_receivex"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="owners∪{e ↦ o}∈repairman ↔ order" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#N"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#R"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#N"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poSequent#AllocateJob\/inv18\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD15"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTmessage_receivex" org.eventb.core.parentSet="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="54">
+<org.eventb.core.poIdentifier name="o" org.eventb.core.type="ORDER"/>
+<org.eventb.core.poIdentifier name="c_u" org.eventb.core.type="USER"/>
+<org.eventb.core.poIdentifier name="e" org.eventb.core.type="USER"/>
+<org.eventb.core.poIdentifier name="owners'" org.eventb.core.type="ℙ(USER×ORDER)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPmessage_receivex)" org.eventb.core.parentSet="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTIDENTmessage_receivex" org.eventb.core.poStamp="54">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="c_u∈admin∪manager" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#R|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="o∈order" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#R|org.eventb.core.guard#\/"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="e∈employee" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#R|org.eventb.core.guard#-"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPmessage_receivex" org.eventb.core.parentSet="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTHYPmessage_receivex)" org.eventb.core.poStamp="54">
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="status(o)∈{ALLOCATED,PENDING}" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#R|org.eventb.core.guard#."/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="SubmitNewRepairRequest/inv11/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="55">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTALLHYPmessage_receivey"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="status{o ↦ PENDING}∈order∪{o} → STATUS" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#@"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#S"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#@"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poSequent#SubmitNewRepairRequest\/inv11\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD10"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="SubmitNewRepairRequest/inv18/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="55">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTALLHYPmessage_receivey"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="owners∈repairman ↔ order∪{o}" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#N"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#S"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#N"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poSequent#SubmitNewRepairRequest\/inv18\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD15"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="SubmitNewRepairRequest/inv19/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="55">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTALLHYPmessage_receivey"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="ordcate{o ↦ cate}∈order∪{o} → category" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#U"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#S"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#U"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poSequent#SubmitNewRepairRequest\/inv19\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD16"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTmessage_receivey" org.eventb.core.parentSet="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="55">
+<org.eventb.core.poIdentifier name="cus" org.eventb.core.type="USER"/>
+<org.eventb.core.poIdentifier name="cate" org.eventb.core.type="CATEGORY"/>
+<org.eventb.core.poIdentifier name="o" org.eventb.core.type="ORDER"/>
+<org.eventb.core.poIdentifier name="status'" org.eventb.core.type="ℙ(ORDER×STATUS)"/>
+<org.eventb.core.poIdentifier name="ordcate'" org.eventb.core.type="ℙ(ORDER×CATEGORY)"/>
+<org.eventb.core.poIdentifier name="order'" org.eventb.core.type="ℙ(ORDER)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPmessage_receivey" org.eventb.core.parentSet="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTIDENTmessage_receivey" org.eventb.core.poStamp="55">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="cus∈customer" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#S|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="cate∈category" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#S|org.eventb.core.guard#."/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="o∈ORDER ∖ order" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#S|org.eventb.core.guard#,"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="54">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="employee⊆USER" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#-"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="admin⊆employee" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#."/>
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="manager⊆employee" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#\/"/>
@@ -201,5 +284,6 @@
 <org.eventb.core.poPredicate name="PRD13" org.eventb.core.predicate="message_receiver∈message → USER" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#B"/>
 <org.eventb.core.poPredicate name="PRD14" org.eventb.core.predicate="category⊆CATEGORY" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#L"/>
 <org.eventb.core.poPredicate name="PRD15" org.eventb.core.predicate="owners∈repairman ↔ order" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#N"/>
+<org.eventb.core.poPredicate name="PRD16" org.eventb.core.predicate="ordcate∈order → category" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#U"/>
 </org.eventb.core.poPredicateSet>
 </org.eventb.core.poFile>
