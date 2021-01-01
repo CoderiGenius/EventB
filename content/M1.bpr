@@ -4848,11 +4848,16 @@
 <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p2"/>
 <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p3"/>
 <org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p5"/>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
 <org.eventb.core.prPred name="p3" org.eventb.core.predicate="message⊆MESSAGE">
 <org.eventb.core.prIdent name="MESSAGE" org.eventb.core.type="ℙ(MESSAGE)"/>
 <org.eventb.core.prIdent name="message" org.eventb.core.type="ℙ(MESSAGE)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="review⊆REVIEW">
+<org.eventb.core.prIdent name="REVIEW" org.eventb.core.type="ℙ(REVIEW)"/>
+<org.eventb.core.prIdent name="review" org.eventb.core.type="ℙ(REVIEW)"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p1" org.eventb.core.predicate="customer⊆USER">
 <org.eventb.core.prIdent name="USER" org.eventb.core.type="ℙ(USER)"/>
@@ -4883,6 +4888,7 @@
 <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p4"/>
 <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p5"/>
 <org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p6"/>
+<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p7"/>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
@@ -4893,6 +4899,10 @@
 <org.eventb.core.prPred name="p5" org.eventb.core.predicate="message⊆MESSAGE">
 <org.eventb.core.prIdent name="MESSAGE" org.eventb.core.type="ℙ(MESSAGE)"/>
 <org.eventb.core.prIdent name="message" org.eventb.core.type="ℙ(MESSAGE)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="review⊆REVIEW">
+<org.eventb.core.prIdent name="REVIEW" org.eventb.core.type="ℙ(REVIEW)"/>
+<org.eventb.core.prIdent name="review" org.eventb.core.type="ℙ(REVIEW)"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p0" org.eventb.core.predicate="repairman∪{u}⊆employee∪{u}"/>
 <org.eventb.core.prPred name="p3" org.eventb.core.predicate="customer⊆USER">
@@ -4920,11 +4930,16 @@
 <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p2"/>
 <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p3"/>
 <org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p5"/>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
 <org.eventb.core.prPred name="p3" org.eventb.core.predicate="message⊆MESSAGE">
 <org.eventb.core.prIdent name="MESSAGE" org.eventb.core.type="ℙ(MESSAGE)"/>
 <org.eventb.core.prIdent name="message" org.eventb.core.type="ℙ(MESSAGE)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="review⊆REVIEW">
+<org.eventb.core.prIdent name="REVIEW" org.eventb.core.type="ℙ(REVIEW)"/>
+<org.eventb.core.prIdent name="review" org.eventb.core.type="ℙ(REVIEW)"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p1" org.eventb.core.predicate="customer⊆USER">
 <org.eventb.core.prIdent name="USER" org.eventb.core.type="ℙ(USER)"/>
@@ -4953,11 +4968,16 @@
 <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p2"/>
 <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p3"/>
 <org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p5"/>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
 <org.eventb.core.prPred name="p3" org.eventb.core.predicate="message⊆MESSAGE">
 <org.eventb.core.prIdent name="MESSAGE" org.eventb.core.type="ℙ(MESSAGE)"/>
 <org.eventb.core.prIdent name="message" org.eventb.core.type="ℙ(MESSAGE)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="review⊆REVIEW">
+<org.eventb.core.prIdent name="REVIEW" org.eventb.core.type="ℙ(REVIEW)"/>
+<org.eventb.core.prIdent name="review" org.eventb.core.type="ℙ(REVIEW)"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p1" org.eventb.core.predicate="customer⊆USER">
 <org.eventb.core.prIdent name="USER" org.eventb.core.type="ℙ(USER)"/>
@@ -5097,11 +5117,16 @@
 <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p2"/>
 <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p3"/>
 <org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p5"/>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
 <org.eventb.core.prPred name="p3" org.eventb.core.predicate="message⊆MESSAGE">
 <org.eventb.core.prIdent name="MESSAGE" org.eventb.core.type="ℙ(MESSAGE)"/>
 <org.eventb.core.prIdent name="message" org.eventb.core.type="ℙ(MESSAGE)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="review⊆REVIEW">
+<org.eventb.core.prIdent name="REVIEW" org.eventb.core.type="ℙ(REVIEW)"/>
+<org.eventb.core.prIdent name="review" org.eventb.core.type="ℙ(REVIEW)"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p1" org.eventb.core.predicate="customer⊆USER">
 <org.eventb.core.prIdent name="USER" org.eventb.core.type="ℙ(USER)"/>
@@ -5130,11 +5155,16 @@
 <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p2"/>
 <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p3"/>
 <org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p5"/>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
 <org.eventb.core.prPred name="p3" org.eventb.core.predicate="message⊆MESSAGE">
 <org.eventb.core.prIdent name="MESSAGE" org.eventb.core.type="ℙ(MESSAGE)"/>
 <org.eventb.core.prIdent name="message" org.eventb.core.type="ℙ(MESSAGE)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="review⊆REVIEW">
+<org.eventb.core.prIdent name="REVIEW" org.eventb.core.type="ℙ(REVIEW)"/>
+<org.eventb.core.prIdent name="review" org.eventb.core.type="ℙ(REVIEW)"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p1" org.eventb.core.predicate="customer⊆USER">
 <org.eventb.core.prIdent name="USER" org.eventb.core.type="ℙ(USER)"/>
@@ -5163,11 +5193,16 @@
 <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p2"/>
 <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p3"/>
 <org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p5"/>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
 <org.eventb.core.prPred name="p3" org.eventb.core.predicate="message⊆MESSAGE">
 <org.eventb.core.prIdent name="MESSAGE" org.eventb.core.type="ℙ(MESSAGE)"/>
 <org.eventb.core.prIdent name="message" org.eventb.core.type="ℙ(MESSAGE)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="review⊆REVIEW">
+<org.eventb.core.prIdent name="REVIEW" org.eventb.core.type="ℙ(REVIEW)"/>
+<org.eventb.core.prIdent name="review" org.eventb.core.type="ℙ(REVIEW)"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p1" org.eventb.core.predicate="customer⊆USER">
 <org.eventb.core.prIdent name="USER" org.eventb.core.type="ℙ(USER)"/>
@@ -5198,6 +5233,7 @@
 <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p4"/>
 <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p5"/>
 <org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p6"/>
+<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p7"/>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
@@ -5208,6 +5244,10 @@
 <org.eventb.core.prPred name="p5" org.eventb.core.predicate="message⊆MESSAGE">
 <org.eventb.core.prIdent name="MESSAGE" org.eventb.core.type="ℙ(MESSAGE)"/>
 <org.eventb.core.prIdent name="message" org.eventb.core.type="ℙ(MESSAGE)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="review⊆REVIEW">
+<org.eventb.core.prIdent name="REVIEW" org.eventb.core.type="ℙ(REVIEW)"/>
+<org.eventb.core.prIdent name="review" org.eventb.core.type="ℙ(REVIEW)"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p0" org.eventb.core.predicate="repairman∪{u}⊆employee∪{u}"/>
 <org.eventb.core.prPred name="p3" org.eventb.core.predicate="customer⊆USER">
@@ -5235,11 +5275,16 @@
 <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p2"/>
 <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p3"/>
 <org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p5"/>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
 <org.eventb.core.prPred name="p3" org.eventb.core.predicate="message⊆MESSAGE">
 <org.eventb.core.prIdent name="MESSAGE" org.eventb.core.type="ℙ(MESSAGE)"/>
 <org.eventb.core.prIdent name="message" org.eventb.core.type="ℙ(MESSAGE)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="review⊆REVIEW">
+<org.eventb.core.prIdent name="REVIEW" org.eventb.core.type="ℙ(REVIEW)"/>
+<org.eventb.core.prIdent name="review" org.eventb.core.type="ℙ(REVIEW)"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p1" org.eventb.core.predicate="customer⊆USER">
 <org.eventb.core.prIdent name="USER" org.eventb.core.type="ℙ(USER)"/>
@@ -5268,11 +5313,16 @@
 <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p2"/>
 <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p3"/>
 <org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p5"/>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
 <org.eventb.core.prPred name="p3" org.eventb.core.predicate="message⊆MESSAGE">
 <org.eventb.core.prIdent name="MESSAGE" org.eventb.core.type="ℙ(MESSAGE)"/>
 <org.eventb.core.prIdent name="message" org.eventb.core.type="ℙ(MESSAGE)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="review⊆REVIEW">
+<org.eventb.core.prIdent name="REVIEW" org.eventb.core.type="ℙ(REVIEW)"/>
+<org.eventb.core.prIdent name="review" org.eventb.core.type="ℙ(REVIEW)"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p1" org.eventb.core.predicate="customer⊆USER">
 <org.eventb.core.prIdent name="USER" org.eventb.core.type="ℙ(USER)"/>
@@ -5755,10 +5805,11 @@
 <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p4"/>
 <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p5"/>
 <org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p6"/>
+<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p7"/>
 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∧ goal" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p7"/>
-<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p8">
-<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="functional goal" org.eventb.core.prGoal="p8" org.eventb.core.prHyps="p1"/>
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p8"/>
+<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p9">
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="functional goal" org.eventb.core.prGoal="p9" org.eventb.core.prHyps="p1"/>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
@@ -5770,7 +5821,11 @@
 <org.eventb.core.prIdent name="MESSAGE" org.eventb.core.type="ℙ(MESSAGE)"/>
 <org.eventb.core.prIdent name="message" org.eventb.core.type="ℙ(MESSAGE)"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="status∈ORDER ⇸ STATUS"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="review⊆REVIEW">
+<org.eventb.core.prIdent name="REVIEW" org.eventb.core.type="ℙ(REVIEW)"/>
+<org.eventb.core.prIdent name="review" org.eventb.core.type="ℙ(REVIEW)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="status∈ORDER ⇸ STATUS"/>
 <org.eventb.core.prPred name="p3" org.eventb.core.predicate="customer⊆USER">
 <org.eventb.core.prIdent name="USER" org.eventb.core.type="ℙ(USER)"/>
 <org.eventb.core.prIdent name="customer" org.eventb.core.type="ℙ(USER)"/>
@@ -5782,7 +5837,7 @@
 <org.eventb.core.prPred name="p1" org.eventb.core.predicate="status∈order → STATUS"/>
 <org.eventb.core.prPred name="p4" org.eventb.core.predicate="order⊆ORDER"/>
 <org.eventb.core.prPred name="p0" org.eventb.core.predicate="o∈dom(status)∧status∈ORDER ⇸ STATUS"/>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="o∈dom(status)"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="o∈dom(status)"/>
 <org.eventb.core.prPred name="p2" org.eventb.core.predicate="employee⊆USER">
 <org.eventb.core.prIdent name="USER" org.eventb.core.type="ℙ(USER)"/>
 <org.eventb.core.prIdent name="employee" org.eventb.core.type="ℙ(USER)"/>
@@ -5800,11 +5855,16 @@
 <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p2"/>
 <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p3"/>
 <org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p5"/>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
 <org.eventb.core.prPred name="p3" org.eventb.core.predicate="message⊆MESSAGE">
 <org.eventb.core.prIdent name="MESSAGE" org.eventb.core.type="ℙ(MESSAGE)"/>
 <org.eventb.core.prIdent name="message" org.eventb.core.type="ℙ(MESSAGE)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="review⊆REVIEW">
+<org.eventb.core.prIdent name="REVIEW" org.eventb.core.type="ℙ(REVIEW)"/>
+<org.eventb.core.prIdent name="review" org.eventb.core.type="ℙ(REVIEW)"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p1" org.eventb.core.predicate="customer⊆USER">
 <org.eventb.core.prIdent name="USER" org.eventb.core.type="ℙ(USER)"/>
@@ -5890,11 +5950,16 @@
 <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p2"/>
 <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p3"/>
 <org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p5"/>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
 <org.eventb.core.prPred name="p3" org.eventb.core.predicate="message⊆MESSAGE">
 <org.eventb.core.prIdent name="MESSAGE" org.eventb.core.type="ℙ(MESSAGE)"/>
 <org.eventb.core.prIdent name="message" org.eventb.core.type="ℙ(MESSAGE)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="review⊆REVIEW">
+<org.eventb.core.prIdent name="REVIEW" org.eventb.core.type="ℙ(REVIEW)"/>
+<org.eventb.core.prIdent name="review" org.eventb.core.type="ℙ(REVIEW)"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p1" org.eventb.core.predicate="customer⊆USER">
 <org.eventb.core.prIdent name="USER" org.eventb.core.type="ℙ(USER)"/>
@@ -5935,11 +6000,16 @@
 <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p2"/>
 <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p3"/>
 <org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p5"/>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
 <org.eventb.core.prPred name="p3" org.eventb.core.predicate="message⊆MESSAGE">
 <org.eventb.core.prIdent name="MESSAGE" org.eventb.core.type="ℙ(MESSAGE)"/>
 <org.eventb.core.prIdent name="message" org.eventb.core.type="ℙ(MESSAGE)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="review⊆REVIEW">
+<org.eventb.core.prIdent name="REVIEW" org.eventb.core.type="ℙ(REVIEW)"/>
+<org.eventb.core.prIdent name="review" org.eventb.core.type="ℙ(REVIEW)"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p1" org.eventb.core.predicate="customer⊆USER">
 <org.eventb.core.prIdent name="USER" org.eventb.core.type="ℙ(USER)"/>
@@ -5980,11 +6050,16 @@
 <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p2"/>
 <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p3"/>
 <org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p5"/>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
 <org.eventb.core.prPred name="p3" org.eventb.core.predicate="message⊆MESSAGE">
 <org.eventb.core.prIdent name="MESSAGE" org.eventb.core.type="ℙ(MESSAGE)"/>
 <org.eventb.core.prIdent name="message" org.eventb.core.type="ℙ(MESSAGE)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="review⊆REVIEW">
+<org.eventb.core.prIdent name="REVIEW" org.eventb.core.type="ℙ(REVIEW)"/>
+<org.eventb.core.prIdent name="review" org.eventb.core.type="ℙ(REVIEW)"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p1" org.eventb.core.predicate="customer⊆USER">
 <org.eventb.core.prIdent name="USER" org.eventb.core.type="ℙ(USER)"/>
@@ -6013,11 +6088,16 @@
 <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p2"/>
 <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p3"/>
 <org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p5"/>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
 <org.eventb.core.prPred name="p3" org.eventb.core.predicate="message⊆MESSAGE">
 <org.eventb.core.prIdent name="MESSAGE" org.eventb.core.type="ℙ(MESSAGE)"/>
 <org.eventb.core.prIdent name="message" org.eventb.core.type="ℙ(MESSAGE)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="review⊆REVIEW">
+<org.eventb.core.prIdent name="REVIEW" org.eventb.core.type="ℙ(REVIEW)"/>
+<org.eventb.core.prIdent name="review" org.eventb.core.type="ℙ(REVIEW)"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p1" org.eventb.core.predicate="customer⊆USER">
 <org.eventb.core.prIdent name="USER" org.eventb.core.type="ℙ(USER)"/>
@@ -6046,11 +6126,16 @@
 <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p2"/>
 <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p3"/>
 <org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p5"/>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
 <org.eventb.core.prPred name="p3" org.eventb.core.predicate="message⊆MESSAGE">
 <org.eventb.core.prIdent name="MESSAGE" org.eventb.core.type="ℙ(MESSAGE)"/>
 <org.eventb.core.prIdent name="message" org.eventb.core.type="ℙ(MESSAGE)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="review⊆REVIEW">
+<org.eventb.core.prIdent name="REVIEW" org.eventb.core.type="ℙ(REVIEW)"/>
+<org.eventb.core.prIdent name="review" org.eventb.core.type="ℙ(REVIEW)"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p1" org.eventb.core.predicate="customer⊆USER">
 <org.eventb.core.prIdent name="USER" org.eventb.core.type="ℙ(USER)"/>
@@ -6079,11 +6164,166 @@
 <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p2"/>
 <org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p3"/>
 <org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p5"/>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
 <org.eventb.core.prPred name="p3" org.eventb.core.predicate="message⊆MESSAGE">
 <org.eventb.core.prIdent name="MESSAGE" org.eventb.core.type="ℙ(MESSAGE)"/>
 <org.eventb.core.prIdent name="message" org.eventb.core.type="ℙ(MESSAGE)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="review⊆REVIEW">
+<org.eventb.core.prIdent name="REVIEW" org.eventb.core.type="ℙ(REVIEW)"/>
+<org.eventb.core.prIdent name="review" org.eventb.core.type="ℙ(REVIEW)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="customer⊆USER">
+<org.eventb.core.prIdent name="USER" org.eventb.core.type="ℙ(USER)"/>
+<org.eventb.core.prIdent name="customer" org.eventb.core.type="ℙ(USER)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="category⊆CATEGORY">
+<org.eventb.core.prIdent name="CATEGORY" org.eventb.core.type="ℙ(CATEGORY)"/>
+<org.eventb.core.prIdent name="category" org.eventb.core.type="ℙ(CATEGORY)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="order⊆ORDER">
+<org.eventb.core.prIdent name="ORDER" org.eventb.core.type="ℙ(ORDER)"/>
+<org.eventb.core.prIdent name="order" org.eventb.core.type="ℙ(ORDER)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="employee⊆USER">
+<org.eventb.core.prIdent name="USER" org.eventb.core.type="ℙ(USER)"/>
+<org.eventb.core.prIdent name="employee" org.eventb.core.type="ℙ(USER)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="INITIALISATION/inv20/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="ORDER,REVIEW">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p1" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="(∅ ⦂ ℙ(ORDER×REVIEW))∈(∅ ⦂ ℙ(ORDER)) → (∅ ⦂ ℙ(REVIEW))"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="SubmitNewRepairRequest/inv20/INV" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p0"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p1"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p2"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p3"/>
+<org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p5"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="message⊆MESSAGE">
+<org.eventb.core.prIdent name="MESSAGE" org.eventb.core.type="ℙ(MESSAGE)"/>
+<org.eventb.core.prIdent name="message" org.eventb.core.type="ℙ(MESSAGE)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="review⊆REVIEW">
+<org.eventb.core.prIdent name="REVIEW" org.eventb.core.type="ℙ(REVIEW)"/>
+<org.eventb.core.prIdent name="review" org.eventb.core.type="ℙ(REVIEW)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="customer⊆USER">
+<org.eventb.core.prIdent name="USER" org.eventb.core.type="ℙ(USER)"/>
+<org.eventb.core.prIdent name="customer" org.eventb.core.type="ℙ(USER)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="category⊆CATEGORY">
+<org.eventb.core.prIdent name="CATEGORY" org.eventb.core.type="ℙ(CATEGORY)"/>
+<org.eventb.core.prIdent name="category" org.eventb.core.type="ℙ(CATEGORY)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="order⊆ORDER">
+<org.eventb.core.prIdent name="ORDER" org.eventb.core.type="ℙ(ORDER)"/>
+<org.eventb.core.prIdent name="order" org.eventb.core.type="ℙ(ORDER)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="employee⊆USER">
+<org.eventb.core.prIdent name="USER" org.eventb.core.type="ℙ(USER)"/>
+<org.eventb.core.prIdent name="employee" org.eventb.core.type="ℙ(USER)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="SubmitReview/grd4/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2" org.eventb.core.prSets="ORDER,STATUS">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p3"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p5"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p6"/>
+<org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p7"/>
+<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p8"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∧ goal" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p9">
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="total function dom substitution in goal" org.eventb.core.prGoal="p9" org.eventb.core.prHyps="p2">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="hyp" org.eventb.core.prGoal="p1" org.eventb.core.prHyps="p1"/>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="1"/>
+<org.eventb.core.prExprRef name=".subst" org.eventb.core.prRef="e0"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p10">
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="functional goal" org.eventb.core.prGoal="p10" org.eventb.core.prHyps="p2"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="o" org.eventb.core.type="ORDER"/>
+<org.eventb.core.prIdent name="order" org.eventb.core.type="ℙ(ORDER)"/>
+<org.eventb.core.prIdent name="status" org.eventb.core.type="ℙ(ORDER×STATUS)"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="message⊆MESSAGE">
+<org.eventb.core.prIdent name="MESSAGE" org.eventb.core.type="ℙ(MESSAGE)"/>
+<org.eventb.core.prIdent name="message" org.eventb.core.type="ℙ(MESSAGE)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="review⊆REVIEW">
+<org.eventb.core.prIdent name="REVIEW" org.eventb.core.type="ℙ(REVIEW)"/>
+<org.eventb.core.prIdent name="review" org.eventb.core.type="ℙ(REVIEW)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="status∈ORDER ⇸ STATUS"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="customer⊆USER">
+<org.eventb.core.prIdent name="USER" org.eventb.core.type="ℙ(USER)"/>
+<org.eventb.core.prIdent name="customer" org.eventb.core.type="ℙ(USER)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="category⊆CATEGORY">
+<org.eventb.core.prIdent name="CATEGORY" org.eventb.core.type="ℙ(CATEGORY)"/>
+<org.eventb.core.prIdent name="category" org.eventb.core.type="ℙ(CATEGORY)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="o∈order"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="status∈order → STATUS"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="order⊆ORDER"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="o∈dom(status)∧status∈ORDER ⇸ STATUS"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="o∈dom(status)"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="employee⊆USER">
+<org.eventb.core.prIdent name="USER" org.eventb.core.type="ℙ(USER)"/>
+<org.eventb.core.prIdent name="employee" org.eventb.core.type="ℙ(USER)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prExpr name="e0" org.eventb.core.expression="order"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.isFunGoal"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.totalDom:2"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.conj:0"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="SubmitReview/inv20/INV" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p0"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p1"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p2"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p3"/>
+<org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p5"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="message⊆MESSAGE">
+<org.eventb.core.prIdent name="MESSAGE" org.eventb.core.type="ℙ(MESSAGE)"/>
+<org.eventb.core.prIdent name="message" org.eventb.core.type="ℙ(MESSAGE)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="review⊆REVIEW">
+<org.eventb.core.prIdent name="REVIEW" org.eventb.core.type="ℙ(REVIEW)"/>
+<org.eventb.core.prIdent name="review" org.eventb.core.type="ℙ(REVIEW)"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p1" org.eventb.core.predicate="customer⊆USER">
 <org.eventb.core.prIdent name="USER" org.eventb.core.type="ℙ(USER)"/>

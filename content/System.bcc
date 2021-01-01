@@ -7,6 +7,7 @@
 <org.eventb.core.scConstant name="ALLOCATED" org.eventb.core.source="/content/System.buc|org.eventb.core.contextFile#System|org.eventb.core.constant#," org.eventb.core.type="STATUS"/>
 <org.eventb.core.scCarrierSet name="USER" org.eventb.core.source="/content/System.buc|org.eventb.core.contextFile#System|org.eventb.core.carrierSet#'" org.eventb.core.type="ℙ(USER)"/>
 <org.eventb.core.scConstant name="COMPLETED" org.eventb.core.source="/content/System.buc|org.eventb.core.contextFile#System|org.eventb.core.constant#." org.eventb.core.type="STATUS"/>
+<org.eventb.core.scCarrierSet name="REVIEW" org.eventb.core.source="/content/System.buc|org.eventb.core.contextFile#System|org.eventb.core.carrierSet#2" org.eventb.core.type="ℙ(REVIEW)"/>
 <org.eventb.core.scCarrierSet name="CATEGORY" org.eventb.core.source="/content/System.buc|org.eventb.core.contextFile#System|org.eventb.core.carrierSet#)" org.eventb.core.type="ℙ(CATEGORY)"/>
 <org.eventb.core.scConstant name="PENDING" org.eventb.core.source="/content/System.buc|org.eventb.core.contextFile#System|org.eventb.core.constant#+" org.eventb.core.type="STATUS"/>
 <org.eventb.core.scConstant name="IN_PROGRESS" org.eventb.core.source="/content/System.buc|org.eventb.core.contextFile#System|org.eventb.core.constant#-" org.eventb.core.type="STATUS"/>

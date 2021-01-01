@@ -15,6 +15,8 @@
 <org.eventb.core.action name="2" org.eventb.core.assignment="order ≔ ∅" org.eventb.core.label="act12"/>
 <org.eventb.core.action name="3" org.eventb.core.assignment="orderCategory ≔∅" org.eventb.core.label="act13"/>
 <org.eventb.core.action name="4" org.eventb.core.assignment="orderCustomer ≔ ∅" org.eventb.core.label="act14"/>
+<org.eventb.core.action name="5" org.eventb.core.assignment="review ≔ ∅" org.eventb.core.label="act15"/>
+<org.eventb.core.action name="6" org.eventb.core.assignment="orderReview ≔ ∅" org.eventb.core.label="act16"/>
 </org.eventb.core.event>
 <org.eventb.core.variable name=")" org.eventb.core.identifier="employee"/>
 <org.eventb.core.variable name="*" org.eventb.core.identifier="admin"/>
@@ -148,5 +150,20 @@
 <org.eventb.core.action name="." org.eventb.core.assignment="status(ord) ≔ PENDING" org.eventb.core.label="act2"/>
 <org.eventb.core.action name="/" org.eventb.core.assignment="orderCategory(ord) ≔ cate" org.eventb.core.label="act3"/>
 <org.eventb.core.action name="0" org.eventb.core.assignment="orderCustomer(ord) ≔ cus" org.eventb.core.label="act4"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="\" org.eventb.core.identifier="review"/>
+<org.eventb.core.variable name="]" org.eventb.core.identifier="orderReview"/>
+<org.eventb.core.invariant name="^" org.eventb.core.label="inv19" org.eventb.core.predicate="review ⊆ REVIEW"/>
+<org.eventb.core.invariant name="_" org.eventb.core.label="inv20" org.eventb.core.predicate="orderReview ∈ order → review"/>
+<org.eventb.core.event name="`" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="SubmitReview">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="r"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="o"/>
+<org.eventb.core.parameter name=")" org.eventb.core.identifier="cus"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd1" org.eventb.core.predicate="r ∈ REVIEW ∖ review"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="o ∈ order"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="cus ∈ customer"/>
+<org.eventb.core.guard name="-" org.eventb.core.label="grd4" org.eventb.core.predicate="status(o) = COMPLETED"/>
+<org.eventb.core.action name="." org.eventb.core.assignment="review ≔ review ∪ {r}" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="/" org.eventb.core.assignment="orderReview(o) ≔ r" org.eventb.core.label="act2"/>
 </org.eventb.core.event>
 </org.eventb.core.machineFile>
