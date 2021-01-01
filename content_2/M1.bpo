@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="34">
+<org.eventb.core.poFile org.eventb.core.poStamp="43">
 <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="11">
 <org.eventb.core.poIdentifier name="MESSAGE" org.eventb.core.type="ℙ(MESSAGE)"/>
 <org.eventb.core.poIdentifier name="STATUS" org.eventb.core.type="ℙ(STATUS)"/>
@@ -146,6 +146,35 @@
 <org.eventb.core.poPredicateSet name="EVTALLHYPmessage_receiveu" org.eventb.core.parentSet="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTIDENTmessage_receiveu" org.eventb.core.poStamp="34">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="c_u∈admin∪manager" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#&gt;|org.eventb.core.guard#+"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="r=ran({r_m} ◁ owners)" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#&gt;|org.eventb.core.guard#,"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="SendMessageToEmployee/inv12/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="43">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTALLHYPmessage_receivev"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="message_sender{m ↦ o}∈message∪{m} → USER" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#A"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#P"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#A"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poSequent#SendMessageToEmployee\/inv12\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD12"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="SendMessageToEmployee/inv13/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="43">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTALLHYPmessage_receivev"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="message_receiver{m ↦ e}∈message∪{m} → USER" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#B"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#P"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#B"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poSequent#SendMessageToEmployee\/inv13\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD13"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTmessage_receivev" org.eventb.core.parentSet="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="43">
+<org.eventb.core.poIdentifier name="message'" org.eventb.core.type="ℙ(MESSAGE)"/>
+<org.eventb.core.poIdentifier name="message_sender'" org.eventb.core.type="ℙ(MESSAGE×USER)"/>
+<org.eventb.core.poIdentifier name="o" org.eventb.core.type="USER"/>
+<org.eventb.core.poIdentifier name="message_receiver'" org.eventb.core.type="ℙ(MESSAGE×USER)"/>
+<org.eventb.core.poIdentifier name="e" org.eventb.core.type="USER"/>
+<org.eventb.core.poIdentifier name="m" org.eventb.core.type="MESSAGE"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPmessage_receivev" org.eventb.core.parentSet="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTIDENTmessage_receivev" org.eventb.core.poStamp="43">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="o∈admin∪manager" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#P|org.eventb.core.guard#*"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="IN_PROGRESS⊆ran(owners[{e}] ◁ status)" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#P|org.eventb.core.guard#+"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="m∈MESSAGE ∖ message" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#P|org.eventb.core.guard#\/"/>
 </org.eventb.core.poPredicateSet>
 <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/content_2/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="27">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="employee⊆USER" org.eventb.core.source="/content_2/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#-"/>

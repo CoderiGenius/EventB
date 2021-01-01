@@ -11,4 +11,6 @@
 <org.eventb.core.psStatus name="INITIALISATION/inv12/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="27" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="INITIALISATION/inv13/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="27" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="INITIALISATION/inv18/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="27" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="SendMessageToEmployee/inv12/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="43" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="SendMessageToEmployee/inv13/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="43" org.eventb.core.psManual="false"/>
 </org.eventb.core.psFile>
