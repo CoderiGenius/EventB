@@ -9,4 +9,5 @@
 <org.eventb.core.constant name="-" org.eventb.core.identifier="IN_PROGRESS"/>
 <org.eventb.core.constant name="." org.eventb.core.identifier="COMPLETED"/>
 <org.eventb.core.axiom name="/" org.eventb.core.label="axm1" org.eventb.core.predicate="partition(STATUS,PENDING,ALLOCATED,IN_PROGRESS,COMPLETED)"/>
+<org.eventb.core.carrierSet name="0" org.eventb.core.identifier="MESSAGE"/>
 </org.eventb.core.contextFile>
