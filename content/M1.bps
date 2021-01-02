@@ -60,4 +60,11 @@
 <org.eventb.core.psStatus name="SubmitReview/grd4/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="135" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="SubmitReview/inv20/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="135" org.eventb.core.psManual="true"/>
 <org.eventb.core.psStatus name="customerRegister/inv18/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="135" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="initAdmin/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="138" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="initAdmin/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="138" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="initAdmin/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="138" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="initAdmin/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="138" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="initAdmin/inv6/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="138" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="initAdmin/inv8/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="138" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="initAdmin/inv13/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="138" org.eventb.core.psManual="true"/>
 </org.eventb.core.psFile>

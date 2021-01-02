@@ -116,4 +116,7 @@
 <org.eventb.core.action name="." org.eventb.core.assignment="orderDesc ≔ orderDesc  {ord ↦ des}" org.eventb.core.comment="rewrite the link between order and description" org.eventb.core.label="act1"/>
 <org.eventb.core.action name="/" org.eventb.core.assignment="description ≔ description ∪ {des}" org.eventb.core.comment="add" org.eventb.core.label="act2"/>
 </org.eventb.core.event>
+<org.eventb.core.event name="V" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="initAdmin">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="initAdmin"/>
+</org.eventb.core.event>
 </org.eventb.core.machineFile>

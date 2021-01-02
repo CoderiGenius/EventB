@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="136">
+<org.eventb.core.poFile org.eventb.core.poStamp="138">
 <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="130">
 <org.eventb.core.poIdentifier name="LOCATION" org.eventb.core.type="ℙ(LOCATION)"/>
 <org.eventb.core.poIdentifier name="MESSAGE" org.eventb.core.type="ℙ(MESSAGE)"/>
@@ -677,6 +677,70 @@
 </org.eventb.core.poPredicateSet>
 <org.eventb.core.poPredicateSet name="EVTALLHYPmessage_receivf)" org.eventb.core.parentSet="/content/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTIDENTmessage_receivf)" org.eventb.core.poStamp="135">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="cus∈USER ∖ customer" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#a|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="initAdmin/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="138">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/content/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTALLHYPmessage_receivf*"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="admin∪{u}⊆employee∪{u}" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#."/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#b"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#."/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/content/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/content/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poSequent#initAdmin\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/content/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="initAdmin/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="138">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/content/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTALLHYPmessage_receivf*"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="manager⊆employee∪{u}" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#\/"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#b"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#\/"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/content/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/content/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poSequent#initAdmin\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/content/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="initAdmin/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="138">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/content/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTALLHYPmessage_receivf*"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="repairman⊆employee∪{u}" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#0"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#b"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#0"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/content/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/content/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poSequent#initAdmin\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/content/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="initAdmin/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="138">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/content/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTALLHYPmessage_receivf*"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(admin∪{u})∩manager=(∅ ⦂ ℙ(USER))" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#1"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#b"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#1"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/content/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/content/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poSequent#initAdmin\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/content/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="initAdmin/inv6/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="138">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/content/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTALLHYPmessage_receivf*"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(admin∪{u})∩repairman=(∅ ⦂ ℙ(USER))" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#2"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#b"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#2"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/content/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/content/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poSequent#initAdmin\/inv6\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/content/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD5"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="initAdmin/inv8/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="138">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/content/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTALLHYPmessage_receivf*"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="employee∪{u}=(admin∪{u})∪manager∪repairman" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#4"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#b"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#4"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/content/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/content/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poSequent#initAdmin\/inv8\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/content/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD7"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="initAdmin/inv13/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="138">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/content/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTALLHYPmessage_receivf*"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="message_sender∈message → (admin∪{u})∪manager" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#L"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#b"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#L"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/content/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/content/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poSequent#initAdmin\/inv13\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/content/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD12"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTmessage_receivf*" org.eventb.core.parentSet="/content/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="138">
+<org.eventb.core.poIdentifier name="u" org.eventb.core.type="USER"/>
+<org.eventb.core.poIdentifier name="employee'" org.eventb.core.type="ℙ(USER)"/>
+<org.eventb.core.poIdentifier name="admin'" org.eventb.core.type="ℙ(USER)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPmessage_receivf*" org.eventb.core.parentSet="/content/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTIDENTmessage_receivf*" org.eventb.core.poStamp="138">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="u∈USER ∖ employee" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#b|org.eventb.core.guard#("/>
 </org.eventb.core.poPredicateSet>
 <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/content/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="135">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="employee⊆USER" org.eventb.core.source="/content/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#-"/>
