@@ -50,8 +50,8 @@
 <org.eventb.core.event name="I" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="AddJobCategory">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="AddJobCategory"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="J" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="ViewCompeletedJob">
-<org.eventb.core.refinesEvent name="'" org.eventb.core.target="ViewCompeletedJob"/>
+<org.eventb.core.event name="J" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="ViewCompletedJob">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="ViewCompletedJob"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="K" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="SendMessageToEmployee">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="SendMessageToEmployee"/>
@@ -68,10 +68,13 @@
 <org.eventb.core.event name="O" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="completeOrder">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="completeOrder"/>
 </org.eventb.core.event>
+<org.eventb.core.event name="W" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="StartOrder">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="StartOrder"/>
+</org.eventb.core.event>
 <org.eventb.core.event name="P" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="SubmitNewRepairRequest">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="SubmitNewRepairRequest"/>
-<org.eventb.core.parameter name="(" org.eventb.core.identifier="des"/>
-<org.eventb.core.parameter name=")" org.eventb.core.identifier="loc"/>
+<org.eventb.core.parameter name="(" org.eventb.core.comment="description" org.eventb.core.identifier="des"/>
+<org.eventb.core.parameter name=")" org.eventb.core.comment="location" org.eventb.core.identifier="loc"/>
 <org.eventb.core.guard name="*" org.eventb.core.label="grd4" org.eventb.core.predicate="des ∈ DESCRIPTION ∖ description"/>
 <org.eventb.core.guard name="," org.eventb.core.comment="this location can be a new location or a exist location" org.eventb.core.label="grd6" org.eventb.core.predicate="loc ∈ LOCATION"/>
 <org.eventb.core.action name="-" org.eventb.core.assignment="orderDesc(ord) ≔ des" org.eventb.core.comment="link the order and description" org.eventb.core.label="act5"/>
@@ -112,7 +115,7 @@
 <org.eventb.core.guard name="*" org.eventb.core.label="grd1" org.eventb.core.predicate="r ∈ repairman"/>
 <org.eventb.core.guard name="+" org.eventb.core.comment="new description" org.eventb.core.label="grd2" org.eventb.core.predicate="des ∈ DESCRIPTION ∖ description"/>
 <org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="ord ∈ order"/>
-<org.eventb.core.guard name="-" org.eventb.core.comment="ensuer the order was allocated by the repairman" org.eventb.core.label="grd4" org.eventb.core.predicate="ord ∈ owners[{r}]"/>
+<org.eventb.core.guard name="-" org.eventb.core.comment="ensuer the order was allocated to the repairman" org.eventb.core.label="grd4" org.eventb.core.predicate="ord ∈ owners[{r}]"/>
 <org.eventb.core.action name="." org.eventb.core.assignment="orderDesc ≔ orderDesc  {ord ↦ des}" org.eventb.core.comment="rewrite the link between order and description" org.eventb.core.label="act1"/>
 <org.eventb.core.action name="/" org.eventb.core.assignment="description ≔ description ∪ {des}" org.eventb.core.comment="add" org.eventb.core.label="act2"/>
 </org.eventb.core.event>

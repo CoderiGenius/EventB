@@ -37,6 +37,7 @@
 <org.eventb.core.action name="." org.eventb.core.assignment="manager ≔ manager ∪ {u}" org.eventb.core.label="act2"/>
 <org.eventb.core.parameter name="/" org.eventb.core.comment="operator" org.eventb.core.identifier="o"/>
 <org.eventb.core.action name="1" org.eventb.core.assignment="employee ≔ employee ∪ {u}" org.eventb.core.label="act3"/>
+<org.eventb.core.guard name="2" org.eventb.core.label="grd3" org.eventb.core.predicate="u ∉ customer"/>
 </org.eventb.core.event>
 <org.eventb.core.seesContext name=";" org.eventb.core.target="System"/>
 <org.eventb.core.event name="=" org.eventb.core.comment="admin adds a new repairman" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="adminAddRepairman">
@@ -46,6 +47,7 @@
 <org.eventb.core.guard name="*" org.eventb.core.comment="ensure the role of operator is admin" org.eventb.core.label="grd2" org.eventb.core.predicate="o ∈ admin"/>
 <org.eventb.core.action name="+" org.eventb.core.assignment="employee ≔ employee ∪ {u}" org.eventb.core.label="act1"/>
 <org.eventb.core.action name="," org.eventb.core.assignment="repairman ≔ repairman ∪ {u}" org.eventb.core.label="act2"/>
+<org.eventb.core.guard name="-" org.eventb.core.label="grd3" org.eventb.core.predicate="u ∉ customer"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="&gt;" org.eventb.core.comment="admin adds a new admin" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="adminAddAdmin">
 <org.eventb.core.parameter name="'" org.eventb.core.comment="new employee" org.eventb.core.identifier="u"/>
@@ -54,6 +56,7 @@
 <org.eventb.core.guard name="*" org.eventb.core.comment="ensure the role of operator is admin" org.eventb.core.label="grd2" org.eventb.core.predicate="o ∈ admin"/>
 <org.eventb.core.action name="+" org.eventb.core.assignment="employee ≔ employee ∪ {u}" org.eventb.core.label="act1"/>
 <org.eventb.core.action name="," org.eventb.core.assignment="admin ≔ admin ∪ {u}" org.eventb.core.label="act2"/>
+<org.eventb.core.guard name="-" org.eventb.core.label="grd3" org.eventb.core.predicate="u ∉ customer"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="?" org.eventb.core.comment="manager adds a new repairman" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="managerAddRepairman">
 <org.eventb.core.parameter name="'" org.eventb.core.comment="new employee" org.eventb.core.identifier="u"/>
@@ -62,6 +65,7 @@
 <org.eventb.core.guard name="*" org.eventb.core.comment="ensure the role of operator is manager" org.eventb.core.label="grd2" org.eventb.core.predicate="o ∈ manager"/>
 <org.eventb.core.action name="+" org.eventb.core.assignment="employee ≔ employee ∪ {u}" org.eventb.core.label="act1"/>
 <org.eventb.core.action name="," org.eventb.core.assignment="repairman ≔ repairman ∪ {u}" org.eventb.core.label="act2"/>
+<org.eventb.core.guard name="-" org.eventb.core.label="grd3" org.eventb.core.predicate="u ∉ customer"/>
 </org.eventb.core.event>
 <org.eventb.core.variable name="@" org.eventb.core.identifier="customer"/>
 <org.eventb.core.variable name="A" org.eventb.core.identifier="status"/>
@@ -86,7 +90,7 @@
 <org.eventb.core.guard name="*" org.eventb.core.comment="a new category" org.eventb.core.label="grd2" org.eventb.core.predicate="c ∈ CATEGORY ∖ category"/>
 <org.eventb.core.action name="+" org.eventb.core.assignment="category ≔ category ∪ {c}" org.eventb.core.label="act1"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="Q" org.eventb.core.comment="An admin/manager viewing a list of jobs completed by an employee" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ViewCompeletedJob">
+<org.eventb.core.event name="Q" org.eventb.core.comment="An admin/manager viewing a list of jobs completed by an employee" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="ViewCompletedJob">
 <org.eventb.core.parameter name="'" org.eventb.core.identifier="o"/>
 <org.eventb.core.parameter name="(" org.eventb.core.identifier="result"/>
 <org.eventb.core.parameter name=")" org.eventb.core.comment="repairman" org.eventb.core.identifier="rm"/>
@@ -133,9 +137,19 @@
 <org.eventb.core.parameter name="'" org.eventb.core.comment="order" org.eventb.core.identifier="o"/>
 <org.eventb.core.parameter name="(" org.eventb.core.comment="repairman" org.eventb.core.identifier="r"/>
 <org.eventb.core.guard name="," org.eventb.core.comment="ensure the operator is repairman" org.eventb.core.label="grd1" org.eventb.core.predicate="r ∈ repairman"/>
+<org.eventb.core.guard name="0" org.eventb.core.label="grd4" org.eventb.core.predicate="o ∈ order"/>
 <org.eventb.core.guard name="-" org.eventb.core.comment="ensure the order operated is allocated to the operator" org.eventb.core.label="grd2" org.eventb.core.predicate="o ∈ owners[{r}]"/>
-<org.eventb.core.guard name="*" org.eventb.core.comment="prestatus of the order should be ALLOCATED or IN_PROGRESS since the ALLOCATED order can be completed directly." org.eventb.core.label="grd3" org.eventb.core.predicate="status(o) ∈ {ALLOCATED,IN_PROGRESS}"/>
 <org.eventb.core.action name="." org.eventb.core.assignment="status(o) ≔ COMPLETED" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name="/" org.eventb.core.label="grd3" org.eventb.core.predicate="IN_PROGRESS = status(o)"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="d" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="StartOrder">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="o"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="r"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="r ∈ repairman"/>
+<org.eventb.core.guard name="-" org.eventb.core.label="grd4" org.eventb.core.predicate="o ∈ order"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="o ∈ owners[{r}]"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd3" org.eventb.core.predicate="ALLOCATED = status(o)"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="status(o) ≔ IN_PROGRESS" org.eventb.core.label="act1"/>
 </org.eventb.core.event>
 <org.eventb.core.variable name="W" org.eventb.core.comment="a function with finding and recording thd order's category" org.eventb.core.identifier="orderCategory"/>
 <org.eventb.core.invariant name="X" org.eventb.core.label="inv17" org.eventb.core.predicate="orderCategory ∈ order → category"/>
@@ -164,6 +178,7 @@
 <org.eventb.core.guard name="*" org.eventb.core.label="grd1" org.eventb.core.predicate="r ∈ REVIEW ∖ review"/>
 <org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="o ∈ order"/>
 <org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="cus ∈ customer"/>
+<org.eventb.core.guard name="0" org.eventb.core.label="grd5" org.eventb.core.predicate="orderCustomer(o) = cus"/>
 <org.eventb.core.guard name="-" org.eventb.core.comment="ensure the order status is COMPLETED" org.eventb.core.label="grd4" org.eventb.core.predicate="status(o) = COMPLETED"/>
 <org.eventb.core.action name="." org.eventb.core.assignment="review ≔ review ∪ {r}" org.eventb.core.label="act1"/>
 <org.eventb.core.action name="/" org.eventb.core.assignment="orderReview(o) ≔ r" org.eventb.core.comment="link the order and review" org.eventb.core.label="act2"/>
@@ -172,11 +187,14 @@
 <org.eventb.core.parameter name="'" org.eventb.core.identifier="cus"/>
 <org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="cus ∈ USER ∖ customer"/>
 <org.eventb.core.action name=")" org.eventb.core.assignment="customer ≔ customer ∪ {cus}" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="cus ∉ employee"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="b" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="initAdmin">
 <org.eventb.core.parameter name="'" org.eventb.core.identifier="u"/>
 <org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="u ∈ USER ∖ employee"/>
 <org.eventb.core.action name=")" org.eventb.core.assignment="admin ≔ admin ∪ {u}" org.eventb.core.label="act1"/>
 <org.eventb.core.action name="*" org.eventb.core.assignment="employee ≔ employee ∪ {u}" org.eventb.core.label="act2"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="u ∉ customer"/>
 </org.eventb.core.event>
+<org.eventb.core.invariant name="c" org.eventb.core.label="inv21" org.eventb.core.predicate="employee ∩ customer = ∅"/>
 </org.eventb.core.machineFile>

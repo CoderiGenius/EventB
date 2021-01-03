@@ -3,13 +3,13 @@
 <org.eventb.core.psStatus name="INITIALISATION/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="20" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="INITIALISATION/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="20" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="INITIALISATION/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="30" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="SubmitNewRepairRequest/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="46" org.eventb.core.psManual="true"/>
-<org.eventb.core.psStatus name="SubmitNewRepairRequest/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="46" org.eventb.core.psManual="true"/>
-<org.eventb.core.psStatus name="SubmitNewRepairRequest/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="46" org.eventb.core.psManual="true"/>
-<org.eventb.core.psStatus name="customerRegister/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="43" org.eventb.core.psManual="true"/>
-<org.eventb.core.psStatus name="addNewLocation/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="43" org.eventb.core.psManual="true"/>
-<org.eventb.core.psStatus name="addNewLocation/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="43" org.eventb.core.psManual="true"/>
-<org.eventb.core.psStatus name="cusModifyDesc/grd4/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="43" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="cusModifyDesc/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="43" org.eventb.core.psManual="true"/>
-<org.eventb.core.psStatus name="repairmanModifyDesc/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="43" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="SubmitNewRepairRequest/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="60" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="SubmitNewRepairRequest/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="60" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="SubmitNewRepairRequest/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="60" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="customerRegister/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="60" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="addNewLocation/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="60" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="addNewLocation/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="60" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="cusModifyDesc/grd4/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="60" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="cusModifyDesc/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="60" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="repairmanModifyDesc/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="60" org.eventb.core.psManual="true"/>
 </org.eventb.core.psFile>
